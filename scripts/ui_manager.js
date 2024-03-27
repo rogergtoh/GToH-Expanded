@@ -4,7 +4,7 @@
  //   }
 
  //   addElement(element) {
-        this.uiElements.push(element);
+      //  this.uiElements.push(element);
   //  }
 
  //   render(ctx) {}
