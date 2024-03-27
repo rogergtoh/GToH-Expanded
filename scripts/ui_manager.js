@@ -1,19 +1,19 @@
-class UIManager {
-    constructor() {
-        this.uiElements = [];
-    }
+// class UIManager {
+   // constructor() {
+      //  this.uiElements = [];
+ //   }
 
-    addElement(element) {
+ //   addElement(element) {
         this.uiElements.push(element);
-    }
+  //  }
 
-    render(ctx) {}
+ //   render(ctx) {}
 
-    handleInput(mouseX, mouseY, click) {
-        for (const element of this.uiElements) {
-            if (element.handleClick && click) {
-                element.handleClick(mouseX, mouseY);
-            }
-        }
-    }
-}
+ //   handleInput(mouseX, mouseY, click) {
+  //      for (const element of this.uiElements) {
+   //         if (element.handleClick && click) {
+  //              element.handleClick(mouseX, mouseY);
+  //          }
+ //       }
+//    }
+// }
