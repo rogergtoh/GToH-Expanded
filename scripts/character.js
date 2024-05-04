@@ -175,7 +175,7 @@ class Character {
             case 'vlgravblock':
               plyr.gravityMultiplier = 0.25;
               break;
-            case 'hlgravblock':
+            case 'vhgravblock':
               plyr.gravityMultiplier = 2;
               break;
             case 'normalgravblock':
