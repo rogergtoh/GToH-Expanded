@@ -130,7 +130,6 @@ var sideBarOptions = {
     ['doors/door9', 'door', {tags: [9]}]
   ],
   settings: [
-    ['errorblock', null, {type: 'coor'}],
     ['speedpad', 'speedpad']
   ],
   bounce: [
