@@ -182,7 +182,7 @@ class Character {
               plyr.gravityMultiplier = 1;
               break;
             case 'speedpad':
-              plyr.speed = 8;
+              plyr.speed = 10;
               break;
             case 'dirt':
               return true;
