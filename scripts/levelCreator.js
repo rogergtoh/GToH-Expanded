@@ -139,8 +139,7 @@ var sideBarOptions = {
     ['bounceLeft', 'lbounce']
   ],
   water: [
-    ['pee', 'pee'],
-    ['umbrella', 'umbrella']
+    ['pee', 'pee']
   ],
   tp: [
     ['levelCreator/coorimg', null, {type: 'coor'}]
