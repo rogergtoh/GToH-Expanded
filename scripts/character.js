@@ -185,6 +185,8 @@ class Character {
             case 'normalgravblock':
               plyr.gravityMultiplier = 1;
               break;
+            case 'sand':
+              return true;
             case 'speedpad':
               plyr.speed = 10;
               break;
