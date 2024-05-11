@@ -85,6 +85,9 @@ class Block {
       case 'textblock':
         this.img = cliDir + 'textures/text.png';
         break;
+      case 'umbrella':
+        this.img = cliDir + 'textures/umbrella.png';
+        break
       case 'lgravblock':
         this.img = cliDir + 'textures/lgravblock.png';
         break;
