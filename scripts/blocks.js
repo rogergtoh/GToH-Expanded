@@ -67,12 +67,42 @@ class Block {
         this.img = cliDir + 'textures/vines.png';
         this.tags.push('nc');
         break;
+      case 'rose':
+       this.img = cliDir + 'textures/Rose.png';
+        break;
+      case 'sparkle':
+       this.img = cliDir + 'textures/sparkle.png';
+        break;
+      case 'pee':
+        this.img = cliDir + 'textures/pee.png';
+        break;
+      case 'dirtblock':
+        this.img = cliDir + 'textures/dirtblock2.png';
+         break;
       case 'blank2':
         this.img = cliDir + 'textures/bblank.png';
         break;
       case 'textblock':
         this.img = cliDir + 'textures/text.png';
         break;
+      case 'lgravblock':
+        this.img = cliDir + 'textures/lgravblock.png';
+        break;
+      case 'hgravblock':
+        this.img = cliDir + 'textures/hgravblock.png';
+        break;
+      case 'normalgravblock':
+        this.img = cliDir + 'textures/normalgravblock.png';
+        break;
+      case 'vlgravblock':
+        this.img = cliDir + 'textures/vlgravblock.png';
+        break;
+      case 'vhgravblock':
+        this.img = cliDir + 'textures/vhgravblock.png';
+        break;
+      //case 'lowgravblock':
+       // this.img = cliDir + 'textures/lowgrav.png';
+      //  break;
       case 'red':
         this.img = cliDir + 'textures/redblock.png';
         break;
@@ -179,6 +209,9 @@ class Block {
         break;
       case 'purple':
         this.img = cliDir + `textures/purpleblock.png`;
+        break;
+      case 'flower':
+        this.img = cliDir + 'textures/flower.png';
         break;
       case 'mud':
         this.img = cliDir + `textures/mudblock.png`;
