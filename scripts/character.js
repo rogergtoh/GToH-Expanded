@@ -159,6 +159,8 @@ class Character {
               break;
             case 'sparkle':
               break;
+            case 'pee':
+              break;
             case 'dirtblock':
               return true;
             case 'textblock':
