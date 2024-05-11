@@ -79,6 +79,9 @@ class Block {
       case 'dirtblock':
         this.img = cliDir + 'textures/dirtblock2.png';
          break;
+      case 'sand':
+        this.img = cliDir + 'textures/sand.png';
+        break;
       case 'blank2':
         this.img = cliDir + 'textures/bblank.png';
         break;
