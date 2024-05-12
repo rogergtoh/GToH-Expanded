@@ -140,7 +140,8 @@ var sideBarOptions = {
   ],
   water: [
     ['pee', 'pee'],
-    ['sand', 'sand']
+    ['sand', 'sand'],
+    ['seagrass', 'seagrass']
   ],
   tp: [
     ['levelCreator/coorimg', null, {type: 'coor'}]
