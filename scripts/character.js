@@ -157,9 +157,7 @@ class Character {
             case 'pee':
               break;
             case 'umbrella':
-              if (!statuses.includes('con')) {
-                statuses.push('con');
-              }
+              this.xAccel = 5
               return true;
             case 'beachball':
               break;
@@ -243,8 +241,6 @@ class Character {
       this.xAccel = -20;
     if (statuses.includes('rbounce'))
       this.xAccel = 20;
-    if (statuses.includes('con'))
-      this.xAccel = 5;
 
     //set y position
     this.y += this.yAccel;
