@@ -87,7 +87,8 @@ var blockTypeButtons = [
   ['textblock', 'text', {tags: ["test", 30]}],
   ['water', 'water'],
   ['lgravblock', 'lgravblock'],
-  ['speedpad', 'speedpad']
+  ['speedpad', 'speedpad'],
+  ['umbrella', 'umbrella']
 ];
 var sideBarOptions = {
   lgravblock: [
