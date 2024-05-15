@@ -91,6 +91,9 @@ class Block {
       case 'umbrella':
         this.img = cliDir + 'textures/umbrella.png';
         break;
+      case 'beachball':
+        this.img = cliDir + 'textures/beachball.png';
+        break;
       case 'seagrass':
         this.img = cliDir + 'textures/seagrass.png';
         break;
