@@ -163,6 +163,8 @@ class Character {
               break;
             case 'umbrella':
               break;
+            case 'beachball':
+              break;
             case 'seagrass':
               break;
             case 'dirtblock':
