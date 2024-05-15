@@ -157,7 +157,10 @@ class Character {
             case 'pee':
               break;
             case 'umbrella':
-              break;
+              if (!statuses.includes('con')) {
+                statuses.push('con');
+              }
+              return true;
             case 'beachball':
               break;
             case 'seagrass':
@@ -240,6 +243,8 @@ class Character {
       this.xAccel = -20;
     if (statuses.includes('rbounce'))
       this.xAccel = 20;
+    if (statuses.includes('con'))
+      this.xAccel = 5;
 
     //set y position
     this.y += this.yAccel;
@@ -363,8 +368,6 @@ class Character {
 
       if (this.pressUp && (this.canJump || statuses.includes('mud') || statuses.includes('water')) && !prevMudJump) {
         this.yAccel = -this.jump * gravitySign * (statuses.includes('water') ? -1 : 1);
-       if (statuses.includes('water'))
-         this.xAccel = 20
         this.canJump = false;
         if (statuses.includes('mud'))
           prevMudJump = true;
