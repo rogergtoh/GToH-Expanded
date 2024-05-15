@@ -363,6 +363,7 @@ class Character {
 
       if (this.pressUp && (this.canJump || statuses.includes('mud') || statuses.includes('water')) && !prevMudJump) {
         this.yAccel = -this.jump * gravitySign * (statuses.includes('water') ? -1 : 1);
+        this.xAccel = 5
         this.canJump = false;
         if (statuses.includes('mud'))
           prevMudJump = true;
