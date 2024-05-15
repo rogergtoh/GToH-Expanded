@@ -139,11 +139,6 @@ class Character {
                 statuses.push('rjump');
               }
               return true;
-        //    case 'lowgravblock':
-         //     if (!statuses.includes('icy')) {
-          //      statuses.push('icy');
-         //     }
-         //     return true;
             case 'die':
               newlvl = WorldId;
               return true;
