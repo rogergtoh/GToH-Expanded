@@ -87,8 +87,7 @@ var blockTypeButtons = [
   ['textblock', 'text', {tags: ["test", 30]}],
   ['water', 'water'],
   ['lgravblock', 'lgravblock'],
-  ['speedpad', 'speedpad'],
-  ['umbrella', 'umbrella']
+  ['speedpad', 'speedpad']
 ];
 var sideBarOptions = {
   lgravblock: [
@@ -97,6 +96,10 @@ var sideBarOptions = {
     ['vlgravblock', 'vlgravblock'],
     ['vhgravblock', 'vhgravblock'],
     ['normalgravblock', 'normalgravblock']
+   ],
+  speedpad: [
+    ['speedpad', 'speedpad'],
+    ['slowpad', 'slowpad']
    ],
   orange: [
    ['orangeblock', 'orange'],
@@ -140,6 +143,7 @@ var sideBarOptions = {
     ['bounceLeft', 'lbounce']
   ],
   water: [
+    ['water', 'water'],
     ['pee', 'pee'],
     ['sand', 'sand'],
     ['seagrass', 'seagrass'],
