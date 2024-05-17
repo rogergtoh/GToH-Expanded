@@ -118,9 +118,12 @@ class Block {
       case 'slowpad':
         this.img = cliDir + 'textures/slowpad.png';
         break;
-      //case 'lowgravblock':
-       // this.img = cliDir + 'textures/lowgrav.png';
-      //  break;
+      case 'normalpad':
+        this.img = cliDir + 'textures/normalpad.png';
+        break;
+      case 'resetpad':
+        this.img = cliDir + 'textures/resetpad.png';
+        break;
       case 'red':
         this.img = cliDir + 'textures/redblock.png';
         break;
