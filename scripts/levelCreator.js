@@ -87,7 +87,8 @@ var blockTypeButtons = [
   ['textblock', 'text', {tags: ["test", 30]}],
   ['water', 'water'],
   ['lgravblock', 'lgravblock'],
-  ['speedpad', 'speedpad']
+  ['speedpad', 'speedpad'],
+  ['resetpad', 'resetpad']
 ];
 var sideBarOptions = {
   lgravblock: [
@@ -99,7 +100,8 @@ var sideBarOptions = {
    ],
   speedpad: [
     ['speedpad', 'speedpad'],
-    ['slowpad', 'slowpad']
+    ['slowpad', 'slowpad'],
+    ['normalpad', 'normalpad']
    ],
   orange: [
    ['orangeblock', 'orange'],
