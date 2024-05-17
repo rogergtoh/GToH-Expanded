@@ -157,8 +157,7 @@ class Character {
             case 'pee':
               break;
             case 'umbrella':
-              this.xAccel = 5
-              return true;
+              break;
             case 'beachball':
               break;
             case 'seagrass':
@@ -189,6 +188,9 @@ class Character {
               return true;
             case 'speedpad':
               plyr.speed = 10;
+              break;
+            case 'slowpad':
+              plyr.speed = 3;
               break;
             case 'dirt':
               return true;
