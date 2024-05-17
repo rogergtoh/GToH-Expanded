@@ -192,6 +192,14 @@ class Character {
             case 'slowpad':
               plyr.speed = 3;
               break;
+            case 'normalpad':
+              plyr.speed = 5;
+              break;
+            case 'resetpad':
+              plyr.speed = 5;
+              plyr.gravityMultiplier = 1;
+              plyr.gravityReversed = false;
+              break;
             case 'dirt':
               return true;
             case 'decor':
