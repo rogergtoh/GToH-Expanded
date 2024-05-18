@@ -70,6 +70,9 @@ class Block {
       case 'rose':
        this.img = cliDir + 'textures/Rose.png';
         break;
+      case 'erenscrown':
+        this.img = cliDir + 'textures/erenscrown.png';
+        break;
       case 'sparkle':
        this.img = cliDir + 'textures/sparkle.png';
         break;
