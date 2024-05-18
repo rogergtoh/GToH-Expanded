@@ -156,6 +156,8 @@ class Character {
               break;
             case 'pee':
               break;
+            case 'erenscrown':
+              break;
             case 'umbrella':
               break;
             case 'beachball':
