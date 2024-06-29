@@ -7,7 +7,7 @@ skipIntro && (mainInc = 3, mainBeat = 100), document.body.style.width = "100%", 
   t.onload = (() => { 
     let e = t.width / myCanvas.width; 
     t.height / e > myCanvas.height - 45 && (e = t.height / (myCanvas.height - 45)), ctx.imageSmoothingEnabled = !1, ctx.lineWidth = 5, ctx.strokeRect((myCanvas.width - t.width / e) / 2, 0, t.width / e, t.height / e), ctx.drawImage(t, (myCanvas.width - t.width / e) / 2, 0, t.width / e, t.height / e), ctx.lineWidth = 1 
-  }), t.src = cliDir + "textures/updates/0.4.3-expanded.png" 
+  }), t.src = cliDir + "textures/updates/0.4.4-expanded.png" 
 } 
 function cool() { 
   setTimeout(() => { 
@@ -29,7 +29,7 @@ function cool() {
 ctx.fillStyle = "aliceblue", ctx.fillRect(0, 0, myCanvas.width, myCanvas.height), ctx.fillStyle = "black", /*ctx.fillText("(Press any key to continue...)", myCanvas.width / 2, myCanvas.height - 30), ctx.fillText("(This screen is for preloading.)", myCanvas.width / 2, myCanvas.height - 15),*/ ctx.font = "50px MinecraftRegular";
 var IntroLogo = [myCanvas.width / 2, myCanvas.height - 100, -15], gtohICON = new Image;
 gtohICON.src = cliDir + "textures/gtohICON.png";
-var gtohGravity = -20, gtohRotation = 40, gtohSize = 128, gtohAccel = 1;
+var gtohGravity = -20, gtohRotation = 80, gtohSize = 128, gtohAccel = 2;
 function introPhysics() { 
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height), ctx.translate(IntroLogo[0] + 32, IntroLogo[1] + 32), ctx.rotate(IntroLogo[2] * Math.PI / 180), ctx.drawImage(gtohICON, gtohSize / -2, gtohSize / -2, gtohSize, gtohSize), ctx.resetTransform(), IntroLogo[1] += gtohGravity, IntroLogo[2] += gtohRotation, IntroLogo[1] > myCanvas.height / 3 && gtohGravity > 0 ? gtohGravity -= .5 : gtohGravity += .5, (gtohRotation -= .5) < 10 && (gtohAccel *= 1.3), gtohSize += gtohAccel - 1
 } 
