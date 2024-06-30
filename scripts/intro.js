@@ -39,6 +39,10 @@ ctx.imageSmoothingEnabled = !1, songList.main.onplay = (() => {
     GAME = setInterval(GameTick, 25);
     return;
   } 
+  if (Username == "rogersd" || skipIntro) {
+    GAME = setInterval(GameTick, 25);
+    return;
+  } 
   ctx.fillText("Made by Guppy", myCanvas.width / 2, 100);
   songList.main.currentTime = 0;
   setTimeout(cool, 500)
