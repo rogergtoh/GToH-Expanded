@@ -1,6 +1,7 @@
 'use strict';
 function StartLevelCreator() {
   clearInterval(GAME);
+  GUIVisible = true;
   world = [];
   creatorBlocks = [];
   creatorHistory = [];
@@ -30,6 +31,9 @@ function StartLevelCreator() {
   }, 100);
   CREATE = setInterval(lvlCreateTick, 25);
 }
+
+var GUIVisible = true;
+
 var deletingBlock = false;
 var saveButton = new Block('decor', 10, myCanvas.height - 150, [], 'levelCreator/save.png');
 saveButton.width = 75;
@@ -399,6 +403,12 @@ myCanvas.addEventListener('mouseup', MyEvent => {
   point1 = [];
 });
 
+addEventListener('keydown', key => {
+  if (key.key === "h") {
+    GUIVisible = !GUIVisible;
+  }
+});
+
 function togglePlayTest() {
   PlayTest = !PlayTest;
   if (PlayTest) {
@@ -416,6 +426,7 @@ function togglePlayTest() {
 }
 
 function lvlCreateGui() {
+  if (!GUIVisible) return;
   creatorGrid(lastX, lastY);
   if (point1 != []) {
     let blockWidth = 30;
@@ -524,6 +535,7 @@ function lvlCreateTick() {
   DrawFrame(false);
 
   ctx.fillText(`PlaceX: ${placeX}, placeY: ${placeY}`, 100, 25);
+  ctx.fillText(`Press H to toggle gui`, 100, 38);
   lvlCreateGui();
 
     ChatTick();
