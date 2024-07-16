@@ -444,6 +444,7 @@ function sign_up(){
   socket.emit('check register', signup, false); 
 }
 
+/*
 socket.on('true login', (rer, logging)=>{
   if (logging) {
     if (rer == true) {
@@ -463,6 +464,7 @@ socket.on('true login', (rer, logging)=>{
     alert("new account created");
   }
 });
+*/
 
 /*
 X = 150
