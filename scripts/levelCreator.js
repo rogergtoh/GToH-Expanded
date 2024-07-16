@@ -147,7 +147,11 @@ var sideBarOptions = {
     ['doors/door9', 'door', {tags: [9]}]
   ],
   road: [
-    ['roads/road0', 'road', {tags: [0]}]
+    ['roads/road0', 'road', {tags: [0]}],
+    ['roads/road1', 'road', {tags: [1]}],
+    ['roads/road2', 'road', {tags: [2]}],
+    ['roads/road3', 'road', {tags: [3]}],
+    ['roads/road4', 'road', {tags: [4]}]
   ],
   settings: [
     ['errorblock', null, {type: 'coor'}]
