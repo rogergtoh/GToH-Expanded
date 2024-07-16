@@ -135,6 +135,17 @@ function getPlayerIdByName(name) {
   return false;
 }
 
+// Checks if your LevelRewards match up with reqs
+function checkReqs(reqs) {
+  for (const req in reqs) {
+    if (!(req in LevelRewards)) return false;
+    if (LevelRewards[req] < reqs[req]) 
+      return false
+  }
+  return true;
+}
+
+
 var preloadList = [
   'block',
   'blueblock',

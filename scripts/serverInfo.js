@@ -138,7 +138,30 @@ function syncProgress() {
   if (swaps != null) {
     swapsComplete = JSON.parse(swaps);
   }
-  updateAllStars()
+
+  syncRewards();
+
+  updateAllStars();
 }
+
+function syncRewards() {
+  for (const i in levelsComplete) {
+    if (!(levelsComplete[i] > 0)) continue;
+    if (!('reward' in lvlData[i])) continue;
+    for (const b in lvlData[i].reward) {
+      if (!(b in LevelRewards)) {
+        LevelRewards[b] = lvlData[i].reward[b];
+      } else {
+        LevelRewards[b] += lvlData[i].reward[b];
+      }
+    }
+  }
+}
+
+function setSkin(skin) {
+  PlayerSkin = cliDir + 'textures/skins/' + skin + ".png";
+  Player.img = PlayerSkin;
+}
+
 levelsComplete = new Array(lvlData.length).fill(false);
 syncProgress()
