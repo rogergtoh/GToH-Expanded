@@ -285,20 +285,19 @@ class Block {
           this.opacity = 1;
         break;
       case 'door':
-        if (!perLevel.includes(this.tags[0]))
-          this.opacity = 1;
+        if (levelFormat === 1) {
+          if (!perLevel.includes(this.tags[0].slice(4)))
+            this.opacity = 1;
+        } else {
+          if (!perLevel.includes(this.tags[0]))
+            this.opacity = 1;
+        }
 
         break;
       case 'road':
-          if (levelFormat === 1) {
-            if (perLevel.includes(this.tags[0].slice(4)))
-              this.opacity = 1;
-          } else {
-            if (perLevel.includes(this.tags[0]))
-              this.opacity = 1;
-          }
-  
-          break;
+        if (perLevel.includes(this.tags[0]))
+          this.opacity = 1;
+        break;
     }
   }
 
