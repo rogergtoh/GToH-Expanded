@@ -104,6 +104,15 @@ class Character {
               }
 
               break;
+            case 'road':
+              if (levelFormat === 1) {
+                if (perLevel.includes(i.tags[0].slice(4)))
+                  return true;
+              } else {
+                if (perLevel.includes(i.tags[0]))
+                  return true;
+              }
+              break;
             case 'bounce':
               bounce = 1;
               break;
@@ -221,6 +230,14 @@ class Character {
             case 'stars2':
             case 'stars3':
             case 'stars4':
+              break;
+            case 'code':
+              if (i.tags[0] != undefined && i.tags[1] !== false) { // second part is for making it single use
+                eval(i.tags[0]);
+                if (i.tags[1] === true) {
+                  i.tags[1] = false;
+                }
+              }
               break;
             case 'decor':
               if(i.tags[1] === false && i.tags.includes('moderatorTest')) {

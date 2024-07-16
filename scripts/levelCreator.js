@@ -1,6 +1,7 @@
 'use strict';
 function StartLevelCreator() {
   clearInterval(GAME);
+  GUIVisible = true;
   world = [];
   creatorBlocks = [];
   creatorHistory = [];
@@ -30,6 +31,18 @@ function StartLevelCreator() {
   }, 100);
   CREATE = setInterval(lvlCreateTick, 25);
 }
+
+function checkForBlockType(data, blockType) {
+  for (const block in data) {
+    if (data[block][2] == blockType) {
+      return true;
+    }
+  }
+  return false;
+}
+
+var GUIVisible = true;
+
 var deletingBlock = false;
 var saveButton = new Block('decor', 10, myCanvas.height - 150, [], 'levelCreator/save.png');
 saveButton.width = 75;
@@ -79,6 +92,7 @@ var blockTypeButtons = [
   ['iceblock', 'ice'],
   ['keys/key0', 'key', {tags: [0]}],
   ['doors/door0', 'door', {tags: [0]}],
+  ['roads/road0', 'road', {tags: [0]}],
   ['skullblock', 'die'],
   ['yellowblock', 'win'],
   ['portalgreen', 'tp', {tags: [0, 0]}],
@@ -140,6 +154,9 @@ var sideBarOptions = {
     ['doors/door7', 'door', {tags: [7]}],
     ['doors/door8', 'door', {tags: [8]}],
     ['doors/door9', 'door', {tags: [9]}]
+  ],
+  road: [
+    ['roads/road0', 'road', {tags: [0]}]
   ],
   settings: [
     ['errorblock', null, {type: 'coor'}]
@@ -328,6 +345,9 @@ myCanvas.addEventListener('mousedown', MyEvent => {
       const lvl = prompt('enter level code');
       if (lvl !== null && lvl !== 'null' && lvl !== '') {
         creatorBlocks = JSON.parse(lvl);
+        if (checkForBlockType(creatorBlocks, "code")) {
+          alert("WARNING: The level you loaded uses blocks that run custom code. THIS INCLUDES RUNNING MALICIOUS CODE! Make sure you trust the creator of this level and whoever you got this level from!");
+        }
         RefreshCreator();
       }
     } else if (fcoll(undoButton, mc) && creatorHistory.length > 0) {
@@ -395,6 +415,12 @@ myCanvas.addEventListener('mouseup', MyEvent => {
   point1 = [];
 });
 
+addEventListener('keydown', key => {
+  if (key.key === "h") {
+    GUIVisible = !GUIVisible;
+  }
+});
+
 function togglePlayTest() {
   PlayTest = !PlayTest;
   if (PlayTest) {
@@ -412,6 +438,7 @@ function togglePlayTest() {
 }
 
 function lvlCreateGui() {
+  if (!GUIVisible) return;
   creatorGrid(lastX, lastY);
   if (point1 != []) {
     let blockWidth = 30;
@@ -520,6 +547,7 @@ function lvlCreateTick() {
   DrawFrame(false);
 
   ctx.fillText(`PlaceX: ${placeX}, placeY: ${placeY}`, 100, 25);
+  ctx.fillText(`Press H to toggle gui`, 100, 38);
   lvlCreateGui();
 
     ChatTick();
