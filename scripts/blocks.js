@@ -271,7 +271,7 @@ class Block {
   }
 
   updateSprite(redActive) {
-    if (['red', 'blue', 'orange', 'purple', 'door'].indexOf(this.type) === -1) return;
+    if (['red', 'blue', 'orange', 'purple', 'door', 'road'].indexOf(this.type) === -1) return;
     this.opacity = 0.3;
     switch (this.type) {
       case 'red':
@@ -300,6 +300,16 @@ class Block {
         }
 
         break;
+      case 'road':
+          if (levelFormat === 1) {
+            if (perLevel.includes(this.tags[0].slice(4)))
+              this.opacity = 1;
+          } else {
+            if (perLevel.includes(this.tags[0]))
+              this.opacity = 1;
+          }
+  
+          break;
     }
   }
 
