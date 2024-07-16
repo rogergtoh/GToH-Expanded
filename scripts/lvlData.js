@@ -17,7 +17,7 @@ lvlData[-16] = {
   "levels": [117,120,121,126],
   "data": [
     [150,-40,"portal",1,1,[-2]],
-    [90,90,"block",5,1],[-150,90,"block",8,1],[240,90,"block",8,1],[-150,60,"block",3,1],[390,60,"block",3,1],[50,10,"code",1,1,["if(checkReqs({WorldOneSkin:1}))setSkin('starskin')"],"skins/starskin.png"],[250,10,"code",1,1,["if(checkReqs({ROKSkin:1}))setSkin('elegant')"],"skins/elegant.png"]
+    [90,90,"block",5,1],[-150,90,"block",8,1],[240,90,"block",8,1],[-150,60,"block",3,1],[390,60,"block",3,1],[50,-8,"text",1,1,["Star Skin",10]],[51,-24,"text",1,1,["Beat Tower of Cheeseburger",6]],[250,-7,"text",1,1,["Elegant Skin",10]],[249,-24,"text",1,1,["Beat Race of Keys",6]],[50,10,"code",1,1,["if(checkReqs({WorldOneSkin:1}))setSkin('starskin')"],"skins/starskin.png"],[250,10,"code",1,1,["if(checkReqs({ROKSkin:1}))setSkin('elegant')"],"skins/elegant.png"]
     ]
 }
 lvlData[-15] = {
