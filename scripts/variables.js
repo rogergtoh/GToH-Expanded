@@ -44,7 +44,8 @@ var worldText = [];
 var worldParticle = [];
 const melonImg = "https://s2js.com/img/etc/watermelon2.png";
 const playerImg = cliDir + "textures/skins/player.png";
-var PlayerSkin = playerImg;
+var PlayerSkin = playerImg; // change this to based off PlayerSkinName
+var PlayerSkinName = "player";
 
 //misc
 var redActive = 1;

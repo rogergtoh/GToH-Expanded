@@ -329,14 +329,21 @@ myCanvas.addEventListener('mousedown', MyEvent => {
     } else if (fcoll(saveButton, mc)) {
       const result = prompt('Are you sure you want to copy to clipboard? (y/n). Type s for localSave.');
       if (result === 'y') {
-        navigator.clipboard.writeText(JSON.stringify(creatorBlocks)).then(function() {
-          AddChat('Copied to Clipboard!');
-          }, function(err) {
-          AddChat('ERROR: Could not copy. >' + err);
+        if (!("clipboard" in navigator)) {
           let tab = window.open('about:blank', '_blank');
           tab.document.write(JSON.stringify(creatorBlocks).replace("'", ''));
           tab.document.close();
-          });
+          AddChat('ERROR: Could not copy.');
+        } else {
+          navigator.clipboard.writeText(JSON.stringify(creatorBlocks)).then(function() {
+            AddChat('Copied to Clipboard!');
+            }, function(err) {
+              AddChat('ERROR: Could not copy. >' + err);
+              let tab = window.open('about:blank', '_blank');
+              tab.document.write(JSON.stringify(creatorBlocks).replace("'", ''));
+              tab.document.close();
+            });
+        }
       } else if (result === 's') {
         localStorage.setItem('level backup', JSON.stringify(creatorBlocks));
       }

@@ -25,6 +25,7 @@ class Character {
     this.x = x;
     this.y = y;
     this.img = img;
+    this.skin = PlayerSkinName;
     this.yAccel = 0;
     this.xAccel = 0;
     this.wallJump = 0;
