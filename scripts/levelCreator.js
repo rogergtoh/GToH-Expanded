@@ -353,11 +353,14 @@ myCanvas.addEventListener('mousedown', MyEvent => {
     } else if (fcoll(loadButton, mc)) {
       const lvl = prompt('enter level code');
       if (lvl !== null && lvl !== 'null' && lvl !== '') {
-        creatorBlocks = JSON.parse(lvl);
-        if (checkForBlockType(creatorBlocks, "code")) {
-          alert("WARNING: The level you loaded uses blocks that run custom code. THIS INCLUDES RUNNING MALICIOUS CODE! Make sure you trust the creator of this level and whoever you got this level from!");
+        let codeConfirmation = true;
+        if (checkForBlockType(JSON.parse(lvl), "code")) {
+          codeConfirmation = confirm("WARNING: The level you loaded uses blocks that run custom code. THIS INCLUDES RUNNING MALICIOUS CODE THAT CAN WIPE YOUR PROGRESS/FORCE YOU TO SAY CHAT MESSAGES! Make sure you trust the creator of this level and whoever you got this level from! Press OK to continue.");
         }
-        RefreshCreator();
+        if (codeConfirmation) {
+          creatorBlocks = JSON.parse(lvl);
+          RefreshCreator();
+        }
       }
     } else if (fcoll(undoButton, mc) && creatorHistory.length > 0) {
       creatorUndo();
