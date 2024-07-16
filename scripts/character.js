@@ -104,6 +104,14 @@ class Character {
               }
 
               break;
+            case 'road':
+              if (levelFormat === 1) {
+                if (perLevel.includes(i.tags[0].slice(4)))
+                  return true;
+              } else {
+                if (perLevel.includes(i.tags[0]))
+                  return true;
+              }
             case 'bounce':
               bounce = 1;
               break;
