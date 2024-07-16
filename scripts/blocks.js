@@ -198,6 +198,15 @@ class Block {
         else
           this.img = cliDir + `textures/doors/door${this.tags[0]}.png`;
         break;
+      case 'road':
+          if (levelFormat === 1) {
+            if (oImg === null)
+              oImg = `textures/roads/road0.png`;
+            this.img = cliDir + oImg;
+          }
+          else
+            this.img = cliDir + `textures/roads/road${this.tags[0]}.png`;
+          break;
       case 'key':
         if (levelFormat === 1) {
           if (oImg === null)
