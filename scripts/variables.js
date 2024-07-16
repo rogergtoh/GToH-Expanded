@@ -5,8 +5,8 @@ var warning = false; //set to true if redesgining code that could potentially br
 const GAMEVERSION = [0,5,0];
 
 // These are for checking server compatibility, only change these if updating information sent/received by the server
-const ClientVersion = 1;
-const MinimumServerVersion = 1;
+const ClientVersion = 2;
+const MinimumServerVersion = 2;
 
 //draw
 var drawQueue = [];
