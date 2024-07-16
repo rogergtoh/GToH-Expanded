@@ -63,7 +63,7 @@ function CreateBlocks(x, y, type = 'block', length = 1, height = 1, extraTags = 
   }
   for (let w = 0; w < length; w++) {
     for (let h = 0; h < height; h++) {
-      world.push(new Block(type, x + (w * blockSize), y + (h * blockSize), extraTags, oImg));
+      world.push(new Block(type, x + (w * blockSize), y + (h * blockSize), [...extraTags], oImg)); // gotta pass extraTags by value not ref!
     }
   }
 }
