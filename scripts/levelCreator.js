@@ -79,6 +79,7 @@ var blockTypeButtons = [
   ['iceblock', 'ice'],
   ['keys/key0', 'key', {tags: [0]}],
   ['doors/door0', 'door', {tags: [0]}],
+  ['roads/road0', 'road', {tags: [0]}],
   ['skullblock', 'die'],
   ['yellowblock', 'win'],
   ['portalgreen', 'tp', {tags: [0, 0]}],
@@ -140,6 +141,9 @@ var sideBarOptions = {
     ['doors/door7', 'door', {tags: [7]}],
     ['doors/door8', 'door', {tags: [8]}],
     ['doors/door9', 'door', {tags: [9]}]
+  ],
+  road: [
+    ['roads/road0', 'road', {tags: [0]}]
   ],
   settings: [
     ['errorblock', null, {type: 'coor'}]
