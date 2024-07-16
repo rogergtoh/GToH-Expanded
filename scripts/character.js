@@ -112,6 +112,7 @@ class Character {
                 if (perLevel.includes(i.tags[0]))
                   return true;
               }
+              break;
             case 'bounce':
               bounce = 1;
               break;
