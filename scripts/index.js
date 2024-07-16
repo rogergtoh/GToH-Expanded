@@ -86,6 +86,7 @@ function GameTick() {
             localStorage.setItem("swaps", JSON.stringify(swapsComplete));
           }
           //socket.emit('new pb', WorldId, i, ReplayKeys); REMOVED BECAUSE SOCKET IS BROKEN IN SINGLEPLAYER
+          syncRewards(); //update rewards!
           AddChat(`Time: ${Timer / 40}`);
         } else {
           AddChat('Cheats enabled. Wake up. Wake up. Wake up.');
