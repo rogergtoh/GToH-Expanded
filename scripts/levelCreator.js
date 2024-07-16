@@ -151,7 +151,12 @@ var sideBarOptions = {
     ['roads/road1', 'road', {tags: [1]}],
     ['roads/road2', 'road', {tags: [2]}],
     ['roads/road3', 'road', {tags: [3]}],
-    ['roads/road4', 'road', {tags: [4]}]
+    ['roads/road4', 'road', {tags: [4]}],
+    ['roads/road5', 'road', {tags: [5]}],
+    ['roads/road6', 'road', {tags: [6]}],
+    ['roads/road7', 'road', {tags: [7]}],
+    ['roads/road8', 'road', {tags: [8]}],
+    ['roads/road9', 'road', {tags: [9]}]
   ],
   settings: [
     ['errorblock', null, {type: 'coor'}]
