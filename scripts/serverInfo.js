@@ -140,5 +140,11 @@ function syncProgress() {
   }
   updateAllStars()
 }
+
+function setSkin(skin) {
+  PlayerSkin = cliDir + 'textures/skins/' + skin + ".png";
+  Player.img = PlayerSkin;
+}
+
 levelsComplete = new Array(lvlData.length).fill(false);
 syncProgress()

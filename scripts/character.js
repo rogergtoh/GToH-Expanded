@@ -233,7 +233,13 @@ class Character {
               break;
             case 'code':
               if (i.tags[0] != undefined && i.tags[1] !== false) { // second part is for making it single use
-                eval(i.tags[0]);
+                try {
+                  eval(i.tags[0]);
+                }
+                catch (error) {
+                  AddChat("An error occurred while executing a code block, check console for details");
+                  console.log(error);
+                }
                 if (i.tags[1] === true) {
                   i.tags[1] = false;
                 }
