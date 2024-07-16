@@ -295,8 +295,12 @@ class Block {
 
         break;
       case 'road':
-        if (perLevel.includes(this.tags[0]))
-          this.opacity = 1;
+        this.opacity = 1
+        if (perLevel.includes(this.tags[0])) {
+          this.img = cliDir + `textures/roads/roadfill${this.tags[0]}.png`;
+        } else {
+          this.img = cliDir + `textures/roads/road${this.tags[0]}.png`;
+        }
         break;
     }
   }
