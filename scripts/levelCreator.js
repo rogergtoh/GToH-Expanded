@@ -32,6 +32,15 @@ function StartLevelCreator() {
   CREATE = setInterval(lvlCreateTick, 25);
 }
 
+function checkForBlockType(data, blockType) {
+  for (const block in data) {
+    if (data[block][2] == blockType) {
+      return true;
+    }
+  }
+  return false;
+}
+
 var GUIVisible = true;
 
 var deletingBlock = false;
@@ -336,6 +345,9 @@ myCanvas.addEventListener('mousedown', MyEvent => {
       const lvl = prompt('enter level code');
       if (lvl !== null && lvl !== 'null' && lvl !== '') {
         creatorBlocks = JSON.parse(lvl);
+        if (checkForBlockType(creatorBlocks, "code")) {
+          alert("WARNING: The level you loaded uses blocks that run custom code. THIS INCLUDES RUNNING MALICIOUS CODE! Make sure you trust the creator of this level and whoever you got this level from!");
+        }
         RefreshCreator();
       }
     } else if (fcoll(undoButton, mc) && creatorHistory.length > 0) {

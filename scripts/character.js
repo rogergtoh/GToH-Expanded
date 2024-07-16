@@ -231,6 +231,14 @@ class Character {
             case 'stars3':
             case 'stars4':
               break;
+            case 'code':
+              if (i.tags[0] != undefined && i.tags[1] !== false) { // second part is for making it single use
+                eval(i.tags[0]);
+                if (i.tags[1] === true) {
+                  i.tags[1] = false;
+                }
+              }
+              break;
             case 'decor':
               if(i.tags[1] === false && i.tags.includes('moderatorTest')) {
                 i.tags[1] = true;

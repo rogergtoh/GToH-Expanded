@@ -216,6 +216,9 @@ class Block {
       case 'decor':
         this.img = cliDir + `textures/${oImg}`;
         break;
+      case 'code':
+        this.img = cliDir + `textures/${oImg}`;
+        break;
       case 'small':
         this.img = cliDir + `textures/block.png`
         this.width = 5;
