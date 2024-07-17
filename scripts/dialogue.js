@@ -1,11 +1,14 @@
 const dialogueEnter = [
-' '
+'Ya got money?',
+"50% off on the @8(#$ in the back!"
 ];
 const dialogueBought = [
-  " "
+  "+5 social credit",
+  "Tra La La, the 'c' button actaully does something."
 ];
 const dialogueLeave = [
-' '
+  'Yeah whatever, bye.',
+  "qwerty."
 ];
 
 function OpenDialogue(txt = null) {
