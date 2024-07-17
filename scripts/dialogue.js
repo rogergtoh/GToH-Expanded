@@ -1,5 +1,6 @@
 const dialogueEnter = [
 'Ya got money?',
+'Is poly really my long lost brother?',
 "50% off on the @8(#$ in the back!"
 ];
 const dialogueBought = [
