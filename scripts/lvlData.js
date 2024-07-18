@@ -16,10 +16,12 @@ lvlData[-16] = {
   "music": "Toyroom",
   "levels": [117,120,121,126],
   "data": [
-    [150,-40,"portal",1,1,[-2]],
-    [120,120,"njump",6,1],[300,120,"njump",3,1],[360,90,"njump",1,1],[30,150,"njump",4,1],[-30,-30,"njump",6,1],[-150,180,"njump",7,1],[-180,-30,"njump",5,1],[-180,210,"njump",2,1],[-240,180,"njump",2,1],[-210,210,"njump",1,1],[-330,150,"njump",4,1],[-330,120,"njump",2,1],[-480,90,"njump",6,1],[-270,-30,"njump",3,1],[-480,-60,"njump",8,1],[-480,-30,"njump",1,4],[150,0,"vine",1,2],[140,60,"small",5,1],[165,60,"small",5,1],[185,65,"small",1,3],[140,75,"small",9,1],[140,65,"small",1,2],[149,69,"text",1,1,["The Back",6]],[240,-150,"njump",1,4],[270,-150,"njump",9,1],[510,-120,"njump",1,8],[390,90,"njump",4,1],[150,-30,"njump",4,1],[50,-8,"text",1,1,["Orbo Skin",10]],[51,-24,"text",1,1,["3 Trial Tokens",6]],[250,-7,"text",1,1,["Elegant Skin",10]],[249,-24,"text",1,1,["1 Trial Token",6]],[50,10,"code",1,1,["if(checkReqs({TrialToken:3}))setSkin('orboskin')"],"skins/orboskin.png"],[250,10,"code",1,1,["if(checkReqs({TrialToken:1}))setSkin('elegant')"],"skins/elegant.png"]
+    [250,40,"portal",1,1,[-2]],
+    [120,120,"njump",6,1],[300,120,"njump",3,1],[360,90,"njump",1,1],[30,150,"njump",4,1],[-30,-30,"njump",6,1],[-150,180,"njump",7,1],[-180,-30,"njump",5,1],[-180,210,"njump",2,1],[-240,180,"njump",2,1],[-210,210,"njump",1,1],[-330,150,"njump",4,1],[-330,120,"njump",2,1],[-480,90,"njump",6,1],[-270,-30,"njump",3,1],[-480,-60,"njump",8,1],[-480,-30,"njump",1,4],[150,0,"vine",1,2],[140,60,"small",5,1],[165,60,"small",5,1],[185,65,"small",1,3],[140,75,"small",9,1],[140,65,"small",1,2],[149,69,"text",1,1,["The Back",6]],[240,-150,"njump",1,4],[270,-150,"njump",9,1],[510,-120,"njump",1,8],[390,90,"njump",4,1],[150,-30,"njump",4,1],[-160,42,"text",1,1,["Orbo Skin",10]],[-160,26,"text",1,1,["3 Trial Tokens",6]],[-20,43,"text",1,1,["Elegant Skin",10]],[-20,26,"text",1,1,["1 Trial Token",6]],[-160,60,"code",1,1,["if(checkReqs({TrialToken:3}))setSkin('orboskin')"],"skins/orboskin.png"],[-20,50,"code",1,1,["if(checkReqs({TrialToken:1}))setSkin('elegant')"],"skins/elegant.png"]
     ]
 }
+//270 -x elegant
+//50 +y orbo
 lvlData[-15] = {
   "format": 2,
   "spawn": [150, 60],
