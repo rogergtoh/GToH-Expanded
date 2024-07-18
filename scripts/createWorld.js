@@ -120,6 +120,9 @@ function CreateWorld(id, useID = true) {
   if ("music" in lvl) {
     setSong(lvl.music);
   }
+  if (id === -16) {
+      worldText.push(new Text('World One Tokens: ' + LevelRewards.WorldOneToken, 375, -70, 12));
+  }
   if (id === -2) {
     const o = [-500, 1000];
     worldText.push(new Text('CUBE OF PRELOADING', o[0], o[1]-25, 20));
