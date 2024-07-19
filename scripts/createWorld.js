@@ -123,6 +123,7 @@ function CreateWorld(id, useID = true) {
   if (id === -16) {
       worldText.push(new Text('World One Tokens: ' + LevelRewards.WorldOneToken, 375, -70, 12));
       worldText.push(new Text('Trial Tokens: ' + LevelRewards.TrialToken, 375, -50, 12));
+      worldText.push(new Text('Interlude Tokens: ' + LevelRewards.InterludeToken, 375, -30, 12));
   }
   if (id === -2) {
     const o = [-500, 1000];
