@@ -20,7 +20,9 @@ const dialogueEnter = [
 "How were skins made... Just ripped off of other cubes? Bro. How rude.",
 "Help. He's below. Help.",
 "--- -... .-. --- / .. ... / -.-. --- -- .. -. --. .-.-.-",
-"The final countdown! 5 tokens, maybe?"
+"The final countdown! 5 tokens, maybe?",
+"I just got back, and I'm still setting up.",
+"I'm still setting up, more skins will come soon!"
 ];
 const dialogueBought = [
   "+5 social credit",
