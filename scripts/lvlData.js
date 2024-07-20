@@ -333,7 +333,6 @@ lvlData[1] = {
   "spawn": [150, 60],//old levels have [150,60] spawn pos
   "about": { name: 'Steeple of Color', create: '', diff: 'Hard'},
   "reward": {WorldOneToken: 1},
-  "reward": {Orbuck: 1},
   "timeConditions": [20, 10, 7],
   "swapConditions": 0,
   "data":[
