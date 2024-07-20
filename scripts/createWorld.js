@@ -120,6 +120,11 @@ function CreateWorld(id, useID = true) {
   if ("music" in lvl) {
     setSong(lvl.music);
   }
+  if (id === -16) {
+      worldText.push(new Text('World One Tokens: ' + LevelRewards.WorldOneToken, 375, -70, 12));
+      worldText.push(new Text('Trial Tokens: ' + LevelRewards.TrialToken, 375, -50, 12));
+      worldText.push(new Text('Interlude Tokens: ' + LevelRewards.InterludeToken, 375, -30, 12));
+  }
   if (id === -2) {
     const o = [-500, 1000];
     worldText.push(new Text('CUBE OF PRELOADING', o[0], o[1]-25, 20));
@@ -132,6 +137,7 @@ function CreateWorld(id, useID = true) {
     //worldText.push(new Text('L to set username', 670, -100, 12));
     worldText.push(new Text('Set username for players to see you (L)', 670, -20, 12));
     worldText.push(new Text('GToH Expanded ' + GAMEVERSION.join("."), 670, -40, 12));
+    world.push(new AnimatedBlock(95, 260, 'orbo.png', t, 2, ['nc']));
     //worldText.push(new Text('Coming March 19...', 360, -320, 12));
     world.push(new AnimatedBlock(635, -320, 'portalgreyanim.png',
     {

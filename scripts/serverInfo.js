@@ -145,6 +145,7 @@ function syncProgress() {
 }
 
 function syncRewards() {
+  LevelRewards = {};
   for (const i in levelsComplete) {
     if (!(levelsComplete[i] > 0)) continue;
     if (!('reward' in lvlData[i])) continue;
