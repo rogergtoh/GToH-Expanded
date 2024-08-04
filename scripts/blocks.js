@@ -76,6 +76,18 @@ class Block {
       case 'pee':
         this.img = cliDir + 'textures/pee.png';
         break;
+      case 'hand':
+        this.img = cliDir + 'textures/hand.png';
+        break;
+      case 'beachball':
+        this.img = cliDir + 'textures/beachball.png';
+        break;
+      case 'sand':
+        this.img = cliDir + 'textures/sand.png';
+        break;
+      case 'seagrass':
+        this.img = cliDir + 'textures/seagrass.png';
+        break;
       case 'dirtblock':
         this.img = cliDir + 'textures/dirtblock2.png';
          break;

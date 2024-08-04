@@ -200,6 +200,14 @@ class Character {
               break;
             case 'flower':
               break;
+            case 'hand':
+              break;
+            case 'beachball':
+              break;
+            case 'sand':
+              return true;
+            case 'seagrass':
+              break;
             case 'sparkle':
               break;
             case 'dirtblock':

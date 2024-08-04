@@ -105,6 +105,12 @@ var blockTypeButtons = [
   ['rightconveyor', 'rightconveyor']
 ];
 var sideBarOptions = {
+  water: [
+    ['sand', 'sand'],
+    ['seagrass', 'seagrass'],
+    ['beachball', 'beachball'],
+    ['hand', 'hand']
+  ],
   lgravblock: [
     ['lgravblock', 'lgravblock'],
     ['hgravblock', 'hgravblock'],
