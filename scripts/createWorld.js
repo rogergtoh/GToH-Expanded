@@ -144,6 +144,11 @@ function CreateWorld(id, useID = true) {
       init:[30, 30, 4, 2],
       idle:[0, 4]
     }, 1, ['nc']));
+    world.push(new AnimatedBlock(950, -120, 'portalseasonanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
     
   }
   Player = new Character(PlayerSkin);
