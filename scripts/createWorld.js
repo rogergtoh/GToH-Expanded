@@ -120,6 +120,38 @@ function CreateWorld(id, useID = true) {
   if ("music" in lvl) {
     setSong(lvl.music);
   }
+  if (id === -15) {
+    world.push(new AnimatedBlock(395, -85, 'portalorbuxanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
+    
+}
+  if (id === -3) {
+    world.push(new AnimatedBlock(925, 120, 'portalorbuxanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
+    
+}
+  if (id === -12) {
+    world.push(new AnimatedBlock(290, -75, 'portalorbuxanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
+    
+}
+  if (id === -4) {
+    world.push(new AnimatedBlock(210, 150, 'portalorbuxanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
+
+}
   if (id === -16) {
       worldText.push(new Text('World One Tokens: ' + LevelRewards.WorldOneToken, 375, -70, 12));
       worldText.push(new Text('Trial Tokens: ' + LevelRewards.TrialToken, 375, -50, 12));
