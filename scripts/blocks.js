@@ -112,6 +112,9 @@ class Block {
       case 'vhgravblock':
         this.img = cliDir + 'textures/vhgravblock.png';
         break;
+      case 'ladder':
+        this.img = cliDir + 'textures/vhgravblock.png';
+        return true;
       case 'speedpad':
         this.img = cliDir + 'textures/speedpad.png';
         break;

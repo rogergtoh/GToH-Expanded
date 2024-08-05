@@ -204,6 +204,11 @@ class Character {
               break;
             case 'orbopass1':
               break;
+            case 'ladder':
+              if (!statuses.includes('ladder')) {
+                statuses.push('ladder');
+              }
+              return true;
             case 'hand':
               break;
             case 'beachball':
@@ -328,6 +333,9 @@ class Character {
     }
     if (statuses.includes('leftconveyor2')) {
       this.x += -8;
+    }
+    if (statuses.includes('ladder')) {
+      this.y += -4;
     }
     //xAccel slowdown
     if ((!this.pressRight && !this.pressLeft && (!prevTouchIcy || this.gravityDisabled)) || statuses.includes('mud')) {

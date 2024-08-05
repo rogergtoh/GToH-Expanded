@@ -102,7 +102,8 @@ var blockTypeButtons = [
   ['water', 'water'],
   ['lgravblock', 'lgravblock'],
   ['speedpad', 'speedpad'],
-  ['rightconveyor', 'rightconveyor']
+  ['rightconveyor', 'rightconveyor'],
+  ['ladder', 'ladder']
 ];
 var sideBarOptions = {
   water: [
