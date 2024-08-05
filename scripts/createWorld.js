@@ -1,26 +1,4 @@
 console.log("loading createWorld...")
-var countDownDate = new Date("Aug 31, 2024 15:37:25").getTime();
-
-var x = setInterval(function() {
-
-  var now = new Date().getTime();
-
-  var distance = countDownDate - now;
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
- 
-  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "EXPIRED";
-  }
-}, 1000);
 class LevelStars {
   constructor(levelID, maxTimes, maxSwaps) {
     this.level = levelID;
@@ -209,7 +187,6 @@ function CreateWorld(id, useID = true) {
     //worldText.push(new Text('L to set username', 670, -100, 12));
     worldText.push(new Text('Set username for players to see you (L)', 670, -20, 12));
     worldText.push(new Text('GToH Expanded ' + GAMEVERSION.join("."), 670, -40, 12));
-    worldText.push(new Text('Interlude Tokens: ' + countDownDate.Date, 1030, -30, 12));
     world.push(new AnimatedBlock(95, 260, 'orbo.png', t, 2, ['nc']));
     //worldText.push(new Text('Coming March 19...', 360, -320, 12));
     world.push(new AnimatedBlock(635, -320, 'portalgreyanim.png',
