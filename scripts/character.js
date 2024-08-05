@@ -82,7 +82,9 @@ class Character {
               LevelWon = true;
               break;
             case 'portal':
-              newlvl = i.tags[0];
+              if (isWorldUnlocked(i.tags[0])) {
+                newlvl = i.tags[0];
+              }
               break;
             case 'key':
               if (levelFormat === 1) {
@@ -199,6 +201,8 @@ class Character {
             case 'rose':
               break;
             case 'flower':
+              break;
+            case 'orbopass1':
               break;
             case 'hand':
               break;

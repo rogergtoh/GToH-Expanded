@@ -159,6 +159,10 @@ class Block {
           this.img = cliDir + 'textures/portalgreen.png';
         } else
         this.img = cliDir + 'textures/portalred.png';
+        // check if reqs are met 
+        if (!isWorldUnlocked(this.tags[0]))
+          this.img = cliDir + 'textures/portallocked.png';
+
         if ('levels' in lvlData[this.tags[0]]) {
           let fullComplete = true;
           for (const l of lvlData[this.tags[0]].levels) {
@@ -251,6 +255,9 @@ class Block {
         break;
       case 'flower':
         this.img = cliDir + 'textures/flower.png';
+        break;
+      case 'orbopass1':
+        this.img = cliDir + 'textures/orbopass1.png';
         break;
       case 'mud':
         this.img = cliDir + `textures/mudblock.png`;

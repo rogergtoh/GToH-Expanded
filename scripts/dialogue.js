@@ -52,6 +52,7 @@ const dialogueLeave = [
   "Guppyadrian didn't create this world... Leave.",
   "Guppy speed!",
   "Go back to the [Scent of Spring].",
+  "boy, I do want to live in an [Oasis Spire]...",
   "Adventure awaits, scrub.",
   "Leaving? You want me to leave for ANOTHER 5 months?",
   "Go back to where you came from. The towers.",

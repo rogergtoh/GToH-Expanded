@@ -370,6 +370,7 @@ lvlData[2] = {
   "spawn": [150, 60],//old levels have [150,60] spawn pos
   "about": { name: 'Steeple of Simplicity', create: '', diff: 'Medium'},
   "reward": {WorldOneToken: 1},
+  "requirements": { testtest: 1 },
   "timeConditions": [13, 9.5, 6],
   "swapConditions": 0,
   "data":[
