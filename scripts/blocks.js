@@ -113,7 +113,7 @@ class Block {
         this.img = cliDir + 'textures/vhgravblock.png';
         break;
       case 'ladder':
-        this.img = cliDir + 'textures/vhgravblock.png';
+        this.img = cliDir + 'textures/vlgravblock.png';
         return true;
       case 'speedpad':
         this.img = cliDir + 'textures/speedpad.png';
