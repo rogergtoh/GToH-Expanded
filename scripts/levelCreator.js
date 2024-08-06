@@ -106,6 +106,7 @@ var blockTypeButtons = [
 ];
 var sideBarOptions = {
   water: [
+    ['water', 'water'],
     ['sand', 'sand'],
     ['seagrass', 'seagrass'],
     ['beachball', 'beachball'],
