@@ -170,13 +170,6 @@ function CreateWorld(id, useID = true) {
     }, 1, ['nc']));
 
 }
-  if (id === -17) {
-    world.push(new AnimatedBlock(1545, 590, 'portalorbuxanim.png',
-    {
-      init:[30, 30, 4, 2],
-      idle:[0, 4]
-    }, 1, ['nc']));
-  }
   if (id === -18) {
       worldText.push(new Text('World One Tokens: ' + LevelRewards.WorldOneToken, 425, 165, 12));
       worldText.push(new Text('Trial Tokens: ' + LevelRewards.TrialToken, 425, 145, 12));
