@@ -11,7 +11,7 @@ lvlData[-6969] = {
 }
 lvlData[-18] = {
   "format": 2,
-  "spawn": [150, 60],
+  "spawn": [150, 210],
   "about": { name: 'Token View', diff: "Tokens", create: ''},
   "music": "arrival",
   "levels": [117,120,121,126],
