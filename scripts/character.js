@@ -82,7 +82,9 @@ class Character {
               LevelWon = true;
               break;
             case 'portal':
-              newlvl = i.tags[0];
+              if (isWorldUnlocked(i.tags[0])) {
+                newlvl = i.tags[0];
+              }
               break;
             case 'key':
               if (levelFormat === 1) {
@@ -200,6 +202,21 @@ class Character {
               break;
             case 'flower':
               break;
+            case 'orbopass1':
+              break;
+            case 'ladder':
+              if (!statuses.includes('ladder')) {
+                statuses.push('ladder');
+              }
+              return true;
+            case 'hand':
+              break;
+            case 'beachball':
+              break;
+            case 'sand':
+              return true;
+            case 'seagrass':
+              break;
             case 'sparkle':
               break;
             case 'dirtblock':
@@ -316,6 +333,9 @@ class Character {
     }
     if (statuses.includes('leftconveyor2')) {
       this.x += -8;
+    }
+    if (statuses.includes('ladder')) {
+      this.y += -4;
     }
     //xAccel slowdown
     if ((!this.pressRight && !this.pressLeft && (!prevTouchIcy || this.gravityDisabled)) || statuses.includes('mud')) {

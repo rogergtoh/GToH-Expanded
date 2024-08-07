@@ -76,6 +76,18 @@ class Block {
       case 'pee':
         this.img = cliDir + 'textures/pee.png';
         break;
+      case 'hand':
+        this.img = cliDir + 'textures/hand.png';
+        break;
+      case 'beachball':
+        this.img = cliDir + 'textures/beachball.png';
+        break;
+      case 'sand':
+        this.img = cliDir + 'textures/sand.png';
+        break;
+      case 'seagrass':
+        this.img = cliDir + 'textures/seagrass.png';
+        break;
       case 'dirtblock':
         this.img = cliDir + 'textures/dirtblock2.png';
          break;
@@ -100,6 +112,9 @@ class Block {
       case 'vhgravblock':
         this.img = cliDir + 'textures/vhgravblock.png';
         break;
+      case 'ladder':
+        this.img = cliDir + 'textures/vlgravblock.png';
+        return true;
       case 'speedpad':
         this.img = cliDir + 'textures/speedpad.png';
         break;
@@ -147,6 +162,10 @@ class Block {
           this.img = cliDir + 'textures/portalgreen.png';
         } else
         this.img = cliDir + 'textures/portalred.png';
+        // check if reqs are met 
+        if (!isWorldUnlocked(this.tags[0]))
+          this.img = cliDir + 'textures/portallocked.png';
+
         if ('levels' in lvlData[this.tags[0]]) {
           let fullComplete = true;
           for (const l of lvlData[this.tags[0]].levels) {
@@ -239,6 +258,9 @@ class Block {
         break;
       case 'flower':
         this.img = cliDir + 'textures/flower.png';
+        break;
+      case 'orbopass1':
+        this.img = cliDir + 'textures/orbopass1.png';
         break;
       case 'mud':
         this.img = cliDir + `textures/mudblock.png`;

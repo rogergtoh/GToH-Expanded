@@ -53,6 +53,16 @@ function updateAllStars() {
 
 initializeAllStars()
 
+function isWorldUnlocked(id) {
+  if (!("requirements" in lvlData[id])) return true; // if no reqs then is unlcoked!
+  for (req in lvlData[id].requirements) {
+    if (!(req in LevelRewards)) return false; // if don't have that reward
+    if (LevelRewards[req] < lvlData[id].requirements[req]) return false; //if don't have enough of reward
+  }
+
+  return true; // passes all checks
+}
+
 function CreateBlocks(x, y, type = 'block', length = 1, height = 1, extraTags = [], oImg = null) {
   let blockSize = 30;
   if (type === 'text') {
@@ -120,10 +130,54 @@ function CreateWorld(id, useID = true) {
   if ("music" in lvl) {
     setSong(lvl.music);
   }
-  if (id === -16) {
-      worldText.push(new Text('World One Tokens: ' + LevelRewards.WorldOneToken, 375, -70, 12));
-      worldText.push(new Text('Trial Tokens: ' + LevelRewards.TrialToken, 375, -50, 12));
-      worldText.push(new Text('Interlude Tokens: ' + LevelRewards.InterludeToken, 375, -30, 12));
+  if (id === -5) {
+    world.push(new AnimatedBlock(300, 120, 'portalorbuxanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
+    
+}
+  if (id === -15) {
+    world.push(new AnimatedBlock(395, -85, 'portalorbuxanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
+    
+}
+  if (id === -3) {
+    world.push(new AnimatedBlock(925, 120, 'portalorbuxanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
+    
+}
+  if (id === -12) {
+    world.push(new AnimatedBlock(290, -75, 'portalorbuxanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
+    
+}
+  if (id === -4) {
+    world.push(new AnimatedBlock(210, 150, 'portalorbuxanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
+
+}
+  if (id === -18) {
+      worldText.push(new Text('World One Tokens: ' + LevelRewards.WorldOneToken, 425, 165, 12));
+      worldText.push(new Text('Trial Tokens: ' + LevelRewards.TrialToken, 425, 145, 12));
+      worldText.push(new Text('Interlude Tokens: ' + LevelRewards.InterludeToken, 425, 125, 12));
+      worldText.push(new Text('Season Tokens: ' + LevelRewards.SeasonToken, 425, 105, 12));
+      worldText.push(new Text('Orbux: ' + LevelRewards.Orbuck, 425, 85, 12));
+      worldText.push(new Text('undefined = 0', -50, 165, 12));
+      worldText.push(new Text('Get Orbux by beating levels with Purple portals!', 425, 210, 12));
   }
   if (id === -2) {
     const o = [-500, 1000];
@@ -139,7 +193,12 @@ function CreateWorld(id, useID = true) {
     worldText.push(new Text('GToH Expanded ' + GAMEVERSION.join("."), 670, -40, 12));
     world.push(new AnimatedBlock(95, 260, 'orbo.png', t, 2, ['nc']));
     //worldText.push(new Text('Coming March 19...', 360, -320, 12));
-    world.push(new AnimatedBlock(635, -320, 'portalgreyanim.png',
+    world.push(new AnimatedBlock(840, -400, 'portalgreyanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
+    world.push(new AnimatedBlock(950, -120, 'portalseasonanim.png',
     {
       init:[30, 30, 4, 2],
       idle:[0, 4]
