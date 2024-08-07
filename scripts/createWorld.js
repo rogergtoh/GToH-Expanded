@@ -170,6 +170,13 @@ function CreateWorld(id, useID = true) {
     }, 1, ['nc']));
 
 }
+  if (id === -17) {
+    world.push(new AnimatedBlock(1545, 590, 'portalorbuxanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
+  }
   if (id === -18) {
       worldText.push(new Text('World One Tokens: ' + LevelRewards.WorldOneToken, 425, 165, 12));
       worldText.push(new Text('Trial Tokens: ' + LevelRewards.TrialToken, 425, 145, 12));
@@ -177,6 +184,7 @@ function CreateWorld(id, useID = true) {
       worldText.push(new Text('Season Tokens: ' + LevelRewards.SeasonToken, 425, 105, 12));
       worldText.push(new Text('Orbux: ' + LevelRewards.Orbuck, 425, 85, 12));
       worldText.push(new Text('undefined = 0', -50, 165, 12));
+      worldText.push(new Text('Get Orbux by beating levels with Purple portals!', 425, 210, 12));
   }
   if (id === -2) {
     const o = [-500, 1000];
