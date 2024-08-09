@@ -410,28 +410,13 @@ lvlData[1] = {
   ]
 };
 lvlData[2] = {
-  "format": 1,//old levels follow format 1
+  "format": 3,//old levels follow format 1
   "spawn": [150, 60],//old levels have [150,60] spawn pos
   "about": { name: 'Steeple of Simplicity', create: '', diff: 'Medium'},
   "reward": {WorldOneToken: 1},
   "timeConditions": [13, 9.5, 6],
   "swapConditions": 0,
-  "data":[
-    [0, 240, 'block', 20, 1],
-    [0, 180, 'block', 4, 3],
-    [200, 80, 'block', 3, 1],
-    [190, -30, 'block', 3, 1],
-    [330, -40, 'red', 1, 1],
-    [400, -140, 'blue', 3, 1],
-    [490, -320, 'blue', 1, 7],
-    [520, -80, 'blue', 2, 1],
-    [585, -260, 'block', 1, 8],
-    [300, -390, 'small', 1, 1],
-    [400, -380, 'block', 1, 1],
-    [185, -525, 'block',1,1],
-    [305, -575, 'block',1,1],
-    [320, -700, 'win',1,1]
-  ]
+  "data":[["block","red","blue","small","win"],"0;6o:0:k:1:0;50:0:4:3:5k:28:0:3:1:5a:u;0:3:1:96:14;1:1:1:b4:3w;2:3:1:dm:8w;2:1:7:eg:28;2:2:1:g9:78;0:1:8:8c:au;3:1:1:b4:ak;0:1:1:55:el;0:1:1:8h:fz;0:1:1:8w:jg;4:1:1:"]
 };
 lvlData[3] = {
   "format": 1,//old levels follow format 1
