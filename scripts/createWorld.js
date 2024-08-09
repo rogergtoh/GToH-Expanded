@@ -102,7 +102,7 @@ function CreateWorld(id, useID = true) {
 
   let lvl;
   if (useID)
-    lvl = lvlData[id];
+    lvl = structuredClone(lvlData[id]);
   else {
     if (Array.isArray(id)) {
     lvl = {"format": 2, "spawn": [150, 60], "data": id};
@@ -117,6 +117,13 @@ function CreateWorld(id, useID = true) {
     levelFormat = lvl.format;
   } else 
     levelFormat = 1;
+
+  if (levelFormat === 3) {
+    const decompressor = new LevelDecompressor(lvl.data);
+    lvl.data = decompressor.decompress();
+    levelFormat = 2;
+  }
+  
   for (let i = 0; i < lvl.data.length; i++) {
     if (lvl.data[i][2] == "portal" && "timeConditions" in lvlData[lvl.data[i][5][0]]) {
       var stars = 0

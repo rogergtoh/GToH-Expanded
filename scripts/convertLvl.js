@@ -12,6 +12,9 @@ class LevelCompressor {
   }
 
   compress() {
+    this.dict = [];
+
+
     let newData = "";
     for (const i in this.data) {
       newData += this.compressBlock(this.data[i]);
@@ -56,7 +59,9 @@ class LevelDecompressor {
     const data = [];
     for (this.pos; this.pos < this.data.length;) {
 
-      data.push(this.getNextBlock());
+      const nextBlock = this.getNextBlock();
+      if (nextBlock === false) return false;
+      data.push(nextBlock);
 
       // If finished
       if (this.pos >= this.data.length - 1) {
@@ -65,15 +70,18 @@ class LevelDecompressor {
       }
     }
 
-    console.log("error! Couldn't decompress");
-    alert("An error occured while decompressing the level! \nIn decompress() Array Overflow at start: " + start);
+    console.log("error! Couldn't decompress following data:");
+    console.log(this.data);
+    alert("An error occured while decompressing the level! \nIn decompress() Array Overflow at start: " + this.pos);
   }
 
   getNextBlock() {
     const block = [];
 
     for(let i = 0; i < 5; i++) {
-      block[i] = this.getNextValue();
+      const nextValue = this.getNextValue();
+      if (nextValue === false) return false;
+      block[i] = nextValue;
     }
 
     block[2] = this.dict[block[2]];
@@ -91,8 +99,10 @@ class LevelDecompressor {
         value += this.data[this.pos];
       }
     }
-    console.log("error! Couldn't get next value");
-    alert("An error occured while decompressing the level! \nIn getNextValue() Array Overflow at start: " + start);
+    console.log("An error occured while decompressing the level! \nIn getNextValue() Array Overflow at start: " + this.pos);
+    console.log(this.data);
+    alert("An error occured while decompressing the level! \nIn getNextValue() Array Overflow at start: " + this.pos);
+    return false;
   }
 }
 
