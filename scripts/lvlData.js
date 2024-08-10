@@ -12,6 +12,18 @@ lvlData[-6969] = {
 lvlData[-19] = {
   "format": 2,
   "spawn": [150, 210],
+  "about": { name: '', diff: "The Path of Legends", create: ''},
+  "requirements": { SeasonToken: 4 },
+  "music": "arrival",
+  "levels": [894],
+  "data": [
+    [210,-30,"portal",1,1,[-2]],
+    [150,90,"block",1,1],[120,90,"block",1,1],[90,90,"block",1,1],[90,-330,"njump",1,15],[180,90,"block",329,1],[10050,-1560,"njump",1,56],[9990,-1560,"njump",2,1],[9960,-1560,"njump",3,1]
+  ]
+}
+lvlData[-19] = {
+  "format": 2,
+  "spawn": [150, 210],
   "about": { name: '', diff: "Orbo Pass", create: ''},
   "requirements": { Orbuck: 4 },
   "music": "arrival",
