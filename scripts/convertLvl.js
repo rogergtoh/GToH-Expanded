@@ -45,7 +45,11 @@ class LevelCompressor {
   compressBlock(block) {
     let compressedBlock = this.compressNumber(block[0]) + this.compressNumber(block[1]);
     compressedBlock += this.addDict(block[2]) + ":";
-    compressedBlock += this.compressNumber(block[3]) + this.compressNumber(block[4]);
+    if (block.length === 3) { // jsut in case hard coded levels don't include size
+      compressedBlock += "1:1:";
+    } else {
+      compressedBlock += this.compressNumber(block[3]) + this.compressNumber(block[4]);
+    }
 
     if (block.length > 5) {
       compressedBlock += this.compressTags(block[5], block.length > 6);
@@ -199,7 +203,12 @@ function fastImportId(lvlId) {
   return JSON.stringify(new LevelDecompressor(lvlData[lvlId].data).decompress());
 }
 
-
+function testCompressedLevelId(lvlId) {
+  if (lvlData[lvlId].format === 3) {
+    return "format is already 3.";
+  }
+  CreateWorld({"format": 3, "spawn": [150, 60], "data": new LevelCompressor(lvlData[lvlId].data).compress()}, false);
+}
 /*
 
 Format:
