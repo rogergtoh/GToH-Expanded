@@ -296,7 +296,6 @@ class Character {
     //limit gravity
     if (((this.yAccel > maxGravity * Math.max(this.gravityMultiplier, 0.5) && gravitySign === 1) || ((this.yAccel < -maxGravity * Math.max(this.gravityMultiplier, 0.5))) && gravitySign === -1)) {
       this.yAccel -= gravitySign;
-      console.log(this.yAccel)
     }
     if (Math.abs(this.yAccel) > this.speed && (this.gravityDisabled || statuses.includes('water'))) this.yAccel = this.speed * Math.sign(this.yAccel);
 

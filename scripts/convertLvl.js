@@ -19,10 +19,10 @@ class LevelCompressor {
 
   addDict(string) {
     if (this.dict.includes(string)) {
-      return this.dict.indexOf(string);
+      return this.dict.indexOf(string).toString(36);
     } else {
       this.dict.push(string);
-      return this.dict.length - 1;
+      return (this.dict.length - 1).toString(36);
     }
   }
 
@@ -106,7 +106,6 @@ class LevelDecompressor {
     }
 
     const tags = this.getTags();
-    console.log(tags)
     if (tags[0].length > 0 || tags.length > 1) { // if tags aren't empty. Also needed if oImg exists.
       block.push([]);
       for (const tag in tags[0]) {
@@ -119,7 +118,6 @@ class LevelDecompressor {
 
     block[2] = this.dict[block[2]];
 
-    console.log(this.pos);
     return block;
   }
 
