@@ -208,6 +208,7 @@ function process_command(command = null) {
     case 'level':
       if (command.length !== 2) return;
       CreateWorld(command[1]);
+      break;
     case 'setskin':
       socket.emit('server command', command);
       break;
