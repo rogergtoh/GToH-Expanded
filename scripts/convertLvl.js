@@ -186,8 +186,18 @@ class LevelDecompressor {
 
 
 function fastExportId(lvlId) {
+  if (lvlData[lvlId].format === 3) {
+    return "Error, level is already defined as format 3 (compressed format). Cancelling...";
+  }
   return JSON.stringify(new LevelCompressor(lvlData[lvlId].data).compress());
 } 
+
+function fastImportId(lvlId) {
+  if (lvlData[lvlId].format !== 3) {
+    return "Error, level is not defined as format 3 (compressed format). Cancelling...";
+  }
+  return JSON.stringify(new LevelDecompressor(lvlData[lvlId].data).decompress());
+}
 
 
 /*
