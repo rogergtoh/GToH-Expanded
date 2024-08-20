@@ -11,7 +11,7 @@ lvlData[-6969] = {
 }
 lvlData[-20] = {
   "format": 2,
-  "spawn": [150, 210],
+  "spawn": [150, 60],
   "about": { name: '', diff: "The Path of Legends", create: ''},
   "music": "arrival",
   "levels": [894],
@@ -1474,8 +1474,8 @@ lvlData[134] = {
 
 // Pick level ids to be added to PoL
 var legendPathLevels = [
-  {id: 1, name: "1-1"},
-  {id: 2, name: "1-2"}
+  {id: 1, name: "1-1", diff: ""},
+  {id: 2, name: "1-2", diff: ""}
 ];
 
 
@@ -1503,6 +1503,9 @@ for (const i in legendPathLevels) {
 
   // Change name
   lvlData[newLevelId].about.name = legendPathLevels[i].name;
+
+  // Remove/change difficulty
+  lvlData[newLevelId].about.diff = legendPathLevels[i].name;
 }
 
 
