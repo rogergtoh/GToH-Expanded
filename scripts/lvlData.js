@@ -1474,8 +1474,8 @@ lvlData[134] = {
 
 // Pick level ids to be added to PoL
 var legendPathLevels = [
-  {id: 1, name: "1-1", diff: ""},
-  {id: 2, name: "1-2", diff: ""}
+  {id: 1, name: "", diff: "1-1"},
+  {id: 2, name: "", diff: "1-2"}
 ];
 
 
