@@ -215,6 +215,12 @@ class Character {
               break;
             case 'sand':
               return true;
+            case 'woodfloor':
+              return true;
+            case 'brick':
+              return true;
+            case 'basketball':
+              return true;
             case 'seagrass':
               break;
             case 'sparkle':

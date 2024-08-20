@@ -36,6 +36,7 @@ var ReplayKeys = [];
 var ReplayPos = [];
 var Replaying = false;
 var LevelRewards = {};
+var Inventory = {};
 
 //world
 var OtherPlayers = {};
