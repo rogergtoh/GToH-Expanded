@@ -1505,7 +1505,7 @@ for (const i in legendPathLevels) {
   lvlData[newLevelId].about.name = legendPathLevels[i].name;
 
   // Remove/change difficulty
-  lvlData[newLevelId].about.diff = legendPathLevels[i].name;
+  lvlData[newLevelId].about.diff = legendPathLevels[i].diff;
 }
 
 
