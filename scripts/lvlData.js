@@ -12,7 +12,7 @@ lvlData[-6969] = {
 lvlData[-20] = {
   "format": 2,
   "spawn": [150, 60],
-  "about": { name: '', diff: "The Path of Legends", create: ''},
+  "about": { name: '', diff: "Path of Legends", create: ''},
   "music": "arrival",
   "levels": [894],
   "data": [
@@ -84,8 +84,13 @@ lvlData[-15] = {
     [540,-85,"portal",1,1,[120]],
     [680,-85,"portal",1,1,[121]],
     [820,-85,"portal",1,1,[126]],
+    [1020,-85,"portal",1,1,[130]],
+    [1180,-85,"portal",1,1,[131]],
+    [1340,-85,"portal",1,1,[132]],
+    [1500,-85,"portal",1,1,[133]],
+    [1660,-85,"portal",1,1,[134]],
     [150,200,"portal",1,1,[-2]],
-    [90,120,"block",5,1],[300,30,"block",7,1],[-300,30,"block",11,1],[510,30,"block",6,1],[-30,60,"block",1,8],[0,270,"block",12,1],[330,60,"block",1,7],[690,30,"block",54,1],[-2340,30,"block",68,1],[-150,90,"text",1,1,["<<< Cosmetics",15]],[450,90,"text",1,1,["Levels >>>",15]],[150,-60,"text",1,1,["Seasonal Archive",30]]
+    [90,120,"block",5,1],[300,30,"block",7,1],[-300,30,"block",11,1],[510,30,"block",6,1],[-30,60,"block",1,8],[0,270,"block",12,1],[330,60,"block",1,7],[690,30,"block",54,1],[-2340,30,"block",68,1],[-150,90,"text",1,1,["<<< Cosmetics",15]],[450,90,"text",1,1,["Levels >>>",15]],[150,-60,"text",1,1,["Seasonal Archive",30]],[1020,0,"orbopass1",1,1],[1180,0,"orbopass1",1,1],[1340,0,"orbopass1",1,1],[1500,0,"orbopass1",1,1],[1660,0,"orbopass1",1,1]
     ]
 }
 lvlData[-14] = {
