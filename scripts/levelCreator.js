@@ -202,7 +202,9 @@ var sideBarOptions = {
     ['sparkle', 'sparkle'],
     ['woodfloor', 'woodfloor'],
     ['brick', 'brick'],
-    ['basketball', 'basketball']
+    ['basketball', 'basketball'],
+    ['easel', 'easel'],
+    ['classdoor', 'classdoor']
   ],
   text: [
     ['errorblock', null, {type: 'text'}],

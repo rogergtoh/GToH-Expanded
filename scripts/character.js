@@ -220,7 +220,11 @@ class Character {
             case 'brick':
               return true;
             case 'basketball':
-              return true;
+              break;
+            case 'easel':
+              break;
+            case 'classdoor':
+              break;
             case 'seagrass':
               break;
             case 'sparkle':

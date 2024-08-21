@@ -271,6 +271,15 @@ class Block {
       case 'orbopass1':
         this.img = cliDir + 'textures/orbopass1.png';
         break;
+      case 'orbopass2':
+        this.img = cliDir + 'textures/orbopass2.png';
+        break;
+      case 'classdoor':
+        this.img = cliDir + 'textures/classdoor.png';
+        break;
+      case 'easel':
+        this.img = cliDir + 'textures/easel.png';
+        break;
       case 'mud':
         this.img = cliDir + `textures/mudblock.png`;
         break;
