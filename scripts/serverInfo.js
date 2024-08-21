@@ -146,6 +146,7 @@ function syncProgress() {
 
 function syncRewards() {
   LevelRewards = {};
+  // Get all the level rewards
   for (const i in levelsComplete) {
     if (!(levelsComplete[i] > 0)) continue;
     if (!('reward' in lvlData[i])) continue;
@@ -155,6 +156,18 @@ function syncRewards() {
       } else {
         LevelRewards[b] += lvlData[i].reward[b];
       }
+    }
+  }
+
+  // then deduct points based off inventory
+  for (const item in Inventory) {
+    if (!(item in InventoryItems)) continue; // SKIPPA if item price is not listed.
+
+    for (const cost in InventoryItems[item]) {
+      if (!(cost in LevelRewards))
+        LevelRewards[cost] = 0;
+      LevelRewards[cost] -= InventoryItems[item][cost] * Inventory[item];
+
     }
   }
 }
