@@ -1,5 +1,5 @@
 const InventoryItems = {
-  "item1": {StyleToken: 2, Orbuck: 2}
+  "elegant": {StyleToken: 2}
 };
 
 function tryBuy(itemName, allowMultiple = false) {
