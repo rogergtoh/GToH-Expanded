@@ -225,6 +225,8 @@ class Character {
               break;
             case 'classdoor':
               break;
+            case 'polwoodfloor':
+              return true;
             case 'seagrass':
               break;
             case 'sparkle':

@@ -204,7 +204,8 @@ var sideBarOptions = {
     ['brick', 'brick'],
     ['basketball', 'basketball'],
     ['easel', 'easel'],
-    ['classdoor', 'classdoor']
+    ['classdoor', 'classdoor'],
+    ['polwoodfloor', 'polwoodfloor']
   ],
   text: [
     ['errorblock', null, {type: 'text'}],

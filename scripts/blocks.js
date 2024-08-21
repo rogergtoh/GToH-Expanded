@@ -280,6 +280,9 @@ class Block {
       case 'easel':
         this.img = cliDir + 'textures/easel.png';
         break;
+      case 'polwoodfloor':
+        this.img = cliDir + 'textures/polwoodfloor.png';
+        break;
       case 'mud':
         this.img = cliDir + `textures/mudblock.png`;
         break;
