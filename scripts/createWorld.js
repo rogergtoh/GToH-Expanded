@@ -193,12 +193,17 @@ function CreateWorld(id, useID = true) {
     worldText.push(new Text('GToH Expanded ' + GAMEVERSION.join("."), 670, -40, 12));
     world.push(new AnimatedBlock(95, 260, 'orbo.png', t, 2, ['nc']));
     //worldText.push(new Text('Coming March 19...', 360, -320, 12));
-    world.push(new AnimatedBlock(520, -320, 'portalorbuxanim.png',
+    world.push(new AnimatedBlock(520, -320, 'portalgreyanim.png',
     {
       init:[30, 30, 4, 2],
       idle:[0, 4]
     }, 1, ['nc']));
     world.push(new AnimatedBlock(950, -120, 'portalseasonanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
+    world.push(new AnimatedBlock(1350, -465, 'portalorbuxanim.png',
     {
       init:[30, 30, 4, 2],
       idle:[0, 4]
