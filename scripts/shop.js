@@ -17,7 +17,7 @@ function tryBuy(itemName, allowMultiple = false) {
   } else {
     Inventory[itemName] = 1;
   }
-  localStorage.setItem('inventory', JSON.stringify(inventory));
+  localStorage.setItem('inventory', JSON.stringify(Inventory));
   syncRewards();
   return true;
 }
