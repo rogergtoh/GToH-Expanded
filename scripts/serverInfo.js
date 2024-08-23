@@ -139,7 +139,9 @@ function syncProgress() {
   if (swaps != null) {
     swapsComplete = JSON.parse(swaps);
   }
-
+  if (inv != null) {
+    Inventory = JSON.parse(inv);
+  }
   syncRewards();
 
   updateAllStars();
