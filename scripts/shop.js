@@ -1,5 +1,12 @@
 const InventoryItems = {
-  "elegant": {StyleToken: 2}
+  "starskin": {StyleToken: 10},
+  "suit": {StyleToken: 20},
+  "ninja": {StyleToken: 20},
+  "knight": {StyleToken: 25},
+  "underwear": {StyleToken: 30},
+  "elegant": {StyleToken: 45},
+  "orboskin": {StyleToken: 50},
+  "love": {StyleToken: 75}
 };
 
 function tryBuy(itemName, allowMultiple = false) {
