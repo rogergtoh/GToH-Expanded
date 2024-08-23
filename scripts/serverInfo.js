@@ -131,6 +131,7 @@ if (socket != undefined) {
 function syncProgress() {
   const lvls = localStorage.getItem("levels");
   const swaps = localStorage.getItem("swaps");
+  const inv = localStorage.getItem('inventory');
   console.log("synced levels")
   if (lvls != null) {
     levelsComplete = JSON.parse(lvls);
