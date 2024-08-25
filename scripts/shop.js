@@ -10,7 +10,7 @@ const InventoryItems = {
 };
 
 function tryBuy(itemName, allowMultiple = false) {
-  if (!checkReqs(InventoryItems[itemName])) return false;
+  if (!checkReqs(InventoryItems[itemName]) && !(itemName in Inventory)) return false;
   
   if (allowMultiple && (itemName in Inventory)) {
     Inventory[itemName] += 1;
