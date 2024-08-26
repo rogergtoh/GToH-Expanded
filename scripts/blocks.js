@@ -97,6 +97,15 @@ class Block {
       case 'seagrass':
         this.img = cliDir + 'textures/seagrass.png';
         break;
+      case 'styletoken':
+        this.img = cliDir + 'textures/styletoken.png';
+        break;
+      case 'seasontoken':
+        this.img = cliDir + 'textures/seasontoken.png';
+        break;
+      case 'eliteseasontoken':
+        this.img = cliDir + 'textures/eliteseasontoken.png';
+        break;
       case 'dirtblock':
         this.img = cliDir + 'textures/dirtblock2.png';
          break;

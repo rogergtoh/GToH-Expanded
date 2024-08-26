@@ -227,6 +227,12 @@ class Character {
               break;
             case 'polwoodfloor':
               return true;
+            case 'styletoken':
+              break;
+            case 'seasontoken':
+              break;
+            case 'eliteseasontoken':
+              break;
             case 'seagrass':
               break;
             case 'sparkle':

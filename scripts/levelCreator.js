@@ -205,7 +205,10 @@ var sideBarOptions = {
     ['basketball', 'basketball'],
     ['easel', 'easel'],
     ['classdoor', 'classdoor'],
-    ['polwoodfloor', 'polwoodfloor']
+    ['polwoodfloor', 'polwoodfloor'],
+    ['styletoken', 'styletoken'],
+    ['seasontoken', 'seasontoken'],
+    ['eliteseasontoken', 'eliteseasontoken']
   ],
   text: [
     ['errorblock', null, {type: 'text'}],
