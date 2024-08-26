@@ -1,5 +1,5 @@
 const InventoryItems = {
-  "starskin": {StyleToken: 10},
+  "starskin": {StyleToken: 5},
   "suit": {StyleToken: 20},
   "ninja": {StyleToken: 20},
   "knight": {StyleToken: 25},
