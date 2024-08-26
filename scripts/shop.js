@@ -9,6 +9,7 @@ const InventoryItems = {
   "love": {StyleToken: 75},
   "backpacker": {NewSeasonToken: 1},
   "nerd": {EliteSeasonToken: 1},
+  "eraser": {EliteSeasonToken: 1},
   "wetsuit": {SeasonToken: 1},
   "lifeguard": {SeasonToken: 1},
   "bikini": {SeasonToken: 1},
