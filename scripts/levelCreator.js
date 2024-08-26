@@ -208,7 +208,8 @@ var sideBarOptions = {
     ['polwoodfloor', 'polwoodfloor'],
     ['styletoken', 'styletoken'],
     ['seasontoken', 'seasontoken'],
-    ['eliteseasontoken', 'eliteseasontoken']
+    ['eliteseasontoken', 'eliteseasontoken'],
+    ['orbopass1', 'orbopass1']
   ],
   text: [
     ['errorblock', null, {type: 'text'}],

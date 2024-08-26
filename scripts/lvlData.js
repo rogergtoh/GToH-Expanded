@@ -73,7 +73,7 @@ lvlData[-15] = {
   "spawn": [150, 60],
   "about": { name: '', diff: "Archive", create: ''},
   "music": "main-archive",
-  "levels": [117,120,121,126],
+  "levels": [117,120,121,126,130,131,132,133,134],
   "data": [
     [395,-85,"portal",1,1,[117]],
     [540,-85,"portal",1,1,[120]],
@@ -85,7 +85,7 @@ lvlData[-15] = {
     [1500,-85,"portal",1,1,[133]],
     [1660,-85,"portal",1,1,[134]],
     [150,200,"portal",1,1,[-2]],
-    [90,120,"block",5,1],[300,30,"block",7,1],[-300,30,"block",11,1],[510,30,"block",6,1],[-30,60,"block",1,8],[0,270,"block",12,1],[330,60,"block",1,7],[690,30,"block",54,1],[-2340,30,"block",68,1],[-150,90,"text",1,1,["<<< Cosmetics",15]],[450,90,"text",1,1,["Levels >>>",15]],[150,-60,"text",1,1,["Seasonal Archive",30]],[1020,-85,"orbopass1",1,1],[1180,-85,"orbopass1",1,1],[1340,-85,"orbopass1",1,1],[1500,-85,"orbopass1",1,1],[1660,-85,"orbopass1",1,1],[-550,-80,"code",1,1,["if(checkReqs({SeasonToken:4}))setSkin('bikini')"],"skins/bikini.png"],[-550,-98,"text",1,1,["Bikini Skin",10]],[-550,-114,"text",1,1,["4 Season Tokens",6]],[-550,-128,"text",1,1,["SEASONAL",6]],[-550,-40,"text",1,1,["By Coincouch",6]],[-750,-80,"code",1,1,["if(checkReqs({SeasonToken:5}))setSkin('diving')"],"skins/diving.png"],[-750,-98,"text",1,1,["Diving Skin",10]],[-750,-114,"text",1,1,["5 Season Tokens",6]],[-750,-128,"text",1,1,["SEASONAL",6]],[-750,-40,"text",1,1,["By Sweet&Sour",6]],[-150,-80,"code",1,1,["if(checkReqs({SeasonToken:1}))setSkin('wetsuit')"],"skins/wetsuit.png"],[-150,-98,"text",1,1,["Wetsuit Skin",10]],[-150,-114,"text",1,1,["1 Season Token",6]],[-150,-128,"text",1,1,["SEASONAL",6]],[-350,-80,"code",1,1,["if(checkReqs({SeasonToken:3}))setSkin('lifeguard')"],"skins/lifeguard.png"],[-350,-98,"text",1,1,["Lifeguard Skin",10]],[-350,-114,"text",1,1,["3 Season Tokens",6]],[-350,-128,"text",1,1,["SEASONAL",6]]
+    [90,120,"block",5,1],[300,30,"block",7,1],[-300,30,"block",11,1],[510,30,"block",6,1],[-30,60,"block",1,8],[0,270,"block",12,1],[330,60,"block",1,7],[690,30,"block",54,1],[-2340,30,"block",68,1],[-150,90,"text",1,1,["<<< Cosmetics",15]],[450,90,"text",1,1,["Levels >>>",15]],[150,-60,"text",1,1,["Seasonal Archive",30]],[1020,-85,"orbopass1",1,1],[1180,-85,"orbopass1",1,1],[1340,-85,"orbopass1",1,1],[1500,-85,"orbopass1",1,1],[1660,-85,"orbopass1",1,1],[-550,-80,"code",1,1,["if(tryBuy('bikini'))setSkin('bikini')"],"skins/bikini.png"],[-550,-98,"text",1,1,["Bikini Skin",10]],[-550,-114,"text",1,1,["1 OG Season Token",6]],[-550,-40,"text",1,1,["By Coincouch",6]],[-750,-80,"code",1,1,["if(tryBuy('diving'))setSkin('diving')"],"skins/diving.png"],[-750,-98,"text",1,1,["Diving Skin",10]],[-750,-114,"text",1,1,["2 OG Season Tokens",6]],[-750,-40,"text",1,1,["By Sweet&Sour",6]],[-150,-80,"code",1,1,["if(tryBuy('wetsuit'))setSkin('wetsuit')"],"skins/wetsuit.png"],[-150,-98,"text",1,1,["Wetsuit Skin",10]],[-150,-114,"text",1,1,["1 OG Season Token",6]],[-350,-80,"code",1,1,["if(tryBuy('lifeguard'))setSkin('lifeguard')"],"skins/lifeguard.png"],[-350,-98,"text",1,1,["Lifeguard Skin",10]],[-350,-114,"text",1,1,["1 OG Season Token",6]]
     ]
 }
 lvlData[-14] = {

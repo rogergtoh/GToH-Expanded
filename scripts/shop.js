@@ -6,7 +6,13 @@ const InventoryItems = {
   "underwear": {StyleToken: 30},
   "elegant": {StyleToken: 45},
   "orboskin": {StyleToken: 50},
-  "love": {StyleToken: 75}
+  "love": {StyleToken: 75},
+  "backpacker": {NewSeasonToken: 1},
+  "nerd": {EliteSeasonToken: 1},
+  "wetsuit": {SeasonToken: 1},
+  "lifeguard": {SeasonToken: 1},
+  "bikini": {SeasonToken: 1},
+  "diving": {SeasonToken: 2}
 };
 
 function tryBuy(itemName, allowMultiple = false) {
