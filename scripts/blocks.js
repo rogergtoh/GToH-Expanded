@@ -88,6 +88,18 @@ class Block {
       case 'seagrass':
         this.img = cliDir + 'textures/seagrass.png';
         break;
+      case 'easel':
+        this.img = cliDir + 'textures/easel.png';
+        break;
+      case 'woodfloor':
+        this.img = cliDir + 'textures/woodfloor.png';
+        break;
+      case 'basketball':
+        this.img = cliDir + 'textures/basketball.png';
+        break;
+      case 'brick':
+        this.img = cliDir  + 'textures/brick.png';
+        break;
       case 'dirtblock':
         this.img = cliDir + 'textures/dirtblock2.png';
          break;
