@@ -199,7 +199,11 @@ var sideBarOptions = {
     ['vines', 'vine'],
     ['bblank', 'blank2'],
     ['flower', 'flower'],
-    ['sparkle', 'sparkle']
+    ['sparkle', 'sparkle'],
+    ['woodfloor', 'woodfloor'],
+    ['brick', 'brick'],
+    ['easel', 'easel'],
+    ['basketball', 'basketball']
   ],
   text: [
     ['errorblock', null, {type: 'text'}],
