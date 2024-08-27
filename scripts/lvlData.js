@@ -37,7 +37,7 @@ lvlData[-19] = {
 lvlData[-18] = {
   "format": 2,
   "spawn": [150, 210],
-  "about": { name: 'Token View', diff: "Tokens", create: ''},
+  "about": { name: '', diff: "Token View", create: ''},
   "music": "shop",
   "levels": [117,120,121,126],
   "data": [
@@ -105,7 +105,7 @@ lvlData[-14] = {
 lvlData[-13] = {
   "format": 2,
   "spawn": [150, 60],
-  "about": { name: 'Difficulty: 8/10', diff: "Planet D", create: ''},
+  "about": { name: '', diff: "Planet D", create: ''},
   "levels": [55,113,114,115,122,124,125],
   "data": [
     [250,-315,"portal",1,1,[-2]],
@@ -123,7 +123,7 @@ lvlData[-13] = {
 lvlData[-12] = {
   "format": 2,
   "spawn": [150, 210],
-  "about": { name: 'Difficulty: 3/10', diff: "World Four", create: ''},
+  "about": { name: '', diff: "World Four", create: ''},
   "music": "traveler",
   "levels": [104,105,106,107,108,109,110,111],
   "data": [
@@ -168,7 +168,7 @@ lvlData[-11] = {
 lvlData[-10] = {
   "format": 2,
   "spawn": [150, 210],
-  "about": { name: 'Difficulty: 8.5/10', diff: "Planet C", create: ''},
+  "about": { name: '', diff: "Planet C", create: ''},
   "music": "arrival",
   "levels": [86,87,88,89,90,91,92,93,94],
   "data": [
@@ -188,7 +188,7 @@ lvlData[-10] = {
 lvlData[-9] = {
   "format": 2,
   "spawn": [150, 210],
-  "about": { name: 'Difficulty: 9/10', diff: "GAUNTLET", create: ''},
+  "about": { name: '', diff: "GAUNTLET", create: ''},
   "requirements": { InterludeToken: 35 },
   "music": "Heccfinalfloor",
   "levels": [80,81,82,83,84],
@@ -205,7 +205,7 @@ lvlData[-9] = {
 lvlData[-8] = {
   "format": 2,
   "spawn": [150, 210],
-  "about": { name: 'Difficulty: 8.5/10', diff: "Interlude Three", create: ''},
+  "about": { name: '', diff: "Interlude Three", create: ''},
   "music": "trec",
   "levels": [86,87,88,89,90,91,92,93,94,55,113,114,115,122,124,125],
   "data": [
@@ -232,7 +232,7 @@ lvlData[-8] = {
 lvlData[-7] = {
   "format": 2,
   "spawn": [150, 210],
-  "about": { name: 'Difficulty: 5.5/10', diff: "Interlude Two", create: ''},
+  "about": { name: '', diff: "Interlude Two", create: ''},
   "music": "trac",
   "levels": [62,63,64,65,66,68,70,72,77,78,61,67,71,73,74,75,76,79,85],
   "data": [
@@ -262,7 +262,7 @@ lvlData[-7] = {
 lvlData[-6] = {
   "format": 2,
   "spawn": [150, 210],
-  "about": { name: 'Difficulty: 6/10', diff: "Interlude One", create: ''},
+  "about": { name: '', diff: "Interlude One", create: ''},
   "music": 'yehyeh',
   "levels": [34, 35, 36, 37,38,40,43,45,46,47,48,49,50,51,52,53,54],
   "data": [
@@ -290,7 +290,7 @@ lvlData[-6] = {
 lvlData[-5] = {
   "format": 1,
   "spawn": [150, 210],
-  "about": { name: 'Difficulty: 8/10', diff: 'TRIALS', create: ''},
+  "about": { name: '', diff: 'TRIALS', create: ''},
   "levels": [22,23,24,31,33,28],
   "data": [
     [-100,240,'block',50,1],
@@ -307,7 +307,7 @@ lvlData[-5] = {
 lvlData[-4] = {
   "format": 1,
   "spawn": [150, 210],
-  "about": { name: 'Difficulty: 4.5/10', diff: 'World Three', create: '' },
+  "about": { name: '', diff: 'World Three', create: '' },
   "music": "fountain",
   "levels": [20,21,25,26,27,29,30,32,39,41,42,44],
   "data": [
@@ -333,7 +333,7 @@ lvlData[-4] = {
 lvlData[-3] = {
   "format": 1,
   "spawn": [0, 210],
-  "about": {name: 'Difficulty: 3/10', diff: 'World Two', create: ''},
+  "about": {name: '', diff: 'World Two', create: ''},
   "music": "hecc3",
   "levels": [7,8,12,14,15,16,17,18,19],
   "data": [[-100,240,"block",50,1],
@@ -384,7 +384,7 @@ lvlData[-1] = {
 lvlData[0] = {
   "format": 1,
   "spawn": [90, 210],
-  "about": { name: 'Difficulty: 1/10', diff: 'World One', create: '' },
+  "about": { name: '', diff: 'World One', create: '' },
   "music": "traveler",
   "levels": [1,2,3,4,5,6,9,13],
   "data": 

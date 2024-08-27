@@ -8,6 +8,7 @@ const InventoryItems = {
   "orboskin": {StyleToken: 50},
   "love": {StyleToken: 75},
   "backpacker": {NewSeasonToken: 1},
+  "pencil": {NewSeasonToken: 1},
   "nerd": {EliteSeasonToken: 1},
   "eraser": {EliteSeasonToken: 1},
   "wetsuit": {SeasonToken: 1},
