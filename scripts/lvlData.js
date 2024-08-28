@@ -24,14 +24,14 @@ lvlData[-20] = {
 }
 lvlData[-19] = {
   "format": 2,
-  "spawn": [150, 210],
+  "spawn": [1330, 60],
   "about": { name: '', diff: "Orbo Pass", create: ''},
-  "requirements": { Orbuck: 4 },
+  "requirements": { PoLPoint: 25 },
   "music": "arrival",
   "levels": [133,134],
   "data": [
     [150,125,"portal",1,1,[-2]],
-    [60,150,"njump",1,1],[60,180,"njump",1,5],[90,300,"njump",5,1],[240,300,"njump",1,1],[270,120,"njump",1,2],[270,270,"njump",1,2],[300,150,"njump",1,1],[300,270,"njump",1,1],[150,240,"njump",1,1],[150,270,"njump",1,1],[60,300,"sand",1,1],[210,300,"sand",2,1],[60,180,"sand",1,1],[240,270,"hand",1,1],[236,253,"beachball",1,1],[330,270,"sand",7,1],[540,270,"sand",7,1],[330,150,"njump",1,1],[330,120,"njump",3,1],[390,90,"njump",1,1],[420,90,"njump",12,1],[330,300,"sand",14,3],[330,390,"sand",14,2],[750,270,"water",8,3],[750,360,"water",26,8],[1500,240,"water",1,4],[990,240,"water",17,4],[1260,210,"water",9,1],[1500,210,"die",1,13],[750,570,"die",25,1],[750,480,"die",1,4],[720,450,"die",1,1],[750,450,"die",1,1],[1530,-30,"die",1,8],[60,90,"njump",1,2],[60,60,"njump",1,1],[90,60,"njump",7,1],[270,90,"njump",1,1],[270,60,"sand",1,2],[90,60,"sand",3,1]
+    [60,-210,"njump",1,10],[660,90,"woodfloor",3,1],[720,90,"woodfloor",5,1],[960,90,"woodfloor",4,1],[1050,90,"woodfloor",5,1],[960,90,"polwoodfloor",2,1],[1110,90,"polwoodfloor",2,1],[1140,-180,"brick",1,8],[1200,90,"woodfloor",7,1],[1410,90,"woodfloor",4,1],[1290,90,"polwoodfloor",8,1],[1290,-210,"brick",7,1],[1140,-210,"brick",5,1],[1140,60,"njump",1,1],[1140,60,"classdoor",1,1],[1500,-210,"brick",1,3],[1500,-120,"brick",8,1],[1530,90,"woodfloor",12,1],[1860,90,"woodfloor",5,1],[2010,90,"woodfloor",10,1],[1740,-120,"brick",21,1],[2340,-90,"brick",1,7],[2310,90,"woodfloor",1,1],[2220,60,"basketball",1,1],[1830,60,"easel",1,1],[1320,-150,"text",1,1,["The Halls",15]],[870,90,"woodfloor",3,1],[810,60,"easel",1,1]
   ]
 }
 lvlData[-18] = {
@@ -54,7 +54,7 @@ lvlData[-17] = {
   "data": [
     [150,-30,"portal",1,1,[-2]],
     [1545,590,"portal",1,1,[-19]],
-    [90,90,"block",5,1],[90,-360,"njump",1,15],[240,90,"small",1,5],[245,90,"small",1,4],[250,90,"small",1,3],[255,90,"small",1,2],[260,90,"small",4,1],[240,-60,"text",1,1,["Season 1",15]],[239,-43,"text",1,1,["Dive into the fun!",9]],[210,180,"water",27,13],[180,570,"sand",29,1],[330,540,"seagrass",1,1],[720,540,"seagrass",1,1],[870,540,"seagrass",2,1],[480,540,"seagrass",1,1],[810,510,"vine",1,2],[540,480,"vine",1,3],[390,510,"vine",1,2],[240,540,"vine",1,1],[180,120,"njump",1,15],[1020,0,"njump",1,5],[1020,150,"njump",1,12],[1050,480,"njump",4,1],[1050,570,"njump",4,1],[1020,510,"water",1,2],[1050,540,"water",1,1],[1050,510,"hand",1,1],[1170,480,"njump",1,1],[1170,570,"njump",1,1],[1230,480,"njump",1,1],[1200,480,"njump",1,1],[1170,600,"njump",1,2],[1200,630,"njump",2,1],[1260,480,"njump",1,3],[1290,540,"njump",2,1],[1260,630,"njump",6,1],[1350,540,"njump",3,1],[1440,630,"njump",2,1],[1440,540,"njump",2,1],[1380,480,"text",1,1,["Season 1",15]],[1378,497,"text",1,1,["The Orbo Pass",9]],[1470,510,"njump",1,1],[1470,660,"njump",1,1],[1500,660,"njump",3,1],[1500,510,"njump",3,1],[1590,510,"njump",2,1],[1620,540,"njump",1,5],[1590,660,"njump",1,1],[1530,720,"text",1,1,["Unlock the Orbo Pass from Orbo's Shop!",9]],[1531,739,"text",1,1,["Unlock the Orbo Pass from Orbo's Shop!",null]],[1532,738,"text",1,1,["Only 4 Orbux!",9]],[1230,600,"beachball",1,1],[1590,630,"seagrass",1,1],[1350,630,"sand",3,1],[1110,570,"sand",1,1],[1200,630,"sand",2,1],[1290,540,"sand",1,1],[1140,480,"sand",1,1],[1470,540,"sand",1,1],[1440,540,"sand",1,1],[1560,510,"sand",2,1],[1530,660,"sand",2,1],[1620,570,"sand",1,4]
+    [60,90,"woodfloor",8,1],[60,-210,"njump",1,10],[60,-120,"brick",1,7],[60,-270,"brick",1,5],[270,60,"classdoor",1,1],[270,-210,"njump",1,9],[270,-210,"brick",1,9],[300,90,"woodfloor",6,1],[480,90,"woodfloor",6,1],[660,90,"woodfloor",3,1],[720,90,"woodfloor",5,1],[840,90,"woodfloor",5,1],[960,90,"woodfloor",4,1],[1050,90,"woodfloor",5,1],[960,90,"polwoodfloor",2,1],[1110,90,"polwoodfloor",2,1],[1140,60,"door",1,1,[0]],[1140,-180,"brick",1,8],[1170,-90,"key",1,1,[0]],[1140,60,"classdoor",1,1],[1200,90,"woodfloor",7,1],[1410,90,"woodfloor",4,1],[1290,90,"polwoodfloor",8,1],[1500,-210,"brick",1,10],[1290,-210,"brick",7,1],[403,102,"text",1,1,["Earn Season Tokens when beating a seasonal level!",10]],[562,88,"seasontoken",1,1],[241,87,"seasontoken",1,1],[1393,133,"text",1,1,["Unlock the Orbo Pass!",7]],[1387,147,"text",1,1,["Complete 25 Path of Legends Levels",7]],[390,-90,"text",1,1,["The Classroom",15]],[510,60,"basketball",1,1],[930,60,"easel",1,1],[90,60,"easel",1,1]
   ]
 }
 lvlData[-16] = {
@@ -1499,7 +1499,7 @@ for (const i in legendPathLevels) {
   }
 
   // Add in reward
-  lvlData[newLevelId].reward = {PathOfLegends: 1, StyleToken: 1, PoLToken: 1};
+  lvlData[newLevelId].reward = {PathOfLegends: 1, StyleToken: 1, PoLPoint: 1};
 
   // Change name
   lvlData[newLevelId].about.name = legendPathLevels[i].name;
