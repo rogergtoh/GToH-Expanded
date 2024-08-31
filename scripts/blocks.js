@@ -198,7 +198,7 @@ class Block {
         if (lvlData[this.tags[0]] === undefined) break;
         worldText.push(new Text(lvlData[this.tags[0]].about.name, this.x + 15, this.y - 20, 8));
         worldText.push(new Text(lvlData[this.tags[0]].about.diff, this.x + 15, this.y + 5, 16));
-        worldText.push(new Text(lvlData[this.tags[0]].about.req, this.x + 15, this.y -30, 8));
+        worldText.push(new Text('Requires ' + lvlData[this.tags[0]].about.req, this.x + 15, this.y -30, 8));
         if (lvlData[this.tags[0]].about.create !== '')
           worldText.push(new Text('By ' + lvlData[this.tags[0]].about.create, this.x + 15, this.y - 40, 8));
         if (levelsComplete[this.tags[0]] !== false && levelsComplete[this.tags[0]] !== null && levelsComplete[this.tags[0]] !== undefined)
