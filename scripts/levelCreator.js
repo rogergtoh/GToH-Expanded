@@ -209,7 +209,8 @@ var sideBarOptions = {
     ['styletoken', 'styletoken'],
     ['seasontoken', 'seasontoken'],
     ['eliteseasontoken', 'eliteseasontoken'],
-    ['orbopass1', 'orbopass1']
+    ['orbopass1', 'orbopass1'],
+    ['orbopass2', 'orbopass2']
   ],
   text: [
     ['errorblock', null, {type: 'text'}],
