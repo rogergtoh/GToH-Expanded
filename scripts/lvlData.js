@@ -25,7 +25,7 @@ lvlData[-20] = {
 lvlData[-19] = {
   "format": 2,
   "spawn": [1330, 60],
-  "about": { name: '', diff: "Orbo Pass", create: '', req: 'Complete 2-5 in Path of Legends', req: ''},
+  "about": { name: '', diff: "Orbo Pass", create: '', req: 'Complete 2-5 in Path of Legends'},
   "requirements": { PoLPoint: 15 },
   "music": "arrival",
   "levels": [133,134],
@@ -188,7 +188,7 @@ lvlData[-10] = {
 lvlData[-9] = {
   "format": 2,
   "spawn": [150, 210],
-  "about": { name: '', diff: "GAUNTLET", create: '', req: 'Completed 3-5 in Path of Legends', req: ''},
+  "about": { name: '', diff: "GAUNTLET", create: '', req: 'Completed 3-5 in Path of Legends'},
   "requirements": { PoLPoint: 25 },
   "music": "Heccfinalfloor",
   "levels": [80,81,82,83,84],
