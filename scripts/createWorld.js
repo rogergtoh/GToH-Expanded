@@ -133,7 +133,7 @@ function CreateWorld(id, useID = true) {
   if (id === -18) {
       worldText.push(new Text('Style Tokens: ' + LevelRewards.StyleToken, 425, 165, 12));
       worldText.push(new Text('Season Tokens: ' + LevelRewards.Season2Token, 425, 145, 12));
-      worldText.push(new Text('Season Tokens: ' + LevelRewards.EliteSeason2Token, 425, 125, 12));
+      worldText.push(new Text('Elite Season Tokens: ' + LevelRewards.EliteSeason2Token, 425, 125, 12));
       worldText.push(new Text('undefined = 0', -50, 165, 12));
       worldText.push(new Text('Get Style Tokens when you beat a level for the first time!', 425, 210, 12));
   }
