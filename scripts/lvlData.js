@@ -18,6 +18,7 @@ lvlData[-20] = {
   "data": [
     [400,-30,"portal",1,1,[900]],
     [600,-30,"portal",1,1,[901]],
+    [800,-30,"portal",1,1,[902]],
     [210,-30,"portal",1,1,[-2]],
     [150,90,"block",1,1],[120,90,"block",1,1],[90,90,"block",1,1],[90,-330,"njump",1,15],[180,90,"block",329,1],[10050,-1560,"njump",1,56],[9990,-1560,"njump",2,1],[9960,-1560,"njump",3,1]
   ]
@@ -1523,8 +1524,42 @@ lvlData[140] = {
 
 // Pick level ids to be added to PoL
 var legendPathLevels = [
-  {id: 1, name: "", diff: "1-1", req: ""},
-  {id: 2, name: "", diff: "1-2"}
+  {id: 2, name: "", diff: "1-1", req: ""},
+  {id: 12, name: "", diff: "1-2"},
+  {id: 13, name: "", diff: "1-3", req: ""},
+  {id: 16, name: "", diff: "1-4", req: ""},
+  {id: 20, name: "", diff: "1-5", req: ""},
+  {id: 29, name: "", diff: "1-6", req: ""},
+  {id: 10, name: "", diff: "1-7", req: ""},
+  {id: 9, name: "", diff: "1-8", req: ""},
+  {id: 4, name: "", diff: "1-9", req: ""},
+  {id: 18, name: "", diff: "1-10", req: ""},
+  {id: 25, name: "", diff: "2-1", req: ""},
+  {id: 17, name: "", diff: "2-2", req: ""},
+  {id: 30, name: "", diff: "2-3", req: ""},
+  {id: 38, name: "", diff: "2-4", req: ""},
+  {id: 19, name: "", diff: "2-5", req: ""},
+  {id: 39, name: "", diff: "2-6", req: ""},
+  {id: 41, name: "", diff: "2-7", req: ""},
+  {id: 42, name: "", diff: "2-8", req: ""},
+  {id: 45, name: "", diff: "2-9", req: ""},
+  {id: 54, name: "", diff: "2-10", req: ""},
+  {id: 47, name: "", diff: "3-1", req: ""},
+  {id: 28, name: "", diff: "3-2", req: ""},
+  {id: 66, name: "", diff: "3-3", req: ""},
+  {id: 72, name: "", diff: "3-4", req: ""},
+  {id: 34, name: "", diff: "3-5", req: ""},
+  {id: 74, name: "", diff: "3-6", req: ""},
+  {id: 78, name: "", diff: "3-7", req: ""},
+  {id: 79, name: "", diff: "3-8", req: ""},
+  {id: 94, name: "", diff: "3-9", req: ""},
+  {id: 58, name: "", diff: "3-10", req: ""},
+  {id: 76, name: "", diff: "4-1", req: ""},
+  {id: 96, name: "", diff: "4-2", req: ""},
+  {id: 124, name: "", diff: "4-3", req: ""},
+  {id: 76, name: "", diff: "4-3", req: ""},
+  {id: 59, name: "", diff: "4-4", req: ""},
+  {id: 115, name: "", diff: "4-5", req: ""},
 ];
 
 
