@@ -188,7 +188,7 @@ lvlData[-10] = {
 lvlData[-9] = {
   "format": 2,
   "spawn": [150, 210],
-  "about": { name: '', diff: "GAUNTLET", create: '', req: 'Completed 3-5 in Path of Legends'},
+  "about": { name: '', diff: "GAUNTLET", create: '', req: 'Complete 3-5 in the PoL'},
   "requirements": { PoLPoint: 25 },
   "music": "Heccfinalfloor",
   "levels": [80,81,82,83,84],
@@ -363,7 +363,7 @@ lvlData[-2] = {
     [1130,-120,"portal",1,1,[-6]],
     [1300,-120,"portal",1,1,[-7]],
     [1470,-120,"portal",1,1,[-8]],
-    [325,-370,"portal",1,1,[-9]],
+    [325,-320,"portal",1,1,[-9]],
     [-90,-40,"portal",1,1,[-11]],
     [540,-120,"portal",1,1,[-12]],
     [1830,210,"portal",1,1,[-15]],
