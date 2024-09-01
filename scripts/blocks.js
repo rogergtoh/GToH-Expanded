@@ -198,9 +198,9 @@ class Block {
         if (lvlData[this.tags[0]] === undefined) break;
         worldText.push(new Text(lvlData[this.tags[0]].about.name, this.x + 15, this.y - 20, 8));
         worldText.push(new Text(lvlData[this.tags[0]].about.diff, this.x + 15, this.y + 5, 16));
-        worldText.push(new Text(lvlData[this.tags[0]].about.req, this.x + 15, this.y - 35, 8));
+        worldText.push(new Text(lvlData[this.tags[0]].about.req, this.x + 15, this.y - 50, 8));
         if (lvlData[this.tags[0]].about.create !== '')
-          worldText.push(new Text('By ' + lvlData[this.tags[0]].about.create, this.x + 15, this.y - 50, 8));
+          worldText.push(new Text('By ' + lvlData[this.tags[0]].about.create, this.x + 15, this.y - 35, 8));
         if (levelsComplete[this.tags[0]] !== false && levelsComplete[this.tags[0]] !== null && levelsComplete[this.tags[0]] !== undefined)
           worldText.push(new Text(`Best Time: ${levelsComplete[this.tags[0]]}`, this.x + 15, this.y + 60, 8));
         if (this.tags[0] <= 0) break;
