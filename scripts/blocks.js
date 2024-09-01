@@ -85,8 +85,26 @@ class Block {
       case 'sand':
         this.img = cliDir + 'textures/sand.png';
         break;
+      case 'brick':
+        this.img = cliDir + 'textures/brick.png';
+        break;
+      case 'woodfloor':
+        this.img = cliDir + 'textures/woodfloor.png';
+        break;
+      case 'basketball':
+        this.img = cliDir + 'textures/basketball.png';
+        break;
       case 'seagrass':
         this.img = cliDir + 'textures/seagrass.png';
+        break;
+      case 'styletoken':
+        this.img = cliDir + 'textures/styletoken.png';
+        break;
+      case 'seasontoken':
+        this.img = cliDir + 'textures/seasontoken.png';
+        break;
+      case 'eliteseasontoken':
+        this.img = cliDir + 'textures/eliteseasontoken.png';
         break;
       case 'dirtblock':
         this.img = cliDir + 'textures/dirtblock2.png';
@@ -180,6 +198,7 @@ class Block {
         if (lvlData[this.tags[0]] === undefined) break;
         worldText.push(new Text(lvlData[this.tags[0]].about.name, this.x + 15, this.y - 20, 8));
         worldText.push(new Text(lvlData[this.tags[0]].about.diff, this.x + 15, this.y + 5, 16));
+        worldText.push(new Text(lvlData[this.tags[0]].about.req, this.x + 15, this.y - 50, 8));
         if (lvlData[this.tags[0]].about.create !== '')
           worldText.push(new Text('By ' + lvlData[this.tags[0]].about.create, this.x + 15, this.y - 35, 8));
         if (levelsComplete[this.tags[0]] !== false && levelsComplete[this.tags[0]] !== null && levelsComplete[this.tags[0]] !== undefined)
@@ -261,6 +280,18 @@ class Block {
         break;
       case 'orbopass1':
         this.img = cliDir + 'textures/orbopass1.png';
+        break;
+      case 'orbopass2':
+        this.img = cliDir + 'textures/orbopass2.png';
+        break;
+      case 'classdoor':
+        this.img = cliDir + 'textures/classdoor.png';
+        break;
+      case 'easel':
+        this.img = cliDir + 'textures/easel.png';
+        break;
+      case 'polwoodfloor':
+        this.img = cliDir + 'textures/polwoodfloor.png';
         break;
       case 'mud':
         this.img = cliDir + `textures/mudblock.png`;

@@ -130,54 +130,12 @@ function CreateWorld(id, useID = true) {
   if ("music" in lvl) {
     setSong(lvl.music);
   }
-  if (id === -5) {
-    world.push(new AnimatedBlock(300, 120, 'portalorbuxanim.png',
-    {
-      init:[30, 30, 4, 2],
-      idle:[0, 4]
-    }, 1, ['nc']));
-    
-}
-  if (id === -15) {
-    world.push(new AnimatedBlock(395, -85, 'portalorbuxanim.png',
-    {
-      init:[30, 30, 4, 2],
-      idle:[0, 4]
-    }, 1, ['nc']));
-    
-}
-  if (id === -3) {
-    world.push(new AnimatedBlock(925, 120, 'portalorbuxanim.png',
-    {
-      init:[30, 30, 4, 2],
-      idle:[0, 4]
-    }, 1, ['nc']));
-    
-}
-  if (id === -12) {
-    world.push(new AnimatedBlock(290, -75, 'portalorbuxanim.png',
-    {
-      init:[30, 30, 4, 2],
-      idle:[0, 4]
-    }, 1, ['nc']));
-    
-}
-  if (id === -4) {
-    world.push(new AnimatedBlock(210, 150, 'portalorbuxanim.png',
-    {
-      init:[30, 30, 4, 2],
-      idle:[0, 4]
-    }, 1, ['nc']));
-
-}
   if (id === -18) {
-      worldText.push(new Text('World One Tokens: ' + LevelRewards.WorldOneToken, 425, 165, 12));
-      worldText.push(new Text('Trial Tokens: ' + LevelRewards.TrialToken, 425, 145, 12));
-      worldText.push(new Text('Interlude Tokens: ' + LevelRewards.InterludeToken, 425, 125, 12));
-      worldText.push(new Text('Season Tokens: ' + LevelRewards.SeasonToken, 425, 105, 12));
-      worldText.push(new Text('Orbux: ' + LevelRewards.Orbuck, 425, 85, 12));
+      worldText.push(new Text('Style Tokens: ' + LevelRewards.StyleToken, 425, 165, 12));
+      worldText.push(new Text('Season Tokens: ' + LevelRewards.Season2Token, 425, 145, 12));
+      worldText.push(new Text('Season Tokens: ' + LevelRewards.EliteSeason2Token, 425, 125, 12));
       worldText.push(new Text('undefined = 0', -50, 165, 12));
-      worldText.push(new Text('Get Orbux by beating levels with Purple portals!', 425, 210, 12));
+      worldText.push(new Text('Get Style Tokens when you beat a level for the first time!', 425, 210, 12));
   }
   if (id === -2) {
     const o = [-500, 1000];
@@ -191,14 +149,19 @@ function CreateWorld(id, useID = true) {
     //worldText.push(new Text('L to set username', 670, -100, 12));
     worldText.push(new Text('Set username for players to see you (L)', 670, -20, 12));
     worldText.push(new Text('GToH Expanded ' + GAMEVERSION.join("."), 670, -40, 12));
-    world.push(new AnimatedBlock(95, 260, 'orbo.png', t, 2, ['nc']));
+    world.push(new AnimatedBlock(-30, 260, 'orbo.png', t, 2, ['nc']));
     //worldText.push(new Text('Coming March 19...', 360, -320, 12));
-    world.push(new AnimatedBlock(840, -400, 'portalgreyanim.png',
+    world.push(new AnimatedBlock(520, -320, 'portalgreyanim.png',
     {
       init:[30, 30, 4, 2],
       idle:[0, 4]
     }, 1, ['nc']));
     world.push(new AnimatedBlock(950, -120, 'portalseasonanim.png',
+    {
+      init:[30, 30, 4, 2],
+      idle:[0, 4]
+    }, 1, ['nc']));
+    world.push(new AnimatedBlock(1350, -465, 'portalorbuxanim.png',
     {
       init:[30, 30, 4, 2],
       idle:[0, 4]

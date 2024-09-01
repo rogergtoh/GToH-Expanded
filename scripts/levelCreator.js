@@ -199,7 +199,18 @@ var sideBarOptions = {
     ['vines', 'vine'],
     ['bblank', 'blank2'],
     ['flower', 'flower'],
-    ['sparkle', 'sparkle']
+    ['sparkle', 'sparkle'],
+    ['woodfloor', 'woodfloor'],
+    ['brick', 'brick'],
+    ['basketball', 'basketball'],
+    ['easel', 'easel'],
+    ['classdoor', 'classdoor'],
+    ['polwoodfloor', 'polwoodfloor'],
+    ['styletoken', 'styletoken'],
+    ['seasontoken', 'seasontoken'],
+    ['eliteseasontoken', 'eliteseasontoken'],
+    ['orbopass1', 'orbopass1'],
+    ['orbopass2', 'orbopass2']
   ],
   text: [
     ['errorblock', null, {type: 'text'}],

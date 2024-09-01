@@ -2,7 +2,7 @@ console.log("loading variables...")
 var warning = false; //set to true if redesgining code that could potentially break game
 
 // Game version!!
-const GAMEVERSION = [0,5,22];
+const GAMEVERSION = [0,6,0];
 
 // These are for checking server compatibility, only change these if updating information sent/received by the server
 const ClientVersion = 2;
@@ -36,6 +36,7 @@ var ReplayKeys = [];
 var ReplayPos = [];
 var Replaying = false;
 var LevelRewards = {};
+var Inventory = {};
 
 //world
 var OtherPlayers = {};

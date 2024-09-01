@@ -131,6 +131,7 @@ if (socket != undefined) {
 function syncProgress() {
   const lvls = localStorage.getItem("levels");
   const swaps = localStorage.getItem("swaps");
+  const inv = localStorage.getItem('inventory');
   console.log("synced levels")
   if (lvls != null) {
     levelsComplete = JSON.parse(lvls);
@@ -138,7 +139,9 @@ function syncProgress() {
   if (swaps != null) {
     swapsComplete = JSON.parse(swaps);
   }
-
+  if (inv != null) {
+    Inventory = JSON.parse(inv);
+  }
   syncRewards();
 
   updateAllStars();
@@ -146,6 +149,7 @@ function syncProgress() {
 
 function syncRewards() {
   LevelRewards = {};
+  // Get all the level rewards
   for (const i in levelsComplete) {
     if (!(levelsComplete[i] > 0)) continue;
     if (!('reward' in lvlData[i])) continue;
@@ -155,6 +159,18 @@ function syncRewards() {
       } else {
         LevelRewards[b] += lvlData[i].reward[b];
       }
+    }
+  }
+
+  // then deduct points based off inventory
+  for (const item in Inventory) {
+    if (!(item in InventoryItems)) continue; // SKIPPA if item price is not listed.
+
+    for (const cost in InventoryItems[item]) {
+      if (!(cost in LevelRewards))
+        LevelRewards[cost] = 0;
+      LevelRewards[cost] -= InventoryItems[item][cost] * Inventory[item];
+
     }
   }
 }
