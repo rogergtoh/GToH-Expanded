@@ -13,7 +13,7 @@ lvlData[-20] = {
   "format": 2,
   "spawn": [150, 60],
   "about": { name: '', diff: "Path of Legends", create: '', req: ''},
-  "music": "arrival",
+  "music": "arrivalschool",
   "levels": [894],
   "data": [
     [400,-30,"portal",1,1,[900]],
