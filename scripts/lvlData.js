@@ -27,7 +27,7 @@ lvlData[-19] = {
   "spawn": [1330, 60],
   "about": { name: '', diff: "Orbo Pass", create: '', req: 'Complete 2-5 in the PoL'},
   "requirements": { PoLPoint: 15 },
-  "music": "arrival",
+  "music": "arrivalschool",
   "levels": [136,137],
   "data": [
     [1850,-15,"portal",1,1,[136]],
@@ -51,7 +51,7 @@ lvlData[-17] = {
   "format": 2,
   "spawn": [150, 60],
   "about": { name: 'The Schooling', diff: "Season 2", create: '', req: ''},
-  "music": "arrival",
+  "music": "arrivalschool",
   "levels": [117,120,121,126],
   "data": [
     [150,-30,"portal",1,1,[-2]],
