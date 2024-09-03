@@ -1644,7 +1644,7 @@ for (const i in legendPathLevels) {
   }
 
   // Add in reward
-  lvlData[newLevelId].reward = {PathOfLegends: 1, StyleToken: 3, PoLPoint: 1, EliteSeason2Token: 0.025, Season2Token: 0.1};
+  lvlData[newLevelId].reward = {PathOfLegends: 1, StyleToken: 3, PoLPoint: 1};
 
   // Change name
   lvlData[newLevelId].about.name = legendPathLevels[i].name;
