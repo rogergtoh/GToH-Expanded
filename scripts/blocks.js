@@ -257,6 +257,9 @@ class Block {
       case 'code':
         this.img = cliDir + `textures/${oImg}`;
         break;
+      case 'ultraspeed':
+        this.img = cliDir + 'textures/blank.png'
+        break;
       case 'small':
         this.img = cliDir + `textures/block.png`
         this.width = 5;

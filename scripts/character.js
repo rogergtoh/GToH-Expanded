@@ -145,6 +145,9 @@ class Character {
                if (!statuses.includes('water'))
                 statuses.push('water');
               break;
+            case 'ultraspeed':
+              plyr.speed = 50
+              break;
             case 'speedpad':
               plyr.speed = 8;
               break;
