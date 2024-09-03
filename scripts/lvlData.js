@@ -67,7 +67,7 @@ lvlData[-20] = {
     [10000,-30,"portal",1,1,[948]],
     [10200,-30,"portal",1,1,[949]],
     [210,-30,"portal",1,1,[-2]],
-    [150,90,"block",1,1],[120,90,"block",1,1],[90,90,"block",1,1],[90,-330,"njump",1,15],[180,90,"block",329,1],[9990,-1560,"njump",2,1],[9960,-1560,"njump",3,1],[10050,90,"block",666,1],[30030,-840,"njump",1,32],[150,60,"ultraspeed",1,1]
+    [150,90,"block",1,1],[120,90,"block",1,1],[90,90,"block",1,1],[90,-330,"njump",1,15],[180,90,"block",329,1],[9990,-1560,"njump",2,1],[9960,-1560,"njump",3,1],[10050,90,"block",666,1],[30030,-840,"njump",1,32],[150,60,"ultraspeed",1,1],[10500,-30,"code",1,1,["if(checkReqs({PoLPoint:50}))setSkin('polskin')"],"skins/polskin.png"],[800,222,"text",1,1,["Legend Skin (Edition 1)",10]],[800,206,"text",1,1,["Complete the Path of Legends",6]]
   ]
 }
 lvlData[-19] = {
