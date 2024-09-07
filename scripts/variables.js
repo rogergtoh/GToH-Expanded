@@ -1,6 +1,12 @@
+console.log("loading variables...")
 var warning = false; //set to true if redesgining code that could potentially break game
 
-const cliDir = './';
+// Game version!!
+const GAMEVERSION = [0,6,0,1];
+
+// These are for checking server compatibility, only change these if updating information sent/received by the server
+const ClientVersion = 2;
+const MinimumServerVersion = 2;
 
 //draw
 var drawQueue = [];
@@ -25,10 +31,12 @@ var pressRight = false;
 var pressUp = false;
 var prevTouchIcy = false;
 var prevMudJump = false;
+var prevTouchConveyor = false;
 var ReplayKeys = [];
 var ReplayPos = [];
 var Replaying = false;
 var LevelRewards = {};
+var Inventory = {};
 
 //world
 var OtherPlayers = {};
@@ -37,7 +45,8 @@ var worldText = [];
 var worldParticle = [];
 const melonImg = "https://s2js.com/img/etc/watermelon2.png";
 const playerImg = cliDir + "textures/skins/player.png";
-var PlayerSkin = playerImg;
+var PlayerSkin = playerImg; // change this to based off PlayerSkinName
+var PlayerSkinName = "player";
 
 //misc
 var redActive = 1;
@@ -46,11 +55,13 @@ var perLevel = [];
 var WorldId = -2;
 var LevelWon = false;
 var Timer = 0;
+var TimesSwapped = 0;
 var Ticker = 0;
 var LobbyWorld = -2;
 var RecentLevel = -2;
 var GAME;
 var levelsComplete = [];
+var swapsComplete = [];
 var worldRecords = [];
 var startTime = 0;
 var cheatsEnabled = false;
@@ -60,7 +71,6 @@ var ChatOpen = false;
 var peopleLeft = 0;
 
 //online
-var ClientVersion;
 var ClientNumber;
 var login;
 var Username = '';
@@ -102,6 +112,7 @@ var dialogueOpen = false;
 
 //chat
 var chatQueue = [];
+var chatLogs = [];
 
 function colliding(x, y, w, h, x2, y2, w2, h2) {
   if (x < x2 + w2 && x + w > x2) {
@@ -115,6 +126,25 @@ function colliding(x, y, w, h, x2, y2, w2, h2) {
 }
 function fcoll(obj, obj2) {
   return colliding(obj.x, obj.y, obj.width, obj.height, obj2.x, obj2.y, obj2.width, obj2.height);
+}
+
+function getPlayerIdByName(name) {
+  for (const plyr in OtherPlayers) {
+    if (OtherPlayers[plyr].user === name) {
+      return plyr;
+    }
+  }
+  return false;
+}
+
+// Checks if your LevelRewards match up with reqs
+function checkReqs(reqs) {
+  for (const req in reqs) {
+    if (!(req in LevelRewards)) return false;
+    if (LevelRewards[req] < reqs[req]) 
+      return false
+  }
+  return true;
 }
 
 

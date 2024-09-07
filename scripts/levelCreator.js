@@ -1,6 +1,7 @@
 'use strict';
 function StartLevelCreator() {
   clearInterval(GAME);
+  GUIVisible = true;
   world = [];
   creatorBlocks = [];
   creatorHistory = [];
@@ -30,6 +31,18 @@ function StartLevelCreator() {
   }, 100);
   CREATE = setInterval(lvlCreateTick, 25);
 }
+
+function checkForBlockType(data, blockType) {
+  for (const block in data) {
+    if (data[block][2] == blockType) {
+      return true;
+    }
+  }
+  return false;
+}
+
+var GUIVisible = true;
+
 var deletingBlock = false;
 var saveButton = new Block('decor', 10, myCanvas.height - 150, [], 'levelCreator/save.png');
 saveButton.width = 75;
@@ -79,6 +92,7 @@ var blockTypeButtons = [
   ['iceblock', 'ice'],
   ['keys/key0', 'key', {tags: [0]}],
   ['doors/door0', 'door', {tags: [0]}],
+  ['roads/road0', 'road', {tags: [0]}],
   ['skullblock', 'die'],
   ['yellowblock', 'win'],
   ['portalgreen', 'tp', {tags: [0, 0]}],
@@ -86,9 +100,18 @@ var blockTypeButtons = [
   ['vines', 'vine'],
   ['textblock', 'text', {tags: ["test", 30]}],
   ['water', 'water'],
-  ['lgravblock', 'lgravblock']
+  ['lgravblock', 'lgravblock'],
+  ['speedpad', 'speedpad'],
+  ['rightconveyor', 'rightconveyor'],
 ];
 var sideBarOptions = {
+  water: [
+    ['water', 'water'],
+    ['sand', 'sand'],
+    ['seagrass', 'seagrass'],
+    ['beachball', 'beachball'],
+    ['hand', 'hand']
+  ],
   lgravblock: [
     ['lgravblock', 'lgravblock'],
     ['hgravblock', 'hgravblock'],
@@ -116,6 +139,17 @@ var sideBarOptions = {
     ['keys/key8', 'key', {tags: [8]}],
     ['keys/key9', 'key', {tags: [9]}]
   ],
+  speedpad: [
+    ['speedpad', 'speedpad'],
+    ['slowpad', 'slowpad'],
+    ['normalpad', 'normalpad']
+  ],
+  rightconveyor: [
+    ['rightconveyor', 'rightconveyor'],
+    ['leftconveyor', 'leftconveyor'],
+    ['rightconveyor2', 'rightconveyor2'],
+    ['leftconveyor2', 'leftconveyor2']
+  ],
   door: [
     ['doors/door0', 'door', {tags: [0]}],
     ['doors/door1', 'door', {tags: [1]}],
@@ -127,6 +161,18 @@ var sideBarOptions = {
     ['doors/door7', 'door', {tags: [7]}],
     ['doors/door8', 'door', {tags: [8]}],
     ['doors/door9', 'door', {tags: [9]}]
+  ],
+  road: [
+    ['roads/road0', 'road', {tags: [0]}],
+    ['roads/road1', 'road', {tags: [1]}],
+    ['roads/road2', 'road', {tags: [2]}],
+    ['roads/road3', 'road', {tags: [3]}],
+    ['roads/road4', 'road', {tags: [4]}],
+    ['roads/road5', 'road', {tags: [5]}],
+    ['roads/road6', 'road', {tags: [6]}],
+    ['roads/road7', 'road', {tags: [7]}],
+    ['roads/road8', 'road', {tags: [8]}],
+    ['roads/road9', 'road', {tags: [9]}]
   ],
   settings: [
     ['errorblock', null, {type: 'coor'}]
@@ -153,7 +199,12 @@ var sideBarOptions = {
     ['vines', 'vine'],
     ['bblank', 'blank2'],
     ['flower', 'flower'],
-    ['sparkle', 'sparkle']
+    ['sparkle', 'sparkle'],
+    ['woodfloor', 'woodfloor'],
+    ['brick', 'brick'],
+    ['basketball', 'basketball'],
+    ['easel', 'easel'],
+    ['classdoor', 'classdoor']
   ],
   text: [
     ['errorblock', null, {type: 'text'}],
@@ -290,14 +341,21 @@ myCanvas.addEventListener('mousedown', MyEvent => {
     } else if (fcoll(saveButton, mc)) {
       const result = prompt('Are you sure you want to copy to clipboard? (y/n). Type s for localSave.');
       if (result === 'y') {
-        navigator.clipboard.writeText(JSON.stringify(creatorBlocks)).then(function() {
-          AddChat('Copied to Clipboard!');
-          }, function(err) {
-          AddChat('ERROR: Could not copy. >' + err);
+        if (!("clipboard" in navigator)) {
           let tab = window.open('about:blank', '_blank');
           tab.document.write(JSON.stringify(creatorBlocks).replace("'", ''));
           tab.document.close();
-          });
+          AddChat('ERROR: Could not copy.');
+        } else {
+          navigator.clipboard.writeText(JSON.stringify(creatorBlocks)).then(function() {
+            AddChat('Copied to Clipboard!');
+            }, function(err) {
+              AddChat('ERROR: Could not copy. >' + err);
+              let tab = window.open('about:blank', '_blank');
+              tab.document.write(JSON.stringify(creatorBlocks).replace("'", ''));
+              tab.document.close();
+            });
+        }
       } else if (result === 's') {
         localStorage.setItem('level backup', JSON.stringify(creatorBlocks));
       }
@@ -314,8 +372,14 @@ myCanvas.addEventListener('mousedown', MyEvent => {
     } else if (fcoll(loadButton, mc)) {
       const lvl = prompt('enter level code');
       if (lvl !== null && lvl !== 'null' && lvl !== '') {
-        creatorBlocks = JSON.parse(lvl);
-        RefreshCreator();
+        let codeConfirmation = true;
+        if (checkForBlockType(JSON.parse(lvl), "code")) {
+          codeConfirmation = confirm("WARNING: The level you loaded uses blocks that run custom code. THIS INCLUDES RUNNING MALICIOUS CODE THAT CAN WIPE YOUR PROGRESS/FORCE YOU TO SAY CHAT MESSAGES! Make sure you trust the creator of this level and whoever you got this level from! Press OK to continue.");
+        }
+        if (codeConfirmation) {
+          creatorBlocks = JSON.parse(lvl);
+          RefreshCreator();
+        }
       }
     } else if (fcoll(undoButton, mc) && creatorHistory.length > 0) {
       creatorUndo();
@@ -382,6 +446,12 @@ myCanvas.addEventListener('mouseup', MyEvent => {
   point1 = [];
 });
 
+addEventListener('keydown', key => {
+  if (key.key === "h") {
+    GUIVisible = !GUIVisible;
+  }
+});
+
 function togglePlayTest() {
   PlayTest = !PlayTest;
   if (PlayTest) {
@@ -399,6 +469,7 @@ function togglePlayTest() {
 }
 
 function lvlCreateGui() {
+  if (!GUIVisible) return;
   creatorGrid(lastX, lastY);
   if (point1 != []) {
     let blockWidth = 30;
@@ -507,6 +578,7 @@ function lvlCreateTick() {
   DrawFrame(false);
 
   ctx.fillText(`PlaceX: ${placeX}, placeY: ${placeY}`, 100, 25);
+  ctx.fillText(`Press H to toggle gui`, 100, 38);
   lvlCreateGui();
 
     ChatTick();

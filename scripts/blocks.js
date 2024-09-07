@@ -76,6 +76,36 @@ class Block {
       case 'pee':
         this.img = cliDir + 'textures/pee.png';
         break;
+      case 'hand':
+        this.img = cliDir + 'textures/hand.png';
+        break;
+      case 'beachball':
+        this.img = cliDir + 'textures/beachball.png';
+        break;
+      case 'sand':
+        this.img = cliDir + 'textures/sand.png';
+        break;
+      case 'brick':
+        this.img = cliDir + 'textures/brick.png';
+        break;
+      case 'woodfloor':
+        this.img = cliDir + 'textures/woodfloor.png';
+        break;
+      case 'basketball':
+        this.img = cliDir + 'textures/basketball.png';
+        break;
+      case 'seagrass':
+        this.img = cliDir + 'textures/seagrass.png';
+        break;
+      case 'styletoken':
+        this.img = cliDir + 'textures/styletoken.png';
+        break;
+      case 'seasontoken':
+        this.img = cliDir + 'textures/seasontoken.png';
+        break;
+      case 'eliteseasontoken':
+        this.img = cliDir + 'textures/eliteseasontoken.png';
+        break;
       case 'dirtblock':
         this.img = cliDir + 'textures/dirtblock2.png';
          break;
@@ -99,6 +129,30 @@ class Block {
         break;
       case 'vhgravblock':
         this.img = cliDir + 'textures/vhgravblock.png';
+        break;
+      case 'ladder':
+        this.img = cliDir + 'textures/vlgravblock.png';
+        return true;
+      case 'speedpad':
+        this.img = cliDir + 'textures/speedpad.png';
+        break;
+      case 'slowpad':
+        this.img = cliDir + 'textures/slowpad.png';
+        break;
+      case 'normalpad':
+        this.img = cliDir + 'textures/normalpad.png';
+        break;
+      case 'rightconveyor':
+        this.img = cliDir + 'textures/rightconveyor.png';
+        break;
+      case 'leftconveyor':
+        this.img = cliDir + 'textures/leftconveyor.png';
+        break;
+      case 'rightconveyor2':
+        this.img = cliDir + 'textures/rightconveyor2.png';
+        break;
+      case 'leftconveyor2':
+        this.img = cliDir + 'textures/leftconveyor2.png';
         break;
       //case 'lowgravblock':
        // this.img = cliDir + 'textures/lowgrav.png';
@@ -126,6 +180,10 @@ class Block {
           this.img = cliDir + 'textures/portalgreen.png';
         } else
         this.img = cliDir + 'textures/portalred.png';
+        // check if reqs are met 
+        if (!isWorldUnlocked(this.tags[0]))
+          this.img = cliDir + 'textures/portallocked.png';
+
         if ('levels' in lvlData[this.tags[0]]) {
           let fullComplete = true;
           for (const l of lvlData[this.tags[0]].levels) {
@@ -140,10 +198,11 @@ class Block {
         if (lvlData[this.tags[0]] === undefined) break;
         worldText.push(new Text(lvlData[this.tags[0]].about.name, this.x + 15, this.y - 20, 8));
         worldText.push(new Text(lvlData[this.tags[0]].about.diff, this.x + 15, this.y + 5, 16));
+        worldText.push(new Text(lvlData[this.tags[0]].about.req, this.x + 15, this.y - 50, 8));
         if (lvlData[this.tags[0]].about.create !== '')
           worldText.push(new Text('By ' + lvlData[this.tags[0]].about.create, this.x + 15, this.y - 35, 8));
         if (levelsComplete[this.tags[0]] !== false && levelsComplete[this.tags[0]] !== null && levelsComplete[this.tags[0]] !== undefined)
-          worldText.push(new Text(`Best Time: ${levelsComplete[this.tags[0]]}`, this.x + 15, this.y + 45, 8));
+          worldText.push(new Text(`Best Time: ${levelsComplete[this.tags[0]]}`, this.x + 15, this.y + 60, 8));
         if (this.tags[0] <= 0) break;
         /* NO WORLD RECORD
         if ((worldRecords[this.tags[0]] === undefined || worldRecords[this.tags[0]] === null)) {
@@ -177,6 +236,9 @@ class Block {
         else
           this.img = cliDir + `textures/doors/door${this.tags[0]}.png`;
         break;
+      case 'road':
+        this.img = cliDir + `textures/roads/road${this.tags[0]}.png`;
+        break;
       case 'key':
         if (levelFormat === 1) {
           if (oImg === null)
@@ -191,6 +253,12 @@ class Block {
         break;
       case 'decor':
         this.img = cliDir + `textures/${oImg}`;
+        break;
+      case 'code':
+        this.img = cliDir + `textures/${oImg}`;
+        break;
+      case 'ultraspeed':
+        this.img = cliDir + 'textures/blank.png'
         break;
       case 'small':
         this.img = cliDir + `textures/block.png`
@@ -213,11 +281,41 @@ class Block {
       case 'flower':
         this.img = cliDir + 'textures/flower.png';
         break;
+      case 'orbopass1':
+        this.img = cliDir + 'textures/orbopass1.png';
+        break;
+      case 'orbopass2':
+        this.img = cliDir + 'textures/orbopass2.png';
+        break;
+      case 'classdoor':
+        this.img = cliDir + 'textures/classdoor.png';
+        break;
+      case 'easel':
+        this.img = cliDir + 'textures/easel.png';
+        break;
+      case 'polwoodfloor':
+        this.img = cliDir + 'textures/polwoodfloor.png';
+        break;
       case 'mud':
         this.img = cliDir + `textures/mudblock.png`;
         break;
       case 'tp':
         this.img = cliDir + `textures/portalgreen.png`;
+        break;
+      case 'stars0':
+        this.img = cliDir + `textures/0star.png`;
+        break;
+      case 'stars1':
+        this.img = cliDir + `textures/1star.png`;
+        break;
+      case 'stars2':
+        this.img = cliDir + `textures/2star.png`;
+        break;
+      case 'stars3':
+        this.img = cliDir + `textures/3star.png`;
+        break;
+      case 'stars4':
+        this.img = cliDir + `textures/4star.png`;
         break;
       default:
         this.img = cliDir + `textures/errorblock.png`;
@@ -226,7 +324,7 @@ class Block {
   }
 
   updateSprite(redActive) {
-    if (['red', 'blue', 'orange', 'purple', 'door'].indexOf(this.type) === -1) return;
+    if (['red', 'blue', 'orange', 'purple', 'door', 'road'].indexOf(this.type) === -1) return;
     this.opacity = 0.3;
     switch (this.type) {
       case 'red':
@@ -254,6 +352,14 @@ class Block {
             this.opacity = 1;
         }
 
+        break;
+      case 'road':
+        this.opacity = 1
+        if (perLevel.includes(this.tags[0])) {
+          this.img = cliDir + `textures/roads/roadfill${this.tags[0]}.png`;
+        } else {
+          this.img = cliDir + `textures/roads/road${this.tags[0]}.png`;
+        }
         break;
     }
   }
