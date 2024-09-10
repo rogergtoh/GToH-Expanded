@@ -191,7 +191,7 @@ songList['main'].volume = 0.1;
   }
 }
 
-function SeedRandom(a) {
+function seedRandom(a) {
   a |= 0;
   a = a + 0x9e3779b9 | 0;
   let t = a ^ a >>> 16;
@@ -199,4 +199,14 @@ function SeedRandom(a) {
   t = t ^ t >>> 15;
   t = Math.imul(t, 0x735a2d97);
   return ((t = t ^ t >>> 15) >>> 0) / 4294967296;
+}
+
+function getDailyLevel(manualDate) {
+    let day = new Date();
+  if (manualDate !== undefined)
+    day = new Date(manualDate);
+  
+  let seed = day.getDate() + day.getMonth() * 31 + day.getFullYear() * 372; // Get seed from day
+  let num = Math.round(seedRandom(seed ** 2) * 100000); // Turn to random num
+  return (num % 140) + 1; // Constrain to only include id's that have a level
 }
