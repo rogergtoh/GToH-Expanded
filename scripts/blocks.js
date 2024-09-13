@@ -136,6 +136,9 @@ class Block {
       case 'speedpad':
         this.img = cliDir + 'textures/speedpad.png';
         break;
+      case 'web':
+        this.img = cliDir + 'textures/web.png';
+        break;
       case 'slowpad':
         this.img = cliDir + 'textures/slowpad.png';
         break;

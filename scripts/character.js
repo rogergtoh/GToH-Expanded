@@ -238,6 +238,8 @@ class Character {
               break;
             case 'seagrass':
               break;
+            case 'web':
+              break;
             case 'sparkle':
               break;
             case 'dirtblock':
