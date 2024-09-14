@@ -166,6 +166,12 @@ function CreateWorld(id, useID = true) {
       init:[30, 30, 4, 2],
       idle:[0, 4]
     }, 1, ['nc']));
+    {
+      let basePos = [660, -480];
+      CreateBlocks(basePos[0], basePos[1], "code", 1, 1, ["CreateWorld(getDailyLevel(),true)"],"portalred.png");
+      worldText.push(new Text(lvlData[getDailyLevel()].about.name, basePos[0] + 15, basePos[1] + 50, 9));
+      worldText.push(new Text("Daily Level", basePos[0] + 15, basePos[1], 14));
+    }
     
   }
   Player = new Character(PlayerSkin);
