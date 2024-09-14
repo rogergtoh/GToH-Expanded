@@ -170,7 +170,7 @@ function syncRewards() {
   // Daily level rewards
   if (!("StyleToken" in LevelRewards))
     LevelRewards["StyleToken"] = 0;
-  LevelRewards["StyleToken"] += 15 * DailyLevelsBeaten;
+  LevelRewards["StyleToken"] += 3 * DailyLevelsBeaten;
 
   // then deduct points based off inventory
   for (const item in Inventory) {

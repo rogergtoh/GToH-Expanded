@@ -89,12 +89,12 @@ function GameTick() {
           // Daily Level
           if (WorldId === getDailyLevel()) {
             if (parseInt(localStorage.getItem("lastDailyBeat")) !== getCurrentDay()) { // If not already beaten
-              addChat("Daily level beaten! You got 15 Style Tokens.");
+              AddChat("Daily level beaten! You got 3 Style Tokens.");
               localStorage.setItem("lastDailyBeat", getCurrentDay());
               DailyLevelsBeaten++;
               localStorage.setItem("dailysBeaten", DailyLevelsBeaten);
             } else {
-              addChat("You already beat the daily level...");
+              AddChat("You already beat the daily level...");
             }
           }
 
