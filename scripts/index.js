@@ -72,7 +72,7 @@ function GameTick() {
     LevelWon = false;
     if (PlayTest) {
       togglePlayTest();
-    } else if (WorldId !== -2) {
+    } else if (WorldId !== -2) { // LEVEL IS BEATEN
       const i = Timer / 40;
       //if (levelsComplete[WorldId] > i || levelsComplete[WorldId] === undefined || levelsComplete[WorldId] === null) {
         if (!cheatsEnabled) {
@@ -85,6 +85,19 @@ function GameTick() {
             swapsComplete[WorldId] = TimesSwapped;
             localStorage.setItem("swaps", JSON.stringify(swapsComplete));
           }
+
+          // Daily Level
+          if (WorldId === getDailyLevel()) {
+            if (parseInt(localStorage.getItem("lastDailyBeat")) !== getCurrentDay()) { // If not already beaten
+              addChat("Daily level beaten! You got 15 Style Tokens.");
+              localStorage.setItem("lastDailyBeat", getCurrentDay());
+              DailyLevelsBeaten++;
+              localStorage.setItem("dailysBeaten", DailyLevelsBeaten);
+            } else {
+              addChat("You already beat the daily level...");
+            }
+          }
+
           //socket.emit('new pb', WorldId, i, ReplayKeys); REMOVED BECAUSE SOCKET IS BROKEN IN SINGLEPLAYER
           syncRewards(); //update rewards!
           AddChat(`Time: ${Timer / 40}`);

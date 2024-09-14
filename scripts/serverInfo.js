@@ -132,6 +132,7 @@ function syncProgress() {
   const lvls = localStorage.getItem("levels");
   const swaps = localStorage.getItem("swaps");
   const inv = localStorage.getItem('inventory');
+  const dailyLvls = localStorage.getItem('dailysBeaten');
   console.log("synced levels")
   if (lvls != null) {
     levelsComplete = JSON.parse(lvls);
@@ -142,6 +143,10 @@ function syncProgress() {
   if (inv != null) {
     Inventory = JSON.parse(inv);
   }
+  if (dailyLvls != null) {
+    DailyLevelsBeaten = parseInt(dailyLvls);
+  }
+
   syncRewards();
 
   updateAllStars();
@@ -161,6 +166,11 @@ function syncRewards() {
       }
     }
   }
+
+  // Daily level rewards
+  if (!("StyleToken" in LevelRewards))
+    LevelRewards["StyleToken"] = 0;
+  LevelRewards["StyleToken"] += 15 * DailyLevelsBeaten;
 
   // then deduct points based off inventory
   for (const item in Inventory) {

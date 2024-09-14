@@ -69,6 +69,7 @@ var TasMode = false;
 var GamePaused = false;
 var ChatOpen = false;
 var peopleLeft = 0;
+var DailyLevelsBeaten = 0;
 
 //online
 var ClientNumber;
@@ -201,12 +202,16 @@ function seedRandom(a) {
   return ((t = t ^ t >>> 15) >>> 0) / 4294967296;
 }
 
-function getDailyLevel(manualDate) {
-    let day = new Date();
+function getCurrentDay(manualDate) {
+  let day = new Date();
   if (manualDate !== undefined)
     day = new Date(manualDate);
-  
-  let seed = day.getDate() + day.getMonth() * 31 + day.getFullYear() * 372; // Get seed from day
+
+  return day.getDate() + day.getMonth() * 31 + day.getFullYear() * 372;
+}
+
+function getDailyLevel(manualDate) {  
+  let seed = getCurrentDay(manualDate) // Get seed from day
   let num = Math.round(seedRandom(seed ** 2) * 100000); // Turn to random num
   return (num % 140) + 1; // Constrain to only include id's that have a level
 }
