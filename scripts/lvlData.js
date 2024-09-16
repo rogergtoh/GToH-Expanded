@@ -605,8 +605,8 @@ lvlData[10] = {
 lvlData[11] = {
   format: 1,
   spawn: [150, 60],
-  about: { name: '', diff: '???', create: '', req: ''},
-  data: [[0, 240, "grass", 20, 1], [210, 0, "fullgrass", 2, 6], [60, -60, "fullgrass", 3, 2], [-30, -150, "fullgrass", 2, 2], [60, 0, "vine", 1, 2], [120, 0, "vine", 1, 1], [90, -240, "fullgrass", 2, 2], [30, -480, "fullgrass", 2, 6], [150, -480, "fullgrass", 2, 6], [270, -480, "fullgrass", 2, 2], [300, -420, "vine", 1, 4], [390, -540, "fullgrass", 2, 2], [390, -480, "vine", 1, 2], [330, 60, "fullgrass", 4, 4], [420, 180, "vine", 1, 2], [240, 180, "vine", 1, 1], [180, -300, "vine", 1, 4], [180, -180, "vine", 1, 2], [150, -300, "vine", 1, 1], [60, -300, "vine", 1, 3], [420, -480, "vine", 1, 1], [270, -420, "vine", 1, 2], [480, -630, "win", 1, 1]],
+  about: { name: 'Secret Level', diff: '???', create: '', req: ''},
+  data: [[150, 60, "text", 1, 1, ["This was an unused secret level to show the new decor", 8]],[0, 240, "grass", 20, 1], [210, 0, "fullgrass", 2, 6], [60, -60, "fullgrass", 3, 2], [-30, -150, "fullgrass", 2, 2], [60, 0, "vine", 1, 2], [120, 0, "vine", 1, 1], [90, -240, "fullgrass", 2, 2], [30, -480, "fullgrass", 2, 6], [150, -480, "fullgrass", 2, 6], [270, -480, "fullgrass", 2, 2], [300, -420, "vine", 1, 4], [390, -540, "fullgrass", 2, 2], [390, -480, "vine", 1, 2], [330, 60, "fullgrass", 4, 4], [420, 180, "vine", 1, 2], [240, 180, "vine", 1, 1], [180, -300, "vine", 1, 4], [180, -180, "vine", 1, 2], [150, -300, "vine", 1, 1], [60, -300, "vine", 1, 3], [420, -480, "vine", 1, 1], [270, -420, "vine", 1, 2], [480, -630, "win", 1, 1]],
   reward: { Secret: 1 }
 };
 lvlData[12] = {
