@@ -1,4 +1,4 @@
-const CurrentRank = 0;
+let CurrentRank = 0;
 
 const Ranks = [
   [0, "Noob"],
@@ -10,8 +10,10 @@ function updateRank() {
   const xp = LevelRewards["xp"];
   let curRank = 0;
   for (const rankId in Ranks) {
+    console.log(rankId);
+    console.log(Ranks[rankId][0]);
     if (xp >= Ranks[rankId][0]) {
-      curRank = rankId;
+      curRank = parseInt(rankId);
       continue;
     }
 
@@ -19,4 +21,6 @@ function updateRank() {
     CurrentRank = curRank;
     return;
   }
+  CurrentRank = curRank;
+  return;
 }
