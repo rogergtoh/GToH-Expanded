@@ -2,10 +2,10 @@ let CurrentRank = 0;
 
 const Ranks = [
   [0, "Novice"],
-  [50, "Pioneer"],
-  [150, "Bouncer"],
-  [400, "Master of Pixels"]
-  [1000, "Certified Cube"]
+  [100, "Pioneer"],
+  [250, "Bouncer"],
+  [500, "Master of Pixels"]
+  [1250, "Certified Cube"]
 ];
 
 function updateRank() {
@@ -17,6 +17,18 @@ function updateRank() {
     if (xp >= Ranks[rankId][0]) {
       curRank = parseInt(rankId);
       continue;
+    }
+
+    const xpRewards = {
+      Easy: 10,
+      Medium: 20,
+      Hard: 30,
+      Extreme: 50,
+      Insane: 70,
+      Absurd: 150,
+      Catastrophic: 500
+
+
     }
 
     // If not enough xp for next rank
