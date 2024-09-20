@@ -1,8 +1,10 @@
 let CurrentRank = 0;
 
 const Ranks = [
-  [0, "Noob"],
-  [100, "Starter"],
+  [0, "Novice"],
+  [50, "Pioneer"],
+  [150, "Bouncer"],
+  [400, "Master of Pixels"]
   [1000, "Certified Cube"]
 ];
 
