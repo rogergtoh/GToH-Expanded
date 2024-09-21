@@ -8,6 +8,7 @@ class OnlinePlayer {
     this.cosmetics = [];
     this.user = user;
     this.userText = new Text(this.user, this.x + 15, this.y - 15, 12);
+    this.rank = 0;
   }
   tick() {
     this.userText.x = this.x + 15;
