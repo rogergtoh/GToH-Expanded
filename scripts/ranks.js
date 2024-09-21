@@ -46,6 +46,8 @@ function updateRank() {
     LevelRewards["RankTwoReward"] = 1;
   if (curRank >= 3)
     LevelRewards["RankThreeReward"] = 1;
+  if (curRank >= 6)
+    LevelRewards["RankSixReward"] = 1;
   if (CurrentRank < curRank && CurrentRank !== -1)
     AddChat("RANK UP: " + Ranks[curRank][1]);
   CurrentRank = curRank;

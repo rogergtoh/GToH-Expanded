@@ -112,7 +112,7 @@ lvlData[-17] = {
 lvlData[-16] = {
   "format": 2,
   "spawn": [150, 60],
-  "about": { name: '', diff: "The Back", create: '', req: ''},
+  "about": { name: '', diff: "Legendary Shop", create: '', req: 'Master Rank'},
   "music": "Toyroom",
   "levels": [135,140],
   "data": [
