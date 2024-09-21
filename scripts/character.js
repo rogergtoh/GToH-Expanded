@@ -225,6 +225,24 @@ class Character {
               return true;
             case 'basketball':
               break;
+            case 'web1':
+              break;
+            case 'web2':
+              break;
+            case 'web3':
+              break;
+            case 'web4':
+              break;
+            case 'basket':
+              break;
+            case 'ghost':
+              break;
+            case 'spookyfloor':
+              return true;
+            case 'spookyfloorweb':
+              return true;
+            case 'orbopass3':
+              break;
             case 'easel':
               break;
             case 'classdoor':
