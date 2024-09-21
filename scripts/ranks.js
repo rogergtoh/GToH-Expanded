@@ -39,11 +39,12 @@ function updateRank() {
     }
 
     // If not enough xp for next rank
-    if (CurrentRank < curRank && CurrentRank !== -1)
-      AddChat("RANK UP: " + Ranks[curRank][1]);
-    CurrentRank = curRank;
-    return;
+    break;
   }
+  if (curRank >= 1)
+    LevelRewards["RankTwoReward"] = 1;
+  if (curRank >= 2)
+    LevelRewards["RankThreeReward"] = 1;
   if (CurrentRank < curRank && CurrentRank !== -1)
     AddChat("RANK UP: " + Ranks[curRank][1]);
   CurrentRank = curRank;
