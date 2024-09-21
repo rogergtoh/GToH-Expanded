@@ -125,7 +125,8 @@ var sideBarOptions = {
   ],
   blue: [
     ['blueblock', 'blue'],
-    ['redblock', 'red']
+    ['redblock', 'red'],
+    ['web1', 'web1']
   ],
   key: [
     ['keys/key0', 'key', {tags: [0]}],
@@ -204,8 +205,7 @@ var sideBarOptions = {
     ['brick', 'brick'],
     ['basketball', 'basketball'],
     ['easel', 'easel'],
-    ['classdoor', 'classdoor'],
-    ['web1', 'web1']
+    ['classdoor', 'classdoor']
   ],
   text: [
     ['errorblock', null, {type: 'text'}],
