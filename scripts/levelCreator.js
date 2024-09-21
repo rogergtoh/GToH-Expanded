@@ -128,6 +128,17 @@ var sideBarOptions = {
     ['blueblock', 'blue'],
     ['redblock', 'red']
   ],
+  spookyfloor: [
+    ['web1', 'web1'],
+    ['web2', 'web2'],
+    ['web3', 'web3'],
+    ['web4', 'web4'],
+    ['spookyfloor', 'spookyfloor'],
+    ['spookyfloorweb', 'spookyfloorweb'],
+    ['orbopass3', 'orbopass3'],
+    ['basket', 'basket'],
+    ['ghost', 'ghost']
+  ],
   key: [
     ['keys/key0', 'key', {tags: [0]}],
     ['keys/key1', 'key', {tags: [1]}],
@@ -205,16 +216,7 @@ var sideBarOptions = {
     ['brick', 'brick'],
     ['basketball', 'basketball'],
     ['easel', 'easel'],
-    ['classdoor', 'classdoor'],
-    ['web1', 'web1'],
-    ['web2', 'web2'],
-    ['web3', 'web3'],
-    ['web4', 'web4'],
-    ['spookyfloor', 'spookyfloor'],
-    ['spookyfloorweb', 'spookyfloorweb'],
-    ['orbopass3', 'orbopass3'],
-    ['basket', 'basket'],
-    ['ghost', 'ghost']
+    ['classdoor', 'classdoor']
   ],
   text: [
     ['errorblock', null, {type: 'text'}],
