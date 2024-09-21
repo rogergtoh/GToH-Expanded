@@ -2,12 +2,12 @@ let CurrentRank = -1;
 
 const Ranks = [
   [0, "Noob"],
-  [10, "Novice"],
+  [30, "Novice"],
   [100, "Pioneer"],
-  [250, "Bouncer"],
-  [500, "Master"],
-  [1250, "Grandmaster"],
-  [2250, "Ultimate Grandmaster"]
+  [500, "Bouncer"],
+  [1000, "Master"],
+  [2000, "Grandmaster"],
+  [5000, "Ultimate Grandmaster"]
 ];
 
 function updateXp() {
