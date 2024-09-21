@@ -4,10 +4,14 @@ const Ranks = [
   [0, "Noob"],
   [30, "Novice"],
   [100, "Pioneer"],
-  [500, "Bouncer"],
+  [300, "Bouncer"],
+  [650, "Expert"],
   [1000, "Master"],
+  [1500, "Prodigy"],
   [2000, "Grandmaster"],
-  [5000, "Ultimate Grandmaster"]
+  [3000, "Grand Prodigy"],
+  [4000, "Champion"],
+  [5500, "Ultimate Grandmaster"]
 ];
 
 function updateXp() {
