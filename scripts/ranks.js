@@ -1,4 +1,4 @@
-let CurrentRank = 0;
+let CurrentRank = -1;
 
 const Ranks = [
   [0, "Novice"],
@@ -9,33 +9,43 @@ const Ranks = [
   [2250, "Ultimate Grandmaster"]
 ];
 
+function updateXp() {
+  LevelRewards["xp"] = 0;
+
+  const xpRewards = {
+    Easy: 10,
+    Medium: 20,
+    Hard: 30,
+    Extreme: 50,
+    Insane: 70,
+    Absurd: 150,
+    Catastrophic: 500
+  }
+
+  for (const diff of Object.keys(xpRewards)) {
+    if (!(diff in LevelRewards)) break;
+
+    LevelRewards["xp"] += xpRewards[diff] * LevelRewards[diff];
+  }
+}
+
 function updateRank() {
   const xp = LevelRewards["xp"];
   let curRank = 0;
   for (const rankId in Ranks) {
-    console.log(rankId);
-    console.log(Ranks[rankId][0]);
     if (xp >= Ranks[rankId][0]) {
       curRank = parseInt(rankId);
       continue;
     }
 
-    const xpRewards = {
-      Easy: 10,
-      Medium: 20,
-      Hard: 30,
-      Extreme: 50,
-      Insane: 70,
-      Absurd: 150,
-      Catastrophic: 500
-
-
-    }
-
     // If not enough xp for next rank
+    if (CurrentRank < curRank && CurrentRank !== -1)
+      AddChat("RANK UP: " + Ranks[curRank][1]);
     CurrentRank = curRank;
     return;
   }
+  if (CurrentRank < curRank && CurrentRank !== -1)
+    AddChat("RANK UP: " + Ranks[curRank][1]);
   CurrentRank = curRank;
   return;
 }

@@ -52,6 +52,12 @@ function AddDrawQueue(type, obj) {
         y: obj.y,
         img: obj.img
       });
+      drawQueue.push({
+        x: obj.x,
+        y: obj.y,
+        img: cliDir + "textures/3star.png",
+        size: 15
+      })
       break;
   }
 }

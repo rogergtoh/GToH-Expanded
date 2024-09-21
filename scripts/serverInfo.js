@@ -183,6 +183,10 @@ function syncRewards() {
 
     }
   }
+
+  // finally update xp & rank
+  updateXp();
+  updateRank();
 }
 
 function setSkin(skin) {
