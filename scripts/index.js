@@ -180,7 +180,7 @@ function GameTick() {
   }
 
   //draw yourself
-  AddDrawQueue('plyr', Player);
+  AddDrawQueue('plyr', {...Player, rank: CurrentRank});
 
   //draw your username
   if (Username !== '') {

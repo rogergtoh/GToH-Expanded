@@ -1,7 +1,8 @@
 let CurrentRank = -1;
 
 const Ranks = [
-  [0, "Novice"],
+  [0, "Noob"],
+  [10, "Novice"],
   [100, "Pioneer"],
   [250, "Bouncer"],
   [500, "Master"],
@@ -41,9 +42,9 @@ function updateRank() {
     // If not enough xp for next rank
     break;
   }
-  if (curRank >= 1)
-    LevelRewards["RankTwoReward"] = 1;
   if (curRank >= 2)
+    LevelRewards["RankTwoReward"] = 1;
+  if (curRank >= 3)
     LevelRewards["RankThreeReward"] = 1;
   if (CurrentRank < curRank && CurrentRank !== -1)
     AddChat("RANK UP: " + Ranks[curRank][1]);
