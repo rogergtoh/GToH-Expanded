@@ -15,7 +15,7 @@ lvlData [-21] = {
   "about": { name: '', diff: "The Legendary Shop", create: '', req: 'Grandmaster Rank Required'},
   "requirements": { RankSixReward: 1},
   "music": "shop",
-  "levels": [],
+  "levels": [10000],
   "data": [
     [60,90,"block",34,1],[60,90,"spookyfloor",33,1],[1050,90,"spookyfloor",1,1],[1080,90,"block",21,1],[1080,90,"spookyfloor",21,1]
   ]
