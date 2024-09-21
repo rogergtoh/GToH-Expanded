@@ -102,9 +102,21 @@ var blockTypeButtons = [
   ['water', 'water'],
   ['lgravblock', 'lgravblock'],
   ['speedpad', 'speedpad'],
-  ['rightconveyor', 'rightconveyor']
+  ['rightconveyor', 'rightconveyor'],
+  ['spookyfloor', 'spookyfloor']
 ];
 var sideBarOptions = {
+  spookyfloor: [
+    ['web1', 'web1'],
+    ['web2', 'web2'],
+    ['web3', 'web3'],
+    ['web4', 'web4'],
+    ['spookyfloor', 'spookyfloor'],
+    ['spookyfloorweb', 'spookyfloorweb'],
+    ['basket', 'basket'],
+    ['ghost', 'ghost'],
+    ['orbopass3', 'orbopass3']
+  ],
   water: [
     ['water', 'water'],
     ['sand', 'sand'],
@@ -125,8 +137,7 @@ var sideBarOptions = {
   ],
   blue: [
     ['blueblock', 'blue'],
-    ['redblock', 'red'],
-    ['web1', 'web1']
+    ['redblock', 'red']
   ],
   key: [
     ['keys/key0', 'key', {tags: [0]}],
