@@ -156,11 +156,6 @@ function CreateWorld(id, useID = true) {
       init:[30, 30, 4, 2],
       idle:[0, 4]
     }, 1, ['nc']));
-    world.push(new AnimatedBlock(650, -320, 'portaldailyanim.png',
-    {
-      init:[30, 30, 4, 2],
-      idle:[0, 4]
-    }, 1, ['nc']));
     world.push(new AnimatedBlock(675, -600, 'portalorbuxanim.png',
     {
       init:[30, 30, 4, 2],
