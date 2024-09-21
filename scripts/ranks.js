@@ -4,8 +4,9 @@ const Ranks = [
   [0, "Novice"],
   [100, "Pioneer"],
   [250, "Bouncer"],
-  [500, "Master of Pixels"]
-  [1250, "Certified Cube"]
+  [500, "Master"],
+  [1250, "Grandmaster"],
+  [2250, "Ultimate Grandmaster"]
 ];
 
 function updateRank() {
