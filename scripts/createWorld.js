@@ -151,7 +151,7 @@ function CreateWorld(id, useID = true) {
     worldText.push(new Text('GToH Expanded ' + GAMEVERSION.join("."), 670, -40, 12));
     world.push(new AnimatedBlock(-30, 260, 'orbo.png', t, 2, ['nc']));
     //worldText.push(new Text('Coming March 19...', 360, -320, 12));
-    world.push(new AnimatedBlock(950, -120, 'portalseasonanim.png',
+    world.push(new AnimatedBlock(1145, -350, 'portalseasonanim.png',
     {
       init:[30, 30, 4, 2],
       idle:[0, 4]
@@ -162,7 +162,7 @@ function CreateWorld(id, useID = true) {
       idle:[0, 4]
     }, 1, ['nc']));
     {
-      let basePos = [660, -480];
+      let basePos = [650, -320];
       CreateBlocks(basePos[0], basePos[1], "code", 1, 1, ["CreateWorld(getDailyLevel(),true)"],"portalred.png");
       worldText.push(new Text(lvlData[getDailyLevel()].about.name, basePos[0] + 15, basePos[1] + 50, 9));
       worldText.push(new Text("Daily Level", basePos[0] + 15, basePos[1], 14));
