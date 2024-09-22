@@ -4,8 +4,8 @@ const Ranks = [
   [0, "Noob"],
   [10, "Novice"],
   [30, "Pioneer"],
-  [150, "Bouncer"],
-  [450, "Expert"],
+  [250, "Bouncer"],
+  [500, "Expert"],
   [850, "Master"],
   [1350, "Prodigy"],
   [2000, "Champion"],
@@ -18,12 +18,12 @@ function updateXp() {
   LevelRewards["xp"] = 0;
 
   const xpRewards = {
-    Easy: 5,
-    Medium: 5,
-    Hard: 5,
-    Extreme: 5,
-    Insane: 5,
-    Absurd: 5,
+    Easy: 10,
+    Medium: 20,
+    Hard: 30,
+    Extreme: 50,
+    Insane: 70,
+    Absurd: 150,
   }
 
   for (const diff of Object.keys(xpRewards)) {
