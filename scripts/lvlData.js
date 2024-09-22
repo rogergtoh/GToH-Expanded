@@ -12,7 +12,7 @@ lvlData[-6969] = {
 lvlData [-21] = {
   "format": 2,
   "spawn": [150, 60],
-  "about": { name: '', diff: "The Legendary Shop", create: '', req: 'Grandmaster Rank Required'},
+  "about": { name: '', diff: "The Legendary Shop", create: '', req: 'Requires Prodigy Rank'},
   "requirements": { RankSixReward: 1},
   "music": "shop",
   "levels": [10000],
@@ -24,6 +24,7 @@ lvlData[-20] = {
   "format": 2,
   "spawn": [150, 60],
   "about": { name: '', diff: "Path of Legends", create: '', req: ''},
+  "requirements": { RankTwoReward: 1, RankThreeReward: 1 },
   "music": "arrivalschool",
   "levels": [894],
   "data": [
@@ -110,6 +111,7 @@ lvlData[-17] = {
   "format": 2,
   "spawn": [150, 60],
   "about": { name: 'The Spooktacular', diff: "Season 3", create: '', req: ''},
+  "requirements": { RankTwoReward: 1, RankThreeReward: 1 },
   "music": "arrivalschool",
   "levels": [117,120,121,126],
   "data": [
@@ -123,7 +125,8 @@ lvlData[-17] = {
 lvlData[-16] = {
   "format": 2,
   "spawn": [150, 60],
-  "about": { name: '', diff: "Legendary Shop", create: '', req: 'Master Rank'},
+  "about": { name: '', diff: "Legendary Shop", create: '', req: 'Requires Prodigy Rank'},
+  "requirements": { RankSixReward: 1 },
   "music": "Toyroom",
   "levels": [135,140],
   "data": [
@@ -135,6 +138,7 @@ lvlData[-15] = {
   "format": 2,
   "spawn": [150, 60],
   "about": { name: '', diff: "Archive", create: '', req: ''},
+  "requirements": { RankTwoReward: 1, RankThreeReward: 1 },
   "music": "main-archive",
   "levels": [117,120,121,126,130,131,132,133,134,138,139],
   "data": [
@@ -171,6 +175,7 @@ lvlData[-13] = {
   "format": 2,
   "spawn": [150, 60],
   "about": { name: '', diff: "Planet D", create: '', req: ''},
+  "requirements": { RankTwoReward: 1 },
   "levels": [55,113,114,115,122,124,125],
   "data": [
     [250,-315,"portal",1,1,[-2]],
@@ -189,6 +194,7 @@ lvlData[-12] = {
   "format": 2,
   "spawn": [150, 210],
   "about": { name: '', diff: "World Four", create: '', req: ''},
+  "requirements": { RankTwoReward: 1 },
   "music": "traveler",
   "levels": [104,105,106,107,108,109,110,111],
   "data": [
@@ -234,6 +240,7 @@ lvlData[-10] = {
   "format": 2,
   "spawn": [150, 210],
   "about": { name: '', diff: "Planet C", create: '', req: ''},
+  "requirements": { RankTwoReward: 1, RankThreeReward: 1 },
   "music": "arrival",
   "levels": [86,87,88,89,90,91,92,93,94],
   "data": [
@@ -253,8 +260,8 @@ lvlData[-10] = {
 lvlData[-9] = {
   "format": 2,
   "spawn": [150, 210],
-  "about": { name: '', diff: "GAUNTLET", create: '', req: 'Complete 3-5 in the PoL'},
-  "requirements": { PoLPoint: 25 },
+  "about": { name: '', diff: "GAUNTLET", create: '', req: 'Requires Champion Rank'},
+  "requirements": { RankSevenReward: 1 },
   "music": "Heccfinalfloor",
   "levels": [80,81,82,83,84],
   "data": [
@@ -271,6 +278,7 @@ lvlData[-8] = {
   "format": 2,
   "spawn": [150, 210],
   "about": { name: '', diff: "Interlude Three", create: '', req: ''},
+  "requirements": { RankTwoReward: 1, RankThreeReward: 1 },
   "music": "trec",
   "levels": [86,87,88,89,90,91,92,93,94,55,113,114,115,122,124,125],
   "data": [
@@ -298,6 +306,7 @@ lvlData[-7] = {
   "format": 2,
   "spawn": [150, 210],
   "about": { name: '', diff: "Interlude Two", create: '', req: ''},
+  "requirements": { RankTwoReward: 1, RankThreeReward: 1 },
   "music": "trac",
   "levels": [62,63,64,65,66,68,70,72,77,78,61,67,71,73,74,75,76,79,85],
   "data": [
@@ -328,6 +337,7 @@ lvlData[-6] = {
   "format": 2,
   "spawn": [150, 210],
   "about": { name: '', diff: "Interlude One", create: '', req: ''},
+  "requirements": { RankTwoReward: 1, RankThreeReward: 1 },
   "music": 'yehyeh',
   "levels": [34, 35, 36, 37,38,40,43,45,46,47,48,49,50,51,52,53,54],
   "data": [
@@ -356,6 +366,7 @@ lvlData[-5] = {
   "format": 1,
   "spawn": [150, 210],
   "about": { name: '', diff: 'TRIALS', create: '', req: ''},
+  "requirements": { RankTwoReward: 1, RankThreeReward: 1 },
   "levels": [22,23,24,31,33,28],
   "data": [
     [-100,240,'block',50,1],
@@ -373,6 +384,7 @@ lvlData[-4] = {
   "format": 1,
   "spawn": [150, 210],
   "about": { name: '', diff: 'World Three', create: '', req: ''},
+  "requirements": { RankTwoReward: 1 },
   "music": "fountain",
   "levels": [20,21,25,26,27,29,30,32,39,41,42,44],
   "data": [
@@ -399,6 +411,7 @@ lvlData[-3] = {
   "format": 1,
   "spawn": [0, 210],
   "about": {name: '', diff: 'World Two', create: '', req: ''},
+  "requirements": { RankTwoReward: 1 },
   "music": "hecc3",
   "levels": [7,8,12,14,15,16,17,18,19],
   "data": [[-100,240,"block",50,1],
@@ -444,6 +457,7 @@ lvlData[-1] = {
   "format": 2,
   "spawn": [150, 60],
   "about": { name: '', diff: 'Level Creator', create: '', req: ''},
+  "requirements": { RankTwoReward: 1 },
   "music": "levelcreator"
 }
 lvlData[0] = {

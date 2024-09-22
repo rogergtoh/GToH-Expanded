@@ -3,14 +3,14 @@ let CurrentRank = -1;
 const Ranks = [
   [0, "Noob"],
   [10, "Novice"],
-  [100, "Pioneer"],
-  [300, "Bouncer"],
-  [650, "Expert"],
-  [1000, "Master"],
-  [1500, "Prodigy"],
-  [2000, "Grandmaster"],
-  [3000, "Grand Prodigy"],
-  [4000, "Champion"],
+  [30, "Pioneer"],
+  [150, "Bouncer"],
+  [450, "Expert"],
+  [850, "Master"],
+  [1350, "Prodigy"],
+  [2000, "Champion"],
+  [3000, "Grandmaster"],
+  [4000, "Supreme Champion"],
   [5500, "Ultimate Grandmaster"]
 ];
 
@@ -18,13 +18,12 @@ function updateXp() {
   LevelRewards["xp"] = 0;
 
   const xpRewards = {
-    Easy: 10,
-    Medium: 20,
-    Hard: 500,
-    Extreme: 50,
-    Insane: 70,
-    Absurd: 150,
-    Catastrophic: 500
+    Easy: 1,
+    Medium: 1,
+    Hard: 1,
+    Extreme: 1,
+    Insane: 1,
+    Absurd: 1,
   }
 
   for (const diff of Object.keys(xpRewards)) {
@@ -52,6 +51,8 @@ function updateRank() {
     LevelRewards["RankThreeReward"] = 1;
   if (curRank >= 6)
     LevelRewards["RankSixReward"] = 1;
+  if (curRank >= 7)
+    LevelRewards["RankSevenReward"] = 1;
   if (CurrentRank < curRank && CurrentRank !== -1)
     AddChat("RANK UP: " + Ranks[curRank][1]);
   CurrentRank = curRank;
