@@ -212,11 +212,11 @@ var sideBarOptions = {
     ['bblank', 'blank2'],
     ['flower', 'flower'],
     ['sparkle', 'sparkle'],
-    ['woodfloor', 'woodfloor'],
-    ['brick', 'brick'],
-    ['basketball', 'basketball'],
-    ['easel', 'easel'],
-    ['classdoor', 'classdoor']
+    ['season2/woodfloor', 'woodfloor'],
+    ['season2/brick', 'brick'],
+    ['season2/basketball', 'basketball'],
+    ['season2/easel', 'easel'],
+    ['season2/classdoor', 'classdoor']
   ],
   text: [
     ['errorblock', null, {type: 'text'}],

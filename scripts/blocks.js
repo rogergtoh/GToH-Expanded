@@ -107,19 +107,19 @@ class Block {
         this.img = cliDir + 'textures/hand.png';
         break;
       case 'beachball':
-        this.img = cliDir + 'textures/beachball.png';
+        this.img = cliDir + 'textures/season2/beachball.png';
         break;
       case 'sand':
         this.img = cliDir + 'textures/sand.png';
         break;
       case 'brick':
-        this.img = cliDir + 'textures/brick.png';
+        this.img = cliDir + 'textures/season2/brick.png';
         break;
       case 'woodfloor':
-        this.img = cliDir + 'textures/woodfloor.png';
+        this.img = cliDir + 'textures/season2/woodfloor.png';
         break;
       case 'basketball':
-        this.img = cliDir + 'textures/basketball.png';
+        this.img = cliDir + 'textures/season2/basketball.png';
         break;
       case 'seagrass':
         this.img = cliDir + 'textures/seagrass.png';
@@ -312,16 +312,16 @@ class Block {
         this.img = cliDir + 'textures/orbopass1.png';
         break;
       case 'orbopass2':
-        this.img = cliDir + 'textures/orbopass2.png';
+        this.img = cliDir + 'textures/season2/orbopass2.png';
         break;
       case 'classdoor':
-        this.img = cliDir + 'textures/classdoor.png';
+        this.img = cliDir + 'textures/season2/classdoor.png';
         break;
       case 'easel':
-        this.img = cliDir + 'textures/easel.png';
+        this.img = cliDir + 'textures/season2/easel.png';
         break;
       case 'polwoodfloor':
-        this.img = cliDir + 'textures/polwoodfloor.png';
+        this.img = cliDir + 'textures/season2/polwoodfloor.png';
         break;
       case 'mud':
         this.img = cliDir + `textures/mudblock.png`;
