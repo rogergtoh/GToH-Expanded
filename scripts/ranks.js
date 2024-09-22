@@ -18,12 +18,12 @@ function updateXp() {
   LevelRewards["xp"] = 0;
 
   const xpRewards = {
-    Easy: 1,
-    Medium: 1,
-    Hard: 1,
-    Extreme: 1,
-    Insane: 1,
-    Absurd: 1,
+    Easy: 5,
+    Medium: 5,
+    Hard: 5,
+    Extreme: 5,
+    Insane: 5,
+    Absurd: 5,
   }
 
   for (const diff of Object.keys(xpRewards)) {
