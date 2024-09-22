@@ -71,31 +71,31 @@ class Block {
        this.img = cliDir + 'textures/Rose.png';
         break;
       case 'web1':
-        this.img = cliDir + 'textures/web1.png';
+        this.img = cliDir + 'textures/season3/web1.png';
         break;
       case 'web2':
-        this.img = cliDir + 'textures/web2.png';
+        this.img = cliDir + 'textures/season3/web2.png';
         break;
       case 'web3':
-        this.img = cliDir + 'textures/web3.png';
+        this.img = cliDir + 'textures/season3/web3.png';
         break;
       case 'web4':
-        this.img = cliDir + 'textures/web4.png';
+        this.img = cliDir + 'textures/season3/web4.png';
         break;
       case 'basket':
-        this.img = cliDir + 'textures/basket.png';
+        this.img = cliDir + 'textures/season3/basket.png';
         break;
       case 'ghost':
-        this.img = cliDir + 'textures/ghost.png';
+        this.img = cliDir + 'textures/season3/ghost.png';
         break;
       case 'spookyfloor':
-        this.img = cliDir + 'textures/spookyfloor.png';
+        this.img = cliDir + 'textures/season3/spookyfloor.png';
         break;
       case 'spookyfloorweb':
-        this.img = cliDir + 'textures/spookyfloorweb.png';
+        this.img = cliDir + 'textures/season3/spookyfloorweb.png';
         break;
       case 'orbopass3':
-        this.img = cliDir + 'textures/orbopass3.png';
+        this.img = cliDir + 'textures/season3/orbopass3.png';
         break;
       case 'sparkle':
        this.img = cliDir + 'textures/sparkle.png';
