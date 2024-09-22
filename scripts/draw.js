@@ -183,8 +183,8 @@ function DrawFrame(debug = true, clear = true) {
     ctx.fillText(`Timer: ${Timer / 40}  Ping: ${Ping}`, 0, 20);
     ctx.fillText(`X: ${Player.x} Y: ${Player.y}`, 0, 33);
     ctx.fillText(`Rank: ${Ranks[CurrentRank][1]}`, 0, 46);
-    ctx.fillText(`Rank: ${LevelRewards.StyleToken}`, 0, 59);
-    ctx.fillText(`Rank: ${LevelRewards.SeasonToken}`, 0, 72);
+    ctx.fillText(`Style Tokens: ${LevelRewards.StyleToken}`, 0, 59);
+    ctx.fillText(`Season Tokens: ${LevelRewards.SeasonToken}`, 0, 72);
     if (debug === 2) {
       ctx.fillText(`xA: ${Player.xAccel} yA: ${Player.yAccel} cj: ${Player.canJump} wj: ${Player.wallJump}`, 0, 85);
 } else {
