@@ -188,7 +188,7 @@ function DrawFrame(debug = true, clear = true) {
     if (debug === 2) {
       ctx.fillText(`xA: ${Player.xAccel} yA: ${Player.yAccel} cj: ${Player.canJump} wj: ${Player.wallJump}`, 0, 85);
 } else {
-      ctx.fillText(`v${GAMEVERSION.join(".")}`, 23, 85); 
+      ctx.fillText(`v${GAMEVERSION.join(".")}`, 32, 85); 
     }
   } 
   if (pressTab) {
