@@ -182,10 +182,11 @@ function DrawFrame(debug = true, clear = true) {
   if (debug !== false) {
     ctx.fillText(`Timer: ${Timer / 40}  Ping: ${Ping}`, 0, 20);
     ctx.fillText(`X: ${Player.x} Y: ${Player.y}`, 0, 33);
+    ctx.fillText('Rank: ${Ranks[CurrentRank][1]}', 0, 46);
     if (debug === 2) {
-      ctx.fillText(`xA: ${Player.xAccel} yA: ${Player.yAccel} cj: ${Player.canJump} wj: ${Player.wallJump}`, 0, 46);
+      ctx.fillText(`xA: ${Player.xAccel} yA: ${Player.yAccel} cj: ${Player.canJump} wj: ${Player.wallJump}`, 0, 59);
 } else {
-      ctx.fillText(`v${GAMEVERSION.join(".")}`, 23, 46); 
+      ctx.fillText(`v${GAMEVERSION.join(".")}`, 23, 59); 
     }
   } 
   if (pressTab) {
