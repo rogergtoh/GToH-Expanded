@@ -2,7 +2,7 @@ let CurrentRank = -1;
 
 const Ranks = [
   [0, "Noob"],
-  [30, "Novice"],
+  [10, "Novice"],
   [100, "Pioneer"],
   [300, "Bouncer"],
   [650, "Expert"],
@@ -20,7 +20,7 @@ function updateXp() {
   const xpRewards = {
     Easy: 10,
     Medium: 20,
-    Hard: 30,
+    Hard: 500,
     Extreme: 50,
     Insane: 70,
     Absurd: 150,
