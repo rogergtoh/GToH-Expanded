@@ -150,8 +150,7 @@ function CreateWorld(id, useID = true) {
     //worldText.push(new Text('L to set username', 670, -100, 12));
     worldText.push(new Text('Set username for players to see you (L)', 670, -20, 12));
     worldText.push(new Text('GToH Expanded ' + GAMEVERSION.join("."), 670, -40, 12));
-    world.push(new AnimatedBlock(-30, 260, 'orbo.png', t, 2, ['nc']));
-    world.push(new AnimatedBlock(-1770, -400, 'obro.png', t, 2, ['nc']));
+    world.push(new AnimatedBlock(-30, 260, 'obro.png', t, 2, ['nc']));
     //worldText.push(new Text('Coming March 19...', 360, -320, 12));
     world.push(new AnimatedBlock(1000, -120, 'portalgreyanim.png',
     {
