@@ -25,7 +25,7 @@ lvlData[-20] = {
   "spawn": [150, 60],
   "about": { name: '', diff: "Path of Legends", create: '', req: ''},
   "requirements": { RankTwoReward: 1, RankThreeReward: 1 },
-  "music": "arrivalschool",
+  "music": "arrivalspooky",
   "levels": [894],
   "data": [
     [400,-30,"portal",1,1,[900]],
@@ -87,7 +87,7 @@ lvlData[-19] = {
   "spawn": [1330, 60],
   "about": { name: '', diff: "Orbo Pass", create: '', req: 'Complete 2-10 in the PoL'},
   "requirements": { PoLPoint: 20 },
-  "music": "arrivalschool",
+  "music": "arrivalspooky",
   "levels": [136,137],
   "data": [
     [1850,-15,"portal",1,1,[136]],
@@ -112,7 +112,7 @@ lvlData[-17] = {
   "spawn": [150, 60],
   "about": { name: 'The Spooktacular', diff: "Season 3", create: '', req: ''},
   "requirements": { RankTwoReward: 1, RankThreeReward: 1 },
-  "music": "arrivalschool",
+  "music": "arrivalspooky",
   "levels": [117,120,121,126],
   "data": [
     [150,-30,"portal",1,1,[-2]],
