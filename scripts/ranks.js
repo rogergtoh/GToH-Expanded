@@ -20,7 +20,7 @@ function updateXp() {
   const xpRewards = {
     Easy: 10,
     Medium: 20,
-    Hard: 600,
+    Hard: 500,
     Extreme: 50,
     Insane: 70,
     Absurd: 150,
