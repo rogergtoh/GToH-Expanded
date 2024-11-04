@@ -1,0 +1,17 @@
+{
+  "name": "GToH-Expanded",
+  "icons": [
+    {
+      "src": "./textures/gtohICON512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./textures/gtohICON192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "fullscreen"
+}

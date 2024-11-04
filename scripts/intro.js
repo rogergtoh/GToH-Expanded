@@ -1,13 +1,13 @@
 "use strict";
 var tempInterval, mainBeat = 400, mainInc = 0, skipIntro = false; 
 ctx.fillText("debug text", -500, 500);
-skipIntro && (mainInc = 3, mainBeat = 100), document.body.style.width = "100%", document.body.style.height = "100%", myCanvas.height = window.innerHeight, myCanvas.width = window.innerWidth, ctx.textAlign = "center", ctx.font = "15px MinecraftRegular";
+skipIntro && (mainInc = 3, mainBeat = 100), document.body.style.width = "100%", document.body.style.height = "100%", myCanvas.height = window.innerHeight - 32, myCanvas.width = window.innerWidth, ctx.textAlign = "center", ctx.font = "15px MinecraftRegular";
 { 
   let t = new Image; 
   t.onload = (() => { 
     let e = t.width / myCanvas.width; 
     t.height / e > myCanvas.height - 45 && (e = t.height / (myCanvas.height - 45)), ctx.imageSmoothingEnabled = !1, ctx.lineWidth = 5, ctx.strokeRect((myCanvas.width - t.width / e) / 2, 0, t.width / e, t.height / e), ctx.drawImage(t, (myCanvas.width - t.width / e) / 2, 0, t.width / e, t.height / e), ctx.lineWidth = 1 
-  }), t.src = cliDir + "textures/updates/0.6.0-expanded.png" 
+  }), t.src = cliDir + "textures/updates/0.7.1-expanded.png" 
 } 
 function cool() { 
   setTimeout(() => { 
@@ -22,7 +22,16 @@ function cool() {
         ctx.clearRect(0, 0, myCanvas.width, myCanvas.height), tempInterval = setInterval(introPhysics, 25); 
         break; 
       case 4: 
-        setTimeout(() => {clearInterval(tempInterval), SetupGame(), GAME = setInterval(GameTick, 25), console.log("finished intro")}, 460)
+        setTimeout(() => {
+          clearInterval(tempInterval);
+          SetupGame();
+          GAME = setInterval(GameTick, 25);
+          if (localStorage.getItem("seenChangelog") !== "true") {
+            window.open("https://docs.google.com/document/d/19GH-SKOVLM3vVhi_nh8wX2Gi11YclYVZ-U2AD8ZgvIY/edit?usp=sharing", "_blank");
+            localStorage.setItem("seenChangelog", "true");
+          }
+          console.log("finished intro");
+        }, 460);
     } 
   }, 4 * mainBeat) 
 } 
@@ -43,7 +52,7 @@ function introPhysics() {
 ctx.imageSmoothingEnabled = false
 songList.main.onplay = (() => {
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height)
-  if ((Username == "guppy" || skipIntro) && mainInc == 0) {
+  if ((Username == "guppy" || Username == " guppy" || skipIntro) && mainInc == 0) {
     mainInc = 999;
     GAME = setInterval(GameTick, 25);
     return;

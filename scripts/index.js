@@ -14,9 +14,8 @@ function SetupGame() {
     AddChat(txt2);
   }
   var introChatQueue = [];
-  introChatQueue.push('Welcome to GToH Expanded!');
+  introChatQueue.push('Welcome to GToH Season 4: The Emulation!');
   if (Username == "") {
-    introChatQueue.push('rogersd did this so you could experience GToH to its fullest!')
     introChatQueue.push('Let us know if you enjoy! Have fun!')
   }
   function finishIntroChat() {
@@ -42,11 +41,11 @@ function ChatTick() {
       continue;
     }
     //actually draw it
-    AddDrawQueue('text', new Text(chatQueue[i][0], 0, myCanvas.height - (chatQueue.length - i) * 20 * camZ, 11, true, false, true));
+    AddDrawQueue('text', {...new Text(((AdminView && chatQueue[i][2] !== "none") ? `{${chatQueue[i][2]}} ` : "") + chatQueue[i][0], 0, myCanvas.height - (chatQueue.length - i) * 20 * camZ, 11, true, false, true), mod: chatQueue[i][3]});
   }
   if (pressTab) {
     for (var i = chatLogs.length - 1; i >= 0; i--) {
-      AddDrawQueue("text", new Text(chatLogs[i][0], 0, myCanvas.height - (chatQueue.length + chatLogs.length - i) * 20 * camZ, 11, true, false, true));
+      AddDrawQueue("text", {...new Text(((AdminView && chatLogs[i][2] !== "none") ? `{${chatLogs[i][2]}} ` : "") + chatLogs[i][0], 0, myCanvas.height - (chatQueue.length + chatLogs.length - i) * 20 * camZ, 11, true, false, true), mod: chatLogs[i][3]});
     }
   }
 }
@@ -72,7 +71,7 @@ function GameTick() {
     LevelWon = false;
     if (PlayTest) {
       togglePlayTest();
-    } else if (WorldId !== -2) {
+    } else if (WorldId !== -2) { // LEVEL IS BEATEN
       const i = Timer / 40;
       //if (levelsComplete[WorldId] > i || levelsComplete[WorldId] === undefined || levelsComplete[WorldId] === null) {
         if (!cheatsEnabled) {
@@ -85,6 +84,19 @@ function GameTick() {
             swapsComplete[WorldId] = TimesSwapped;
             localStorage.setItem("swaps", JSON.stringify(swapsComplete));
           }
+
+          // Daily Level
+          if (WorldId === getDailyLevel()) {
+            if (parseInt(localStorage.getItem("lastDailyBeat")) !== getCurrentDay()) { // If not already beaten
+              AddChat("Daily level beaten! You got 15 Style Tokens.");
+              localStorage.setItem("lastDailyBeat", getCurrentDay());
+              DailyLevelsBeaten++;
+              localStorage.setItem("dailysBeaten", DailyLevelsBeaten);
+            } else {
+              AddChat("You already beat the daily level...");
+            }
+          }
+
           //socket.emit('new pb', WorldId, i, ReplayKeys); REMOVED BECAUSE SOCKET IS BROKEN IN SINGLEPLAYER
           syncRewards(); //update rewards!
           AddChat(`Time: ${Timer / 40}`);
@@ -167,13 +179,13 @@ function GameTick() {
   }
 
   //draw yourself
-  AddDrawQueue('plyr', Player);
+  AddDrawQueue('plyr', {...Player, rank: CurrentRank});
 
   //draw your username
   if (Username !== '') {
-    AddDrawQueue('text', new Text(Username, Player.x + 15, Player.y - 5, 12));
+    AddDrawQueue('text', new Text(Username, Player.x + 15, Player.y - 5 - (Player.hat ? 20 : 0), 12));
   } else {
-    AddDrawQueue('text', new Text('Guest', Player.x + 15, Player.y - 5, 12))
+    AddDrawQueue('text', new Text('Guest', Player.x + 15, Player.y - 5 - (Player.hat ? 20 : 0), 12))
   }
   //draw handler
   if (TasMode)

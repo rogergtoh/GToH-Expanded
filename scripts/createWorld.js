@@ -55,12 +55,8 @@ initializeAllStars()
 
 function isWorldUnlocked(id) {
   if (!("requirements" in lvlData[id])) return true; // if no reqs then is unlcoked!
-  for (req in lvlData[id].requirements) {
-    if (!(req in LevelRewards)) return false; // if don't have that reward
-    if (LevelRewards[req] < lvlData[id].requirements[req]) return false; //if don't have enough of reward
-  }
 
-  return true; // passes all checks
+  return checkReqs(lvlData[id].requirements);
 }
 
 function CreateBlocks(x, y, type = 'block', length = 1, height = 1, extraTags = [], oImg = null) {
@@ -130,12 +126,8 @@ function CreateWorld(id, useID = true) {
   if ("music" in lvl) {
     setSong(lvl.music);
   }
-  if (id === -18) {
-      worldText.push(new Text('Style Tokens: ' + LevelRewards.StyleToken, 425, 165, 12));
-      worldText.push(new Text('Season Tokens: ' + LevelRewards.Season2Token, 425, 145, 12));
-      worldText.push(new Text('Elite Season Tokens: ' + LevelRewards.EliteSeason2Token, 425, 125, 12));
-      worldText.push(new Text('undefined = 0', -50, 165, 12));
-      worldText.push(new Text('Get Style Tokens when you beat a level for the first time!', 425, 210, 12));
+  if (id === 200) {
+    world.push(new AnimatedBlock(1730, -910, 'obro.png', t, 2, ['nc']));
   }
   if (id === -2) {
     const o = [-500, 1000];
@@ -151,21 +143,23 @@ function CreateWorld(id, useID = true) {
     worldText.push(new Text('GToH Expanded ' + GAMEVERSION.join("."), 670, -40, 12));
     world.push(new AnimatedBlock(-30, 260, 'orbo.png', t, 2, ['nc']));
     //worldText.push(new Text('Coming March 19...', 360, -320, 12));
-    world.push(new AnimatedBlock(520, -320, 'portalgreyanim.png',
+    world.push(new AnimatedBlock(1000, -120, 'portalgreyanim.png',
     {
       init:[30, 30, 4, 2],
       idle:[0, 4]
     }, 1, ['nc']));
-    world.push(new AnimatedBlock(950, -120, 'portalseasonanim.png',
+    world.push(new AnimatedBlock(675, -600, 'portalorbuxanim.png',
     {
       init:[30, 30, 4, 2],
       idle:[0, 4]
     }, 1, ['nc']));
-    world.push(new AnimatedBlock(1350, -465, 'portalorbuxanim.png',
     {
-      init:[30, 30, 4, 2],
-      idle:[0, 4]
-    }, 1, ['nc']));
+      let basePos = [650, -320];
+      CreateBlocks(basePos[0], basePos[1], "code", 1, 1, ["CreateWorld(getDailyLevel(),true)"],"portalred.png");
+      worldText.push(new Text(lvlData[getDailyLevel()].about.name, basePos[0] + 15, basePos[1] + 50, 9));
+      worldText.push(new Text("Daily Level", basePos[0] + 15, basePos[1], 14));
+      worldText.push(new Text("Resets at Midnight", basePos[0] + 15, basePos[1] - 25, 7));
+    }
     
   }
   Player = new Character(PlayerSkin);

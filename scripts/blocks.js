@@ -52,7 +52,7 @@ class Block {
 
     switch (this.type) {
       case 'njump':
-        this.img = cliDir + 'textures/metalblock.png';
+        this.img = cliDir + 'textures/season4/metalretro.png';
         break;
       case 'fullgrass':
       case 'grass':
@@ -61,14 +61,116 @@ class Block {
         break;
       case 'block':
         if (this.img === '')
-        this.img = cliDir + 'textures/block.png';
+        this.img = cliDir + 'textures/season4/greenretro.png';
         break;
       case 'vine':
         this.img = cliDir + 'textures/vines.png';
         this.tags.push('nc');
         break;
+      case 'web1':
+        this.img = cliDir + 'textures/season3/web1.png';
+        break;
+      case 'web2':
+        this.img = cliDir + 'textures/season3/web2.png';
+        break;
+      case 'web3':
+        this.img = cliDir + 'textures/season3/web3.png';
+        break;
+      case 'web4':
+        this.img = cliDir + 'textures/season3/web4.png';
+        break;
+      case 'basket':
+        this.img = cliDir + 'textures/season3/basket.png';
+        break;
+      case 'ghost':
+        this.img = cliDir + 'textures/season3/ghost.png';
+        break;
+      case 'spookyfloor':
+        this.img = cliDir + 'textures/season3/spookyfloor.png';
+        break;
       case 'rose':
        this.img = cliDir + 'textures/Rose.png';
+        break;
+      case 'web1':
+        this.img = cliDir + 'textures/season3/web1.png';
+        break;
+      case 'web2':
+        this.img = cliDir + 'textures/season3/web2.png';
+        break;
+      case 'web3':
+        this.img = cliDir + 'textures/season3/web3.png';
+        break;
+      case 'web4':
+        this.img = cliDir + 'textures/season3/web4.png';
+        break;
+      case 'basket':
+        this.img = cliDir + 'textures/season3/basket.png';
+        break;
+      case 'ghost':
+        this.img = cliDir + 'textures/season3/ghost.png';
+        break;
+      case 'spookyfloor':
+        this.img = cliDir + 'textures/season3/spookyfloor.png';
+        break;
+      case 'spookyfloorweb':
+        this.img = cliDir + 'textures/season3/spookyfloorweb.png';
+        break;
+      case 'orbopass3':
+        this.img = cliDir + 'textures/season3/orbopass3.png';
+        break;
+      case 'freeorbopass4':
+        this.img = cliDir + 'textures/season4/freeorbopass4.png';
+        break;
+      case 'paidorbopass4':
+        this.img = cliDir + 'textures/season4/paidorbopass4.png';
+        break;
+      case 'blueretro':
+        this.img = cliDir + 'textures/season4/blueretro.png';
+        break;
+      case 'bounceDOWNretro':
+        this.img = cliDir + 'textures/season4/bounceDOWNretro.png';
+        break;
+      case 'bounceLEFTretro':
+        this.img = cliDir + 'textures/season4/bounceLEFTretro.png';
+        break;
+      case 'bounceRIGHTretro':
+        this.img = cliDir + 'textures/season4/bounceRIGHTretro.png';
+        break;
+      case 'bounceUPretro':
+        this.img = cliDir + 'textures/season4/bounceUPretro.png';
+        break;
+      case 'deathretro':
+        this.img = cliDir + 'textures/season4/deathretro.png';
+        break;
+      case 'greenretro':
+        this.img = cliDir + 'textures/season4/greenretro.png';
+        break;
+      case 'iceretro':
+        this.img = cliDir + 'textures/season4/iceretro.png';
+        break;
+      case 'metalretro':
+        this.img = cliDir + 'textures/season4/metalretro.png';
+        break;
+      case 'njumpretro':
+        this.img = cliDir + 'textures/season4/njumpretro.png';
+        break;
+      case 'orangeRETRO':
+        this.img = cliDir + 'textures/season4/orangeRETRO.png';
+        break;
+      case 'purpleRETRO':
+        this.img = cliDir + 'textures/season4/purpleRETRO.png';
+        break;
+      case 'redretro':
+        this.img = cliDir + 'textures/season4/redretro.png';
+        break;
+      case 'waterretro':
+        this.img = cliDir + 'textures/season4/waterretro.png';
+        break;
+      case 'vr':
+        this.img = cliDir + 'textures/season4/vr.png';
+        break;
+      case 'wires':
+        this.img = cliDir + 'textures/season4/wires.png';
         break;
       case 'sparkle':
        this.img = cliDir + 'textures/sparkle.png';
@@ -86,13 +188,13 @@ class Block {
         this.img = cliDir + 'textures/sand.png';
         break;
       case 'brick':
-        this.img = cliDir + 'textures/brick.png';
+        this.img = cliDir + 'textures/season2/brick.png';
         break;
       case 'woodfloor':
-        this.img = cliDir + 'textures/woodfloor.png';
+        this.img = cliDir + 'textures/season2/woodfloor.png';
         break;
       case 'basketball':
-        this.img = cliDir + 'textures/basketball.png';
+        this.img = cliDir + 'textures/season2/basketball.png';
         break;
       case 'seagrass':
         this.img = cliDir + 'textures/seagrass.png';
@@ -105,6 +207,9 @@ class Block {
         break;
       case 'eliteseasontoken':
         this.img = cliDir + 'textures/eliteseasontoken.png';
+        break;
+      case 'legendarytoken':
+        this.img = cliDir + 'textures/legendarytoken.png';
         break;
       case 'dirtblock':
         this.img = cliDir + 'textures/dirtblock2.png';
@@ -123,9 +228,6 @@ class Block {
         break;
       case 'normalgravblock':
         this.img = cliDir + 'textures/normalgravblock.png';
-        break;
-      case 'vlgravblock':
-        this.img = cliDir + 'textures/vlgravblock.png';
         break;
       case 'vhgravblock':
         this.img = cliDir + 'textures/vhgravblock.png';
@@ -158,16 +260,16 @@ class Block {
        // this.img = cliDir + 'textures/lowgrav.png';
       //  break;
       case 'red':
-        this.img = cliDir + 'textures/redblock.png';
+        this.img = cliDir + 'textures/season4/redretro.png';
         break;
       case 'blue':
-        this.img = cliDir + 'textures/blueblock.png';
+        this.img = cliDir + 'textures/season4/blueretro.png';
         break;
       case 'win':
         this.img = cliDir + 'textures/yellowblock.png';
         break;
       case 'rjump':
-        this.img = cliDir + 'textures/nojumpblock.png';
+        this.img = cliDir + 'textures/season4/njumpretro.png';
         break;
       case 'greverse':
         this.img = cliDir + 'textures/rgravblock.png';
@@ -213,19 +315,19 @@ class Block {
         */
         break;
       case 'orange':
-        this.img = cliDir + 'textures/orangeblock.png';
+        this.img = cliDir + 'textures/season4/orangeRETRO.png';
         break;
       case 'bounce':
-        this.img = cliDir + 'textures/bounceUp.png';
+        this.img = cliDir + 'textures/season4/bounceUPretro.png';
         break;
       case 'dbounce':
-        this.img = cliDir + 'textures/bounceDown.png';
+        this.img = cliDir + 'textures/season4/bounceDOWNretro.png';
         break;
       case 'lbounce':
-        this.img = cliDir + 'textures/bounceLeft.png';
+        this.img = cliDir + 'textures/season4/bounceLEFTretro.png';
         break;
       case 'rbounce':
-        this.img = cliDir + 'textures/bounceRight.png';
+        this.img = cliDir + 'textures/season4/bounceRIGHTretro.png';
         break;
       case 'door':
         if (levelFormat === 1) {
@@ -250,6 +352,7 @@ class Block {
         break;
       case 'anim':
         this.img = cliDir + `textures/animations/${oImg}`;
+        oImg = null;
         break;
       case 'decor':
         this.img = cliDir + `textures/${oImg}`;
@@ -267,16 +370,16 @@ class Block {
         this.size = 5;
         break;
       case 'ice':
-        this.img = cliDir + `textures/iceblock.png`;
+        this.img = cliDir + `textures/season4/iceretro.png`;
         break;
       case 'water':
-        this.img = cliDir + 'textures/water.png';
+        this.img = cliDir + 'textures/season4/waterretro.png';
         break;
       case 'die':
-        this.img = cliDir + `textures/skullblock.png`;
+        this.img = cliDir + `textures/season4/deathretro.png`;
         break;
       case 'purple':
-        this.img = cliDir + `textures/purpleblock.png`;
+        this.img = cliDir + `textures/season4/purpleRETRO.png`;
         break;
       case 'flower':
         this.img = cliDir + 'textures/flower.png';
@@ -285,16 +388,16 @@ class Block {
         this.img = cliDir + 'textures/orbopass1.png';
         break;
       case 'orbopass2':
-        this.img = cliDir + 'textures/orbopass2.png';
+        this.img = cliDir + 'textures/season2/orbopass2.png';
         break;
       case 'classdoor':
-        this.img = cliDir + 'textures/classdoor.png';
+        this.img = cliDir + 'textures/season2/classdoor.png';
         break;
       case 'easel':
-        this.img = cliDir + 'textures/easel.png';
+        this.img = cliDir + 'textures/season2/easel.png';
         break;
       case 'polwoodfloor':
-        this.img = cliDir + 'textures/polwoodfloor.png';
+        this.img = cliDir + 'textures/season2/polwoodfloor.png';
         break;
       case 'mud':
         this.img = cliDir + `textures/mudblock.png`;
@@ -321,10 +424,14 @@ class Block {
         this.img = cliDir + `textures/errorblock.png`;
         break;
     }
+
+    if (oImg !== null) {
+      this.img = cliDir + `textures/${oImg}`;
+    }
   }
 
   updateSprite(redActive) {
-    if (['red', 'blue', 'orange', 'purple', 'door', 'road'].indexOf(this.type) === -1) return;
+    if (['red', 'blue', 'orange', 'purple', 'door', 'road', 'redretro', 'blueretro', 'orangeRETRO', 'purpleRETRO'].indexOf(this.type) === -1) return;
     this.opacity = 0.3;
     switch (this.type) {
       case 'red':
@@ -343,6 +450,22 @@ class Block {
         if (Ticker % 80 < 40)
           this.opacity = 1;
         break;
+      case 'redretro':
+          if (redActive)
+            this.opacity = 1;
+          break;
+      case 'blueretro':
+          if (!redActive)
+            this.opacity = 1;
+          break;
+      case 'orangeRETRO':
+          if (Ticker % 80 >= 40)
+            this.opacity = 1;
+          break;
+      case 'purpleRETRO':
+          if (Ticker % 80 < 40)
+            this.opacity = 1;
+          break;
       case 'door':
         if (levelFormat === 1) {
           if (!perLevel.includes(this.tags[0].slice(4)))

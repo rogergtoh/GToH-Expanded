@@ -8,10 +8,13 @@ class OnlinePlayer {
     this.cosmetics = [];
     this.user = user;
     this.userText = new Text(this.user, this.x + 15, this.y - 15, 12);
+    this.rank = 0;
+    this.hat = false;
+    this.uuid = 'none';
   }
   tick() {
     this.userText.x = this.x + 15;
-    this.userText.y = this.y - 5;
+    this.userText.y = this.y - 5 - (this.hat ? 20 : 0);
     AddDrawQueue('text', this.userText);
   }
   updateName(name) {
@@ -26,6 +29,7 @@ class Character {
     this.y = y;
     this.img = img;
     this.skin = PlayerSkinName;
+    this.hat = PlayerHat;
     this.yAccel = 0;
     this.xAccel = 0;
     this.wallJump = 0;
@@ -62,6 +66,10 @@ class Character {
         if (i.type === 'blue' && redActive > 1) continue;
         if (i.type === 'orange' && Ticker % 80 < 40) continue;
         if (i.type === 'purple' && Ticker % 80 >= 40) continue;
+        if (i.type === 'redretro' && redActive < 2) continue;
+        if (i.type === 'blueretro' && redActive > 1) continue;
+        if (i.type === 'orangeRETRO' && Ticker % 80 < 40) continue;
+        if (i.type === 'purpleRETRO' && Ticker % 80 >= 40) continue;
         if ((!i.tags.includes('nc') || i.type === 'music') && colliding(plyr.x, plyr.y, plyr.width, plyr.height, i.x, i.y, i.width, i.height)) {
           switch (i.type) {
             case 'music':
@@ -205,6 +213,20 @@ class Character {
               break;
             case 'flower':
               break;
+            case 'web1':
+              break;
+            case 'web2':
+              break;
+            case 'web3':
+              break;
+            case 'web4':
+              break;
+            case 'basket':
+              break;
+            case 'ghost':
+              break;
+            case 'spookyfloor':
+              return true;
             case 'orbopass1':
               break;
             case 'ladder':
@@ -224,6 +246,68 @@ class Character {
               return true;
             case 'basketball':
               break;
+            case 'web1':
+              break;
+            case 'web2':
+              break;
+            case 'web3':
+              break;
+            case 'web4':
+              break;
+            case 'basket':
+              break;
+            case 'ghost':
+              break;
+            case 'spookyfloor':
+              return true;
+            case 'spookyfloorweb':
+              return true;
+            case 'orbopass3':
+              break;
+            case 'freeorbopass4':
+              break;
+            case 'paidorbopass4':
+              break;
+              case 'bounceDOWNretro':
+              bounce = 2;
+              break;
+            case 'bounceUPretro':
+              bounce = 1;
+              break;
+            case 'bounceLEFTretro':
+              if (!statuses.includes('lbounce'))
+                statuses.push('lbounce');
+              break;
+            case 'bounceRIGHTretro':
+              if (!statuses.includes('rbounce'))
+                statuses.push('rbounce');
+              break;
+            case 'deathretro':
+              newlvl = WorldId;
+              break;
+            case 'greenretro':
+              return true;
+            case 'iceretro':
+              if (!statuses.includes('icy'))
+                statuses.push('icy');
+              prevTouchIcy = true;
+              return true;
+            case 'metalretro':
+              nJump = true;
+              return true;    
+            case 'njumpretro':
+              if (!statuses.includes('rjump')) {
+                statuses.push('rjump');
+              }
+              return true;
+            case 'waterretro':
+              if (!statuses.includes('water'))
+                statuses.push('water');
+              break;
+            case 'wires':
+              break;
+            case 'vr':
+              break;
             case 'easel':
               break;
             case 'classdoor':
@@ -235,6 +319,8 @@ class Character {
             case 'seasontoken':
               break;
             case 'eliteseasontoken':
+              break;
+            case 'legendarytoken':
               break;
             case 'seagrass':
               break;
@@ -252,12 +338,6 @@ class Character {
               break;
             case 'hgravblock':
               plyr.gravityMultiplier = 1.5;
-              break;
-            case 'vlgravblock':
-              plyr.gravityMultiplier = 0.25;
-              break;
-            case 'hlgravblock':
-              plyr.gravityMultiplier = 2;
               break;
             case 'normalgravblock':
               plyr.gravityMultiplier = 1;

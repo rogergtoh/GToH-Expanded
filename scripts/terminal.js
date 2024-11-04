@@ -107,6 +107,24 @@ function process_command(command = null) {
         alert('Incorrect amount of arguments');
       }
       break;
+    case "admin":
+      AdminView = !AdminView;
+      AddChat("Admin View Toggled " + (AdminView ? "On!" : "Off!"));
+      break;
+    case "ban":
+    case "kick":
+    case "mute":
+    case "warn":
+    case "mod":
+    case "unmod":
+    case "permaban":
+    case "add":
+    case "remove":
+    case "reject":
+    case "requests":
+    case "preregister":
+      socket.emit("command", command);
+      break;
     case "truenc":
     case "truenoclip":
     case "tnoclip":
@@ -161,21 +179,6 @@ function process_command(command = null) {
     case "evaluate":
       //cheatsEnabled = true;
       eval(prompt('command?'));
-      break;
-    case 'kick':
-      if (command.length !== 2) {
-        alert('Incorrect amount of arguments');
-        break;
-      }
-      socket.emit('kick player', command[1]);
-      break;
-    case 'ban':
-      if (command.length === 2)
-        socket.emit('server command', command);
-      break;
-    case 'unban':
-      if (command.length === 2)
-        socket.emit('server command', command);
       break;
     case 'replay':
       if (command[1] !== undefined) {

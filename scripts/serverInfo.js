@@ -4,6 +4,12 @@ var serverDisconnected = false;
 
 if (socket != undefined) {
   socket.emit("socket initialized");
+
+  socket.on("initConnect", () => { // Wait for socket to initialize
+    socket.emit("check save", localStorage.getItem("serverSave") || "none");
+  });
+
+  
   socket.on("old version", () => {
     alert("Your client version is unsupported by the server. If refreshing doesn't fix this, ask the server owner to update the client version used!");
   });
@@ -62,6 +68,9 @@ if (socket != undefined) {
         OtherPlayers[plyr[5]].location = plyr[2];
         OtherPlayers[plyr[5]].img = cliDir + 'textures/skins/' + plyr[4] + ".png";
         OtherPlayers[plyr[5]].updateName(plyr[3]);
+        OtherPlayers[plyr[5]].rank = plyr[6];
+        OtherPlayers[plyr[5]].hat = plyr[7];
+        OtherPlayers[plyr[5]].uuid = plyr[8];
       } else {
         OtherPlayers[plyr[5]] = new OnlinePlayer(cliDir + 'textures/skins/' + plyr[4] + ".png", plyr[0], plyr[1], plyr[3]);
       }
@@ -83,15 +92,46 @@ if (socket != undefined) {
       }
     }
     if (Username !== '' && GAME !== undefined)
-      socket.emit('send player', [Player.x, Player.y, WorldId, Username, Player.skin]);
+      socket.volatile.emit('send player', [Player.x, Player.y, WorldId, Username, Player.skin, CurrentRank, Player.hat]);
   });
   //setInterval(getServerInfo, 1000); REMOVED FOR NOW
   //getServerInfo(); SINGLEPLAYER LOL!
   function cl(cmd) {
     socket.emit('console', cmd);
   }
-  socket.on('chat', (msg) => {
-    AddChat(msg);
+  socket.on('chat', (msg, admin = 0, uuid = "none") => {
+    AddChat(msg, uuid, admin);
+  });
+  socket.on('chatRequest', () => {
+    const p = prompt("To chat now you must be accepted by a mod! Explain why you should get chat access or give a secret code!");
+    if (p == null || p == "") {
+      return;
+    }
+    socket.emit("addRequest", p);
+  });
+  socket.on('codeReturn', (res) => {
+    if (res == false) {
+      AddChat("Invalid Code.");
+      return;
+    } 
+    if (CodesUsed.includes(res.code)) {
+      AddChat("Code already used.");
+      return;
+    }
+    CodesUsed.push(res.code);
+    localStorage.setItem("codesUsed", JSON.stringify(CodesUsed));
+    for (const rew of res.reward) {
+      if (rew.type === "inventory") {
+        if (!(rew.reward in Inventory))
+          Inventory[rew.reward] = rew.amount;
+        else
+          Inventory[rew.reward] += rew.amount;
+        localStorage.setItem("inventory", JSON.stringify(Inventory));
+        AddChat("Code redeemed!");
+      } else {
+        console.log("wrong type?");
+      }
+    }
   });
   socket.on('set position', (loc) => {
     if (loc[2] !== WorldId) {
@@ -121,66 +161,20 @@ if (socket != undefined) {
       Player.img = PlayerSkin;
   });
   socket.io.on("reconnect", (attempt) => {
+    AddChat("Reconnected!");
     if (localStorage.getItem('login') !== null) {
       socket.emit("socket initialized")
       // autoLogin(JSON.parse(localStorage.getItem('login'))); DISABLED BECAUSE NO ACCOUNT SYSTEM
     }
   });
+  socket.on("disconnect", () => {
+    AddChat("You are disconnected from servers!");
+  });
+
+
+  socket.on('get back save', save => {
+    console.log("got back save!");
+    localStorage.setItem('serverSave', save);
+  }); 
+
 }
-
-function syncProgress() {
-  const lvls = localStorage.getItem("levels");
-  const swaps = localStorage.getItem("swaps");
-  const inv = localStorage.getItem('inventory');
-  console.log("synced levels")
-  if (lvls != null) {
-    levelsComplete = JSON.parse(lvls);
-  }
-  if (swaps != null) {
-    swapsComplete = JSON.parse(swaps);
-  }
-  if (inv != null) {
-    Inventory = JSON.parse(inv);
-  }
-  syncRewards();
-
-  updateAllStars();
-}
-
-function syncRewards() {
-  LevelRewards = {};
-  // Get all the level rewards
-  for (const i in levelsComplete) {
-    if (!(levelsComplete[i] > 0)) continue;
-    if (!('reward' in lvlData[i])) continue;
-    for (const b in lvlData[i].reward) {
-      if (!(b in LevelRewards)) {
-        LevelRewards[b] = lvlData[i].reward[b];
-      } else {
-        LevelRewards[b] += lvlData[i].reward[b];
-      }
-    }
-  }
-
-  // then deduct points based off inventory
-  for (const item in Inventory) {
-    if (!(item in InventoryItems)) continue; // SKIPPA if item price is not listed.
-
-    for (const cost in InventoryItems[item]) {
-      if (!(cost in LevelRewards))
-        LevelRewards[cost] = 0;
-      LevelRewards[cost] -= InventoryItems[item][cost] * Inventory[item];
-
-    }
-  }
-}
-
-function setSkin(skin) {
-  PlayerSkin = cliDir + 'textures/skins/' + skin + ".png";
-  Player.skin = skin;
-  Player.img = PlayerSkin;
-  PlayerSkinName = skin;
-}
-
-levelsComplete = new Array(lvlData.length).fill(false);
-syncProgress()

@@ -81,32 +81,71 @@ addImage(gridButton.img);
 addImage(helpButton.img);
 addImage(settingButton.img);
 var blockTypeButtons = [
-  ['block','block'],
+  ['season4/greenretro','block'],
   ['smallcursor', 'small'],
-  ['blueblock', 'blue'],
+  ['season4/blueretro', 'blue'],
   ['orangeblock', 'orange'],
-  ['bounceUp', 'bounce'],
+  ['season4/bounceUPretro', 'bounce'],
   ['mudblock', 'mud'],
-  ['nojumpblock', 'rjump'],
-  ['metalblock', 'njump'],
-  ['iceblock', 'ice'],
+  ['season4/njumpretro', 'rjump'],
+  ['season4/metalretro', 'njump'],
+  ['season4/iceretro', 'ice'],
   ['keys/key0', 'key', {tags: [0]}],
   ['doors/door0', 'door', {tags: [0]}],
   ['roads/road0', 'road', {tags: [0]}],
-  ['skullblock', 'die'],
+  ['season4/deathretro', 'die'],
   ['yellowblock', 'win'],
   ['portalgreen', 'tp', {tags: [0, 0]}],
   ['rgravblock', 'greverse'],
   ['vines', 'vine'],
   ['textblock', 'text', {tags: ["test", 30]}],
-  ['water', 'water'],
+  ['season4/waterretro', 'water'],
   ['lgravblock', 'lgravblock'],
   ['speedpad', 'speedpad'],
   ['rightconveyor', 'rightconveyor'],
+  ['season3/spookyfloor', 'spookyfloor'],
+  ['season4/greenretro', 'greenretro']
 ];
 var sideBarOptions = {
+  orbopass1: [
+    ['orbopass1', 'orbopass1'],
+    ['season2/orbopass2', 'orbopass2'],
+    ['season3/orbopass3', 'orbopass3'],
+    ['season4/freeorbopass4', 'freeorbopass4'],
+    ['season4/paidorbopass4', 'paidorbopass4'],
+    ['legendarytoken', 'legendarytoken'],
+    ['styletoken', 'styletoken']
+  ],
+  greenretro: [
+    ['season4/greenretro', 'block', {oImg: "season4/greenretro.png"}],
+    ['season4/iceretro', 'ice', {oImg: "season4/iceretro.png"}],
+    ['season4/redretro', 'red', {oImg: "season4/redretro.png"}],
+    ['season4/blueretro', 'blue', {oImg: "season4/blueretro.png"}],
+    ['season4/orangeRETRO', 'orange', {oImg: "season4/orangeRETRO.png"}],
+    ['season4/purpleRETRO', 'purple', {oImg: "season4/purpleRETRO.png"}],
+    ['season4/bounceUPretro', 'bounce', {oImg: "season4/bounceUPretro.png"}],
+    ['season4/bounceDOWNretro', 'dbounce', {oImg: "season4/bounceDOWNretro.png"}],
+    ['season4/bounceLEFTretro', 'lbounce', {oImg: "season4/bounceLEFTretro.png"}],
+    ['season4/bounceRIGHTretro', 'rbounce', {oImg: "season4/bounceRIGHTretro.png"}],
+    ['season4/deathretro', 'die', {oImg: "season4/deathretro.png"}],
+    ['season4/metalretro', 'njump', {oImg: "season4/metalretro.png"}],
+    ['season4/njumpretro', 'rjump', {oImg: "season4/njumpretro.png"}],
+    ['season4/waterretro', 'water', {oImg: "season4/waterretro.png"}],
+    ['season4/vr', 'vr'],
+    ['season4/wires', 'wires']
+  ],
+  spookyfloor: [
+    ['season3/web1', 'web1'],
+    ['season3/web2', 'web2'],
+    ['season3/web3', 'web3'],
+    ['season3/web4', 'web4'],
+    ['season3/spookyfloor', 'spookyfloor'],
+    ['season3/spookyfloorweb', 'spookyfloorweb'],
+    ['season3/basket', 'basket'],
+    ['season3/ghost', 'ghost']
+  ],
   water: [
-    ['water', 'water'],
+    ['season4/waterretro', 'water'],
     ['sand', 'sand'],
     ['seagrass', 'seagrass'],
     ['beachball', 'beachball'],
@@ -115,8 +154,6 @@ var sideBarOptions = {
   lgravblock: [
     ['lgravblock', 'lgravblock'],
     ['hgravblock', 'hgravblock'],
-    ['vlgravblock', 'vlgravblock'],
-   // ['vhgravblock', 'vhgravblock'],
     ['normalgravblock', 'normalgravblock']
    ],
   orange: [
@@ -124,8 +161,8 @@ var sideBarOptions = {
    ['purpleblock', 'purple']
   ],
   blue: [
-    ['blueblock', 'blue'],
-    ['redblock', 'red']
+    ['season4/blueretro', 'blue'],
+    ['season4/redretro', 'red']
   ],
   key: [
     ['keys/key0', 'key', {tags: [0]}],
@@ -178,10 +215,10 @@ var sideBarOptions = {
     ['errorblock', null, {type: 'coor'}]
   ],
   bounce: [
-    ['bounceUp', 'bounce'],
-    ['bounceDown', 'dbounce'],
-    ['bounceRight', 'rbounce'],
-    ['bounceLeft', 'lbounce']
+    ['season4/bounceUPretro', 'bounce'],
+    ['season4/bounceDOWNretro', 'dbounce'],
+    ['season4/bounceRIGHTretro', 'rbounce'],
+    ['season4/bounceLEFTretro', 'lbounce']
   ],
   tp: [
     ['levelCreator/coorimg', null, {type: 'coor'}]
@@ -191,7 +228,7 @@ var sideBarOptions = {
     ['ngravblock', 'gnormal']
   ],
   block: [
-    ['block', 'block'],
+    ['season4/greenretro', 'block'],
     ['grassblock', 'fullgrass'],
     ['dirtblock2', 'dirtblock']
   ],
@@ -200,11 +237,11 @@ var sideBarOptions = {
     ['bblank', 'blank2'],
     ['flower', 'flower'],
     ['sparkle', 'sparkle'],
-    ['woodfloor', 'woodfloor'],
-    ['brick', 'brick'],
-    ['basketball', 'basketball'],
-    ['easel', 'easel'],
-    ['classdoor', 'classdoor']
+    ['season2/woodfloor', 'woodfloor'],
+    ['season2/brick', 'brick'],
+    ['season2/basketball', 'basketball'],
+    ['season2/easel', 'easel'],
+    ['season2/classdoor', 'classdoor']
   ],
   text: [
     ['errorblock', null, {type: 'text'}],
@@ -427,15 +464,21 @@ myCanvas.addEventListener('mouseup', MyEvent => {
     if (placeY - point1[1] < 0) {
       iny = placeY;
     }
-    var extraTags = [];
+
+    const blockToPush = [inx, iny, blockType, createWidth, createHeight];
+
     if ('tags' in blockNbt) {
-      extraTags = [...blockNbt.tags];
+      blockToPush.push([...blockNbt.tags]);
+    } else if ('oImg' in blockNbt) {
+      blockToPush.push([]);
     }
-    if (extraTags.length === 0)
-      creatorBlocks.push([inx, iny, blockType, createWidth, createHeight]);
-    else
-      creatorBlocks.push([inx, iny, blockType, createWidth, createHeight, extraTags]);
-    CreateBlocks(...creatorBlocks[creatorBlocks.length - 1]);
+    if ('oImg' in blockNbt) {
+      blockToPush.push(blockNbt.oImg);
+    }
+
+    creatorBlocks.push(blockToPush);
+
+    CreateBlocks(...blockToPush);
     creatorHistory.push(['create']);
     localStorage.setItem('level backup', JSON.stringify(creatorBlocks));
     if (world.length > 5000 && !ignoreWarning) {

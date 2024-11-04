@@ -1,9 +1,11 @@
 
+<!doctype html>
 <html>
-<title>GToH Remastered</title>
+<title>GToH v0.7.1</title>
 <link rel='shortcut icon' href='./textures/gtohICON.png' type='image/png' />
+<!-- I don't think this works...
 <iframe src="./music/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-
+-->
 <meta content="GToH Expanded" property="og:title" />
 <meta content="Expanded with new features!" property="og:description" />
 <meta content="guppyadrian.github.com/GToH-Singleplayer" property="og:url" />
@@ -18,7 +20,7 @@
 		}
 		@font-face {
 			font-family: 'MinecraftRegular';
-			src: url('./client/fonts/Minecraftia-Regular.ttf')
+			src: url('./fonts/Minecraftia-Regular.ttf')
 		}
 		body {
 			overflow: hidden;
@@ -46,6 +48,8 @@
       font-size: 50px;
     }
 	</style>
+
+	<link rel="manifest" href="./manifest.json" />
 </head>
 
 <body>
@@ -65,8 +69,10 @@
 
 	<script>
 
-		const cliDir = (socket == undefined) ? "./" : "./client/";
-		const allScriptPaths = ['variables', 'shop', 'music', 'character', 'lvlData', 'blocks', 'draw', 'createWorld', 'dialogue', 'index', 'terminal', 'intro', 'serverInfo', 'levelCreator'];
+		//const cliDir = (socket == undefined) ? "./" : "./client/";
+		const cliDir = "./"; // Should be irrelevant.
+
+		const allScriptPaths = ['variables', 'shop', 'music', 'character', 'lvlData', 'blocks', 'draw', 'createWorld', 'dialogue', 'ranks', 'loadData', 'index', 'terminal', 'intro', 'serverInfo', 'levelCreator'];
 
 		function loadScript(index) {
 			var scriptElement = document.createElement('script');
@@ -86,6 +92,7 @@
 
 </html>
 
-
 <br>
-you can play old game here: <a href='https://replit.com/@guppyadrian1/Guppys-Towers-of-Hecc-OG?c=212397'>og game</a>
+<div style="position:absolute; bottom: 0px; left: 0px;">
+	Try new physics system here: <a href='./prototype/'>V2 OCT 9 UPDATE</a>
+</div>

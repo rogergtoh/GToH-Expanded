@@ -2,11 +2,11 @@ console.log("loading variables...")
 var warning = false; //set to true if redesgining code that could potentially break game
 
 // Game version!!
-const GAMEVERSION = [0,6,0,1];
+const GAMEVERSION = [0,7,1];
 
 // These are for checking server compatibility, only change these if updating information sent/received by the server
-const ClientVersion = 2;
-const MinimumServerVersion = 2;
+const ClientVersion = 6;
+const MinimumServerVersion = 6;
 
 //draw
 var drawQueue = [];
@@ -37,16 +37,20 @@ var ReplayPos = [];
 var Replaying = false;
 var LevelRewards = {};
 var Inventory = {};
+var CodesUsed = [];
+var AdminView = false;
 
 //world
 var OtherPlayers = {};
 var world = [];
 var worldText = [];
 var worldParticle = [];
-const melonImg = "https://s2js.com/img/etc/watermelon2.png";
+const MelonImage = "https://s2js.com/img/etc/watermelon2.png";
 const playerImg = cliDir + "textures/skins/player.png";
 var PlayerSkin = playerImg; // change this to based off PlayerSkinName
 var PlayerSkinName = "player";
+let PlayerHat = undefined;
+let PlayerHatName = "none";
 
 //misc
 var redActive = 1;
@@ -69,6 +73,7 @@ var TasMode = false;
 var GamePaused = false;
 var ChatOpen = false;
 var peopleLeft = 0;
+var DailyLevelsBeaten = 0;
 
 //online
 var ClientNumber;
@@ -140,9 +145,16 @@ function getPlayerIdByName(name) {
 // Checks if your LevelRewards match up with reqs
 function checkReqs(reqs) {
   for (const req in reqs) {
-    if (!(req in LevelRewards)) return false;
-    if (LevelRewards[req] < reqs[req]) 
-      return false
+
+    if (req in LevelRewards) {
+      if (LevelRewards[req] < reqs[req])
+        return false;
+    } else if (req in Inventory) {
+      if (Inventory[req] < reqs[req])
+        return false;
+    } else {
+      return false;
+    }
   }
   return true;
 }
@@ -189,4 +201,28 @@ songList['main'].volume = 0.1;
       }
     }
   }
+}
+
+function seedRandom(a) {
+  a |= 0;
+  a = a + 0x9e3779b9 | 0;
+  let t = a ^ a >>> 16;
+  t = Math.imul(t, 0x21f0aaad);
+  t = t ^ t >>> 15;
+  t = Math.imul(t, 0x735a2d97);
+  return ((t = t ^ t >>> 15) >>> 0) / 4294967296;
+}
+
+function getCurrentDay(manualDate) {
+  let day = new Date();
+  if (manualDate !== undefined)
+    day = new Date(manualDate);
+
+  return day.getDate() + day.getMonth() * 31 + day.getFullYear() * 372;
+}
+
+function getDailyLevel(manualDate) {  
+  let seed = getCurrentDay(manualDate) // Get seed from day
+  let num = Math.round(seedRandom(seed ** 2) * 100000); // Turn to random num
+  return (num % 140) + 1; // Constrain to only include id's that have a level
 }
